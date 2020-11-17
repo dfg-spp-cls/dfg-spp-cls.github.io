@@ -1,0 +1,57 @@
+header:
+  - titles:
+      # @start locale config
+      en: &EN       Home
+      en-GB: *EN
+      en-US: *EN
+      en-CA: *EN
+      en-AU: *EN
+      de: &DE       Home
+      de-DE: *DE
+      # @end locale config
+      url: /
+  - titles:
+      # @start locale config
+      en      : &EN       Projects
+      en-GB   : *EN
+      en-US   : *EN
+      en-CA   : *EN
+      en-AU   : *EN
+      de      : &DE       Projekte
+      de-DE   : *DE
+      # @end locale config
+    url: /projects/
+#  - titles:
+#      # @start locale config
+#      en      : &EN       Archive
+#      en-GB   : *EN
+#      en-US   : *EN
+#      en-CA   : *EN
+#      en-AU   : *EN
+#      de      : &DE       Archiv
+#      de-DE   : *DE
+#      # @end locale config
+#    url: /archive.html
+  - titles:
+      # @start locale config
+      en      : &EN       About
+      en-GB   : *EN
+      en-US   : *EN
+      en-CA   : *EN
+      en-AU   : *EN
+      de      : &DE       Über uns
+      de-DE   : *DE
+      # @end locale config
+    url: /about.html
+#  - titles:
+#      # @start locale config
+#      en      : &EN       Committee
+#      en-GB   : *EN
+#      en-US   : *EN
+#      en-CA   : *EN
+#      en-AU   : *EN
+#      de      : &DE       Kommitee
+#      de-DE   : *DE
+#      # @end locale config
+#    url: /committee.html
+
