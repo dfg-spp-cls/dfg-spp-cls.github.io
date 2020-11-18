@@ -97,6 +97,7 @@ Wenngleich bei den genutzten Programmierumgebungen und Bibliotheken im Einzelnen
 - Drama Analysis (R): 1 Projekt
 - CoNLL-U: 1 Projekt
 - Matplotlib (Python): 1 Projekt
+- Spark (Java): 1 Projekt
 
 **Programmierumgebungen:**
 - Jupyter Notebooks: 4 Projekte
