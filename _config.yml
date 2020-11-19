@@ -159,7 +159,7 @@ pageview:
 ## => Search
 ##############################
 search:
-  provider: google # "default" (default), false, "google", "custom"
+  provider: default # "default" (default), false, "google", "custom"
 
   ## Google Custom Search Engine
   google:
@@ -208,11 +208,11 @@ defaults:
     values:
       layout: article
       sharing: true
-      license: true
+      license: false
       aside:
         toc: true
       show_edit_on_github: false
-      show_subscribe: true
+      show_subscribe: false
       pageview: true
 
 
