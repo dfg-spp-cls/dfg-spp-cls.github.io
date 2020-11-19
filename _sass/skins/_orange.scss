@@ -1,63 +1,63 @@
 ///
 // Skin: Orange
-// Author: Tian Qi
-// Email: kitian616@outlook.com
+// Author: Sina Bock
+// Email: sina.bock@uni-wuerzburg.de
 ///
 
 // main colors
-$main-color-1:     #f92651;
+$main-color-1: #860111;
 $text-color-1:     #fff;
 
-$main-color-2:     #fdb824;
+$main-color-2:     #a63311;
 $text-color-2:     #fff;
 
-$main-color-3:     #ff8a64;
-$text-color-3:     #fff;
+$main-color-3: #fef2f4;
+$text-color-3: #860111;
 
-$main-color-theme-light: rgba(#000, .9);
+$main-color-theme-light: rgba(#860111, .9);
 $main-color-theme-dark:  rgba(#fff, .9);
 
 // page background
-$background-color: #fffdfa;
+$background-color: #ffffff;
 
 // text colors
-$text-color-theme-light-d: rgba(#000, .95);
-$text-color-theme-light:   rgba(#000, .85);
-$text-color-theme-light-l: rgba(#000, .5);
+$text-color-theme-light-d: #860111;
+$text-color-theme-light:   #222;
+$text-color-theme-light-l: #a50034;
 
-$text-color-theme-dark-d:  rgba(#fff, .95);
-$text-color-theme-dark:    rgba(#fff, .85);
-$text-color-theme-dark-l:  rgba(#fff, .65);
+$text-color-theme-dark-d:  #fff;
+$text-color-theme-dark:    rgba(#fff, .95);
+$text-color-theme-dark-l:  rgba(#fff, .85);
 
 $text-color-d:     $text-color-theme-light-d;
 $text-color:       $text-color-theme-light;
 $text-color-l:     $text-color-theme-light-l;
 
-$text-background-color: rgba(#000, .05);
+$text-background-color: rgba(#853945, .05);
 
 // header and footer colors
 $header-text-color: $text-color-3;
-$header-background: linear-gradient(60deg, #ffa650 0%, #ff7b50 100%);
+$header-background: $main-color-3;
 
 $footer-text-color: $text-color-3;
-$footer-background: linear-gradient(60deg, #ffa650 0%, #ff7b50 100%);
+$footer-background: $main-color-3;
 
 // border and shadow colors
-$border-color:     mix($main-color-1, $background-color, 50%);
+$border-color:     mix(#000, $background-color, 20%);
 $border-color-l:   mix(#000, $background-color, 10%);
 $decorate-color:   rgba(#000, .1);
-$mask-color:       rgba(#000, .9);
-$select-color:     rgba($main-color-3, .5);
+$mask-color:       rgba(#a50034, .9);
+$select-color:     rgba($main-color-1, .5);
 
 // function colors
 $green:           #52c41a;
 $blue:            #1890ff;
 $yellow:          #fa8c16;
-$red:             #f5222d;
+$red:             #8a0406;
 $text-color-function: #fff;
 
 // logo colors
-$mail-color:       #0072c5;
+$mail-color:       #8a0406;
 $facebook-color:   #4267b2;
 $twitter-color:    #1da1f2;
 $weibo-color:      #e6162d;
@@ -71,4 +71,4 @@ $github-color:     #000;
 $npm-color:        #fff;
 
 // highlight colors
-@import "skins/highlight/tomorrow-night-eighties";
+@import "skins/highlight/tomorrow";
