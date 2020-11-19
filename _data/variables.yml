@@ -5,7 +5,6 @@ default:
   paths:
     root: /
     home: /
-    #archive:  /archive.html
     rss:  /feed.xml
   mathjax: false
   mathjax_autoNumber: false
@@ -34,10 +33,10 @@ default:
     show_subscribe: false
     full_width: false
     sharing: false
-    comment: true
+    comment: false
     license: false
     pageview: false
-    search: true
+    search: default
 
 sources:
   bootcdn:

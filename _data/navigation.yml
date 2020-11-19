@@ -20,7 +20,7 @@ header:
       de      : &DE       Projekte
       de-DE   : *DE
       # @end locale config
-    url: /projects/
+    url: /projects_en/
 #  - titles:
 #      # @start locale config
 #      en      : &EN       Archive
