@@ -1,29 +1,29 @@
 ///
-// Skin: Orange
-// Author: Sina Bock
-// Email: sina.bock@uni-wuerzburg.de
+// Skin: Default
+// Author: Tian Qi
+// Email: kitian616@outlook.com
 ///
 
 // main colors
-$main-color-1: #860111;
+$main-color-1:     #8a0406;
 $text-color-1:     #fff;
 
 $main-color-2:     #a63311;
 $text-color-2:     #fff;
 
-$main-color-3: #dedadb;
-$text-color-3: #860111;
+$main-color-3: #e5dadc;
+$text-color-3:     #333;
 
-$main-color-theme-light: rgba(#860111, .9);
+$main-color-theme-light: rgba(#000, .9);
 $main-color-theme-dark:  rgba(#fff, .9);
 
 // page background
-$background-color: #ffffff;
+$background-color: #fff;
 
 // text colors
-$text-color-theme-light-d: #860111;
+$text-color-theme-light-d: #000;
 $text-color-theme-light:   #222;
-$text-color-theme-light-l: #a50034;
+$text-color-theme-light-l: #888;
 
 $text-color-theme-dark-d:  #fff;
 $text-color-theme-dark:    rgba(#fff, .95);
@@ -33,7 +33,7 @@ $text-color-d:     $text-color-theme-light-d;
 $text-color:       $text-color-theme-light;
 $text-color-l:     $text-color-theme-light-l;
 
-$text-background-color: rgba(#853945, .05);
+$text-background-color: rgba(#000, .05);
 
 // header and footer colors
 $header-text-color: $text-color-3;
@@ -46,18 +46,18 @@ $footer-background: $main-color-3;
 $border-color:     mix(#000, $background-color, 20%);
 $border-color-l:   mix(#000, $background-color, 10%);
 $decorate-color:   rgba(#000, .1);
-$mask-color:       rgba(#a50034, .9);
+$mask-color:       rgba(#000, .9);
 $select-color:     rgba($main-color-1, .5);
 
 // function colors
 $green:           #52c41a;
 $blue:            #1890ff;
 $yellow:          #fa8c16;
-$red:             #8a0406;
+$red:             #f5222d;
 $text-color-function: #fff;
 
 // logo colors
-$mail-color:       #8a0406;
+$mail-color:       #0072c5;
 $facebook-color:   #4267b2;
 $twitter-color:    #1da1f2;
 $weibo-color:      #e6162d;
