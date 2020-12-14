@@ -11,7 +11,7 @@ Mit dieser Veranstaltung möchten wir den Promovierenden im SPP die Möglichkeit
 
 Den Kern der Veranstaltung bildet daher eine Reihe von Vorträgen zu Ideen, laufenden Forschungen oder Zwischenergebnissen aus den Promotionsprojekten mit anschließenden Diskussionen. Ausdrücklich nicht erwartet werden fertige Forschungsergebnisse.
 
-Für fachliche und andere Fragen werden **Berenike Herrmann-Wolf** und **Fotis Jannidis** zur Verfügung stehen.
+Für fachliche und andere Fragen werden **Berenike Herrmann** und **Fotis Jannidis** zur Verfügung stehen.
 
 Wir freuen uns auf eine rege Teilnahme.
 
