@@ -4,6 +4,7 @@ excerpt: "Am 22.01.2021 von 10:00 - 18:00 organisiert das DFG Schwerpunktprogram
 modified: 12/14/2020, 9:00:24
 category: News
 ---
+***von Steffen Pielström***
 
 Am **22.01.2021** von 10:00 - 18:00 organisiert das DFG Schwerpunktprogramm *Computational Literary Studies* einen virtuellen Promovierednentag.
 
