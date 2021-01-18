@@ -9,7 +9,7 @@ header:
       de: &DE       Home
       de-DE: *DE
       # @end locale config
-      url: /
+    url: /
   - titles:
       # @start locale config
       en      : &EN       Projects
@@ -20,7 +20,7 @@ header:
       de      : &DE       Projekte
       de-DE   : *DE
       # @end locale config
-    url: /projects_en/
+    url: http://dfg-spp-cls.github.io/projects_en/
 #  - titles:
 #      # @start locale config
 #      en      : &EN       Archive
