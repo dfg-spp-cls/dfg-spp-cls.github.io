@@ -1,10 +1,5 @@
 # Created by .ignore support plugin (hsz.mobi)
-.idea/.gitignore
-.idea/misc.xml
-.idea/shelf/
-.idea/workspace.xml
 .jekyll-cache
 _site
 Gemfile.lock
 
-/.idea/
