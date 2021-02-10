@@ -51,9 +51,11 @@ Die dabei entstehenden Audiodaten werden im Anschluss an die Interviews ausgewer
 
 ## Erste Ergebnisse der Datenerfassung
 
-Die im Folgenden dargestellten Ergebnisse stellen lediglich einen aktuellen Zwischenstand (Oktober 2020) dar. 
+Die im Folgenden dargestellten Ergebnisse stellen lediglich einen aktuellen Zwischenstand (Februar 2021) dar. 
 
-Alle Projekte befanden sich zum Zeitpunkt der Gespräche in unterschiedlichen Stadien des Projektbeginns. Es hat noch kein inhaltliches Review der individuellen Ergebnisse durch die einzelnen Projekte stattgefunden. Dies wird im Anschluss an die Befragung aller Projekte erfolgen. Da im Rahmen der Gespräche i.d.R. offene Fragen gestellt wurden, konnten im Laufe der Zeit viele Antwortkategorien identifiziert werden. Wir erhoffen uns insbesondere von der Abbildung dieser vielen entstandenen, individuellen Antwortkategorien nachträgliche Ergänzungen in Bezug auf die ursprünglich gegebenen Antworten von nahezu allen Projekten und somit auch eine weitere Ausdifferenzierung der Ergebnisse.
+Alle Projekte befanden sich zum Zeitpunkt der Gespräche in unterschiedlichen Stadien des Projektbeginns. Im Rahmen der Gespräche wurden i.d.R. offene Fragen gestellt, wodurch im Laufe der Interviews viele weitere Antwortkategorien identifiziert werden konnten. Im Anschluss an die Gespräche hat daher ein inhaltliches Review der individuellen Ergebnisse durch die einzelnen Projekte stattgefunden. Durch die Abbildung der vielen im Prozess entstandenen, individuellen Antwortkategorien war es entsprechend möglich nachträgliche Ergänzungen in Bezug auf die ursprünglich gegebenen Antworten von nahezu allen Projekten zu erhalten und somit auch eine weitere Ausdifferenzierung der Ergebnisse zu erreichen.
+
+Der Review-Prozess wurde im Januar 2021 abgeschlossen. Aufgrund dessen, dass sich die Projekte zu diesem Zeitpunkt noch in der ersten Hälfte des Forschungsdatenlebenszyklus befanden, wurden im Review-Prozess die Themenkomplexe Archivierungs- und Publikationsstrategien sowie Fragen zu lebenden Systemen noch nicht mit abgedeckt. Für diese Abschnitte des Leitfadens ist eine weitere Review-Phase für Ende 2021 geplant.
 
 ## Tägliches Arbeiten mit Daten
 
