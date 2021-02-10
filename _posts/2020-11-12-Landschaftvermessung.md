@@ -59,24 +59,24 @@ Der Review-Prozess wurde im Januar 2021 abgeschlossen. Aufgrund dessen, dass sic
 
 ## Tägliches Arbeiten mit Daten
 
-Bei der täglichen, datenbezogenen Arbeit lässt sich eine große Bandbreite innerhalb des SPP erkennen (siehe Diagramm 1). Insbesondere Annotationen spielen im Rahmen der einzelnen Projekte eine zentrale Rolle. Die Erstellung (8) bzw. die automatische Generierung von Annotationen (7) wurden entsprechend häufig als datenbezogene Arbeiten genannt. Da die Mehrheit der Projekte zum Zeitpunkt der Befragung noch weitestgehend am Anfang ihrer Laufzeit stand, spielen entsprechend Tätigkeiten wie der Aufbau von Korpora (5), oder die Datenbereinigung (6) und -konvertierung (4) bei vielen Projekten noch eine zentrale Rolle.
+Bei der täglichen, datenbezogenen Arbeit lässt sich eine große Bandbreite innerhalb des SPP erkennen (siehe Diagramm 1). Insbesondere Annotationen spielen im Rahmen der einzelnen Projekte eine zentrale Rolle. Die Erstellung (8) bzw. die automatische Generierung von Annotationen (7) wurden entsprechend häufig als datenbezogene Arbeiten genannt. Da die Mehrheit der Projekte zum Zeitpunkt der Befragung noch weitestgehend am Anfang ihrer Laufzeit stand, spielen entsprechend Tätigkeiten wie die Datenbereinigung (8), der Aufbau von Korpora (7) und die Datenkonvertierung (5) bei vielen Projekten noch eine zentrale Rolle.
 
 ![Diagramm 1]({{site.baseurl}}/assets/img/2020-11-12-Landschaftvermessung/Diagramm1.png)
 *Diagramm 1: Tägliche, oder zumindest regelmäßige, datenbezogene Arbeiten innerhalb der einzelnen Projekte.*
 
 ### Nutzung von Tools und Programmier-/Skriptsprachen
 
-Zur Durchführung dieser datenbezogenen Arbeiten nutzen die einzelnen Projekte unterschiedliche Tools und Systeme. Für die Verwaltung der jeweiligen Projekte wurden Github und Gitlab (8) am Häufigsten genannt (siehe Diagramm 2). Mit den beiden Git-Systemen verwenden die meisten SPP-Projekte ein Tool, das sowohl das kollaborative Arbeiten als auch die Versionierung von Arbeit in den Vordergrund stellt.
+Zur Durchführung dieser datenbezogenen Arbeiten nutzen die einzelnen Projekte unterschiedliche Tools und Systeme. Für die Verwaltung der jeweiligen Projekte wurden Github und Gitlab (11) am Häufigsten genannt (siehe Diagramm 2). Mit den beiden Git-Systemen verwenden die meisten SPP-Projekte ein Tool, das sowohl das kollaborative Arbeiten als auch die Versionierung von Arbeit in den Vordergrund stellt.
 
 ![Diagramm 2]({{site.baseurl}}/assets/img/2020-11-12-Landschaftvermessung/Diagramm2.png)
 *Diagramm 2: Nutzung von Tools und Systemen zur Projektverwaltung.*
 
-Bei der Nutzung von Anwendungen zur Textproduktion werden innerhalb des SPP einige unterschiedliche, sowohl proprietäre als auch freie Tools und Systeme verwendet. Obwohl Annotationen eine zentrale Rolle in nahezu aller Projekte darstellen, haben mit Catma (4), TreeTagger (1), CorefAnnotator (1) und Sentiment Analyzer (1) lediglich sieben Projekte die Verwendung eines entsprechenden Tools angegeben:
+Bei der Nutzung von Anwendungen zur Textproduktion werden innerhalb des SPP einige unterschiedliche, sowohl proprietäre als auch freie Tools und Systeme verwendet (siehe Tabelle 1). Obwohl Annotationen eine zentrale Rolle in nahezu aller Projekte darstellen, haben mit Catma (5), TreeTagger (1), CorefAnnotator (1) und Sentiment Analyzer (1) lediglich acht Projekte die Verwendung eines entsprechenden Tools angegeben.
 
-- Office: 5 Projekte
-- Google Docs/Sheets: 4 Projekte 
-- LaTeX: 2 Projekte 
-- Sublime Text: 1 Projekt
+- Office: 7 Projekte
+- Google Docs/Sheets: 6 Projekte 
+- LaTeX: 3 Projekte 
+- Sublime Text: 3 Projekt
 - ShareLaTeX: 1 Projekt
 - FidusWriter: 1 Projekt
 
@@ -88,66 +88,67 @@ Im Bereich der Programmier- und Scriptsprachen lässt sich eine eindeutige Verte
 Wenngleich bei den genutzten Programmierumgebungen und Bibliotheken im Einzelnen eine große Heterogenität festzustellen ist, ist auch hier die flächendeckende Nutzung von Python, mindestens bei den Bibliotheken, erkennbar:
 
 **Bibliotheken:**
-- NLTK (Python): 3 Projekte
-- spacy (Python): 3 Projekte
-- scikit learn (Python): 2 Projekte
+- scikit learn (Python): 7 Projekte
+- spacy (Python): 6 Projekte
+- pandas (Python): 6 Projekte
+- numpy (Python): 6 Projekt
+- NLTK (Python): 5 Projekte
+- Matplotlib (Python): 4 Projekte
+- keras (Python): 3 Projekte
 - Gorbid (Python): 1 Projekt
-- pandas (Python): 1 Projekt
-- numpy (Python): 1 Projekt
 - NLP (R): 1 Projekt
-- keras (Python): 1 Projekt
 - Drama Analysis (R): 1 Projekt
-- Matplotlib (Python): 1 Projekt
-- Spark (Java): 1 Projekt
+- CoNLL-U: 1 Projekt
 
 **Programmierumgebungen:**
-- Jupyter Notebooks: 4 Projekte
+- Jupyter Notebooks: 5 Projekte
+- div. Editoren: 5 Projekte
+- oXygen: 2 Projekte
+- RStudio: 2 Projekte
 - Spyder IDE: 1 Projekt
 - Google Colab: 1 Projekt
 - Kaggle: 1 Projekt
 - Eclipse: 1 Projekt
-- div. Editoren: 1 Projekt
-- oXygen: 1 Projekt
-- RStudio: 1 Projekt
+
 
 ### Datentypen und -formate
 
-Text (10) und Softwarecode (9) wurden bei der Frage nach verwendeten Datentypen, entsprechend des gemeinsamen Fachbereichs, von allen Projekten angegeben (siehe Diagramm 4). Allerdings spielen auch numerische (6) und bibliographische Daten (4) eine wichtige Rolle, genauso wie Bilddaten (4), bspw. in Form von Scans.
+Text (10) und Softwarecode (9) wurden bei der Frage nach verwendeten Datentypen, entsprechend des gemeinsamen Fachbereichs, von allen Projekten angegeben (siehe Diagramm 4). Allerdings spielen auch numerische Daten (6) oder Bilddaten (5), bspw. in Form von Scans, eine wichtige Rolle, genauso wie bibliographische Daten (4).
 
 ![Diagramm 4]({{site.baseurl}}/assets/img/2020-11-12-Landschaftvermessung/Diagramm4.png)
 *Diagramm 4: Genutzte Datentypen innerhalb des SPP CLS.*
 
-Den etablierten Standards und der Tradition der Fachrichtung folgend nutzen alle Projekte XML (10) als ein zentrales Datenformat (siehe Diagramm 5). Darüber hinaus wurden aber auch viele weitere Formate genannt, unter anderem CSV (6), PDF (5), allgemein Wordformate (4) und PlainText Formate (4).
+Den etablierten Standards und der Tradition der Fachrichtung folgend nutzen alle Projekte XML (10) als ein zentrales Datenformat (siehe Diagramm 5). Darüber hinaus wurden aber auch viele weitere Formate genannt, unter anderem CSV (8), Plain Text Formate (8), PDF (5) und allgemeine Wordformate (4).
 
 ![Diagramm 5]({{site.baseurl}}/assets/img/2020-11-12-Landschaftvermessung/Diagramm5.png)
 *Diagramm 5: Genutzte Datenformate innerhalb des SPP CLS.*
 
 ### Angewendete, wissenschaftliche Methoden
 
-Bei der Verarbeitung der unterschiedlichen Datentypen und -formate stellen, insbesondere aus fachlicher Perspektive, die angewendeten wissenschaftlichen Methoden innerhalb der einzelnen Projekte einen zentralen Aspekt dar. Wenngleich diese stark von der individuellen Forschungsfrage abhängen, lassen sich dennoch einige Methoden, wie bspw. die Sentiment Analyse (6) und das Topic Modelling (4) identifizieren, die von mehreren Projekten angewendet werden: 
+Bei der Verarbeitung der unterschiedlichen Datentypen und -formate stellen, insbesondere aus fachlicher Perspektive, die angewendeten wissenschaftlichen Methoden innerhalb der einzelnen Projekte einen zentralen Aspekt dar. Wenngleich diese stark von der individuellen Forschungsfrage abhängen, lassen sich dennoch einige Methoden, wie bspw. die Word Embedding (7), Sentiment Analysen (6) und das Topic Modelling (5) identifizieren, die von mehreren Projekten angewendet werden (siehe Tabelle 3). 
 
+- Word Embeddings: 7 Projekte
+- ML/Classifierentwicklung: 7 Projekte
 - Sentimentanalyse: 6 Projekte
-- Topic Modeling: 4 Projekte
-- Word Embeddings: 4 Projekte
-- Qualitative Inhaltsanalyse: 4 Projekte
-- ML/Classifierentwicklung: 3 Projekte
-- Stilometrie: 3 Projekte
+- Qualitative Inhaltsanalyse: 6 Projekte
+- Analyse von annotierten Daten: 6 Projekte
+- Part-of-Speech-Tagging: 6 Projekte
+- Topic Modeling: 5 Projekte
+- Stilometrie: 5 Projekte
 - Netzwerkanalyse: 3 Projekte
-- Named Entity Recognition: 2 Projekte
+- Named Entity Recognition: 3 Projekte
+- Emotions Analyse: 3 Projekte
+- Koreferenzerkennung: 3 Projekte
 - Empirische Leserstudien: 2 Projekte
-- Metadatenanalyse: 1 Projekt
-- Emotions Analyse: 1 Projekt
-- Extraktion von Netzwerkinformationen: 1 Projekt
-- Evaluation von Distinktivitätsmaßen: 1 Projekt
-- Analyse von annotierten Daten: 1 Projekt
-- Koreferenzerkennung: 1 Projekt
+- Extraktion von Netzwerkinformationen: 2 Projekte
+- Evaluation von Distinktivitätsmaßen: 2 Projeke
+- Metadatenanalyse: 2 Projekte
+- Erzähltextanalse/Textinterpretation: 2 Projekte
+- Verfahren der Charakterbeschreibung: 2 Projekte
 - Zeitformerkennung: 1 Projekt
 - Anomaliedetektion: 1 Projekt
-- Erzähltextanalse/Textinterpretation: 1 Projekt
 - Text Reuse Detection: 1 Projekt
 - Citation Identification and Linking: 1 Projekt
-- Verfahren der Charakterbeschreibung: 1 Projekt
-- Part-of-Speech-Tagging: 1 Projekt
 - Hermeneutische Verfahren: 1 Projekt
 - Erstellung kleinerer Bibliographien: 1 Projekt
 - Entwicklung distributiver Semantik: 1 Projekt
