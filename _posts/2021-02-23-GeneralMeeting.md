@@ -5,8 +5,6 @@ modified: 02/23/2021, 9:00:24
 category: News
 ---
 
-***by Steffen Pielström***
-
 Das [DFG](www.dfg.de) Schwerpunktprogramm (SPP) 2207 *Computational Literary Studies* lädt am
 
 **16.-18. März 2021**
