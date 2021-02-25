@@ -37,9 +37,9 @@ One of the central project's focuses is to support and consult all researchers i
 The central project is organizing central events, networking opportunities inter-project communication; including general meetings, working groups, workshops and *colloquia* for PhD candidates. It is also responsible for the external communication of results and developments from within the programme into the wider community, and for including external researchers into the activities of the programme. Finally, the implementation of measures and policies to support early career researchers and to promote gender equality are integral parts of the central project's responsibilities.  
 
 ### Team
-### Coordination
-Dr. Steffen Pielström\
-### RDM
+**Coordination**
+Dr. Steffen Pielström
+**Research Data Management**
 Dr. Kerstin Jung
 Patrick Helling M.A.
 
