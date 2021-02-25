@@ -38,10 +38,10 @@ The central project is organizing central events, networking opportunities inter
 
 ### Team
 **Coordination**
-Dr. Steffen Pielström
+- Dr. Steffen Pielström
 **Research Data Management**
-Dr. Kerstin Jung
-Patrick Helling M.A.
+- Dr. Kerstin Jung
+- Patrick Helling M.A.
 
 ### Contact
 
