@@ -5,7 +5,7 @@ modified: 02/23/2021, 9:00:24
 category: News
 ---
 
-Das [DFG](www.dfg.de) Schwerpunktprogramm (SPP) 2207 *Computational Literary Studies* lädt am
+Das [DFG](https://www.dfg.de/) Schwerpunktprogramm (SPP) 2207 *Computational Literary Studies* lädt am
 
 **16.-18. März 2021**
 
@@ -36,9 +36,9 @@ Neben verschiedenen Vorträgen, Diskussionsrunden und offenen Arbeitsgruppen  or
 Anmeldungen erfolgen per Email an pielstroem@biozentrum.uni-wuerzburg.de. Ein [Zoom-Link](https://zoom.us/de-de/meetings.html) wird am Tag vor der Veranstaltung per Email zugeschickt.
 
 ## Beiträge für die Postersession
-Posterbeiträge müssen bis spätestens Sonntag **14. März** eingereicht werden. Die Postersessions werden auf der Plattform [gather.town](gather.town) stattfinden. Als Dateiformate sind **.png** und **.jpg** möglich; die Abmessungen sollten **mindestens 1000x600px** oder 26,46x15,88cm betragen. Die Datei darf **höchstens 3MB** groß sein und **keinen transparenten Hintergrund** haben.
+Posterbeiträge müssen bis spätestens Sonntag **14. März** eingereicht werden. Die Postersessions werden auf der Plattform [gather.town](https://gather.town/) stattfinden. Als Dateiformate sind **.png** und **.jpg** möglich; die Abmessungen sollten **mindestens 1000x600px** oder 26,46x15,88cm betragen. Die Datei darf **höchstens 3MB** groß sein und **keinen transparenten Hintergrund** haben.
 
-Die Posterbeiträge werden auf [Zenodo](www.zenodo.org) unter [Open-Access-Lizenz](https://creativecommons.org/licenses/by/4.0/legalcode.de) publiziert. hierfür bitten wir darum, mit der Einreichung folgende Metadaten anzugeben:
+Die Posterbeiträge werden auf [Zenodo](https://zenodo.org/) unter [Open-Access-Lizenz](https://creativecommons.org/licenses/by/4.0/legalcode.de) publiziert. hierfür bitten wir darum, mit der Einreichung folgende Metadaten anzugeben:
 - Titel
 - Autoren (mit ORCID, sofern möglich)
 - eine kurze Beschreibung
