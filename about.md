@@ -29,13 +29,25 @@ Currently, the programme is comprised of 10 funded projects and one associated p
 
 [Prof. Dr. Simone Winko](https://www.uni-goettingen.de/de/11871.html), Georg-August-Universität Göttingen, Professorin, Literaturwissenschaft
 
-## Contact
+## The central project
+The purpose of the central project is to actively support all research projects in the priority programme, to foster exchange and collaboration and to organize common activities.
 
-Programme coordination is currently done by the [University of Würzburg's Department of Literary Computing](https://www.germanistik.uni-wuerzburg.de/lehrstuehle/computerphilologie/startseite/)
+One of the central project's focuses is to support and consult all researchers in the programme in questions related to research data management (RDM). Here, the aim is to identify all the heterogeneous requirements of the individual projects and the potential synergies regarding the data and the methods used, to develop common strategies and best practices that may be of interest for the entire field of *Computational Literary Studies*. For that purpose, the central project is performing programme-wide surveys to thoroughly describe a "landscape of requirements" in the research field. Furthermore, technological and infrastructural developments are constantly monitored to inform the researchers about new possibilities or to offer innovative infrastructural components.
 
+The central project is organizing central events, networking opportunities inter-project communication; including general meetings, working groups, workshops and *colloquia* for PhD candidates. It is also responsible for the external communication of results and developments from within the programme into the wider community, and for including external researchers into the activities of the programme. Finally, the implementation of measures and policies to support early career researchers and to promote gender equality are integral parts of the central project's responsibilities.  
+
+### Team
+### Coordination
 Dr. Steffen Pielström\
-Lehrstuhl für Comuterphilologie\
-und neuere deutsche Literaturgeschichte\
+### RDM
+Dr. Kerstin Jung
+Patrick Helling M.A.
+
+### Contact
+
+spp-cls-coordination@clariah.de
+
+Lehrstuhl für Comuterphilologie und neuere deutsche Literaturgeschichte\
 Am Hubland\
 97074 Würzburg\
 Germany
