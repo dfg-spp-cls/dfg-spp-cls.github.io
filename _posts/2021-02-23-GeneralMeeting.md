@@ -15,20 +15,20 @@ Neben verschiedenen Vorträgen, Diskussionsrunden und offenen Arbeitsgruppen  or
 
 ## Programm
 **Dienstag, 16. März**
-- 13:00 - 14:00 Berichte aus den Projekten Teil 1
-- 15:00 - 17:00 Berichte aus den Projekten Teil 2
+- 13:00 - 14:20 Berichte aus den Projekten Teil 1
+- 14:30 - 16:50 Berichte aus den Projekten Teil 2
 - 17:00 - 18:00 Offenes Treffen der AG "Drama"
 
 **Mittwoch, 17. März**
-- 13:00 - 14:00 Vortrag "Interdisziplinär erfolgreich forschen: Hürden kennen, Herausforderungen meistern" (Isabel Suditsch) mit anschließender Diskussionsrunde
+- 13:00 - 13:50 Vortrag "Interdisziplinär erfolgreich forschen: Hürden kennen, Herausforderungen meistern" (Isabel Suditsch) mit anschließender Diskussionsrunde
 - 14:00 - 15:00 virtuelle Postersession
-- 15:00 - 17:00 Diskussionsrunde: Urheberrecht in den CLS 
+- 15:00 - 16:50 Diskussionsrunde: Urheberrecht in den CLS 
 - 17:00 - 18:00 Offenes Treffen der AG "Sentimentanalyse"
 
 **Donnerstag, 18. März**
-- 13:00 - 14:00 Diskussionsrunde "Wordembeddings, Machine Learning und Domänenadaptation"
-- 14:00 - 15:00 virtuelle Postersession
-- 15:00 - 16:00 Diskussionsrunde "Textähnlichkeiten"
+- 13:00 - 13:50 Diskussionsrunde "Wordembeddings, Machine Learning und Domänenadaptation"
+- 14:00 - 14:50 virtuelle Postersession
+- 15:00 - 15:50 Diskussionsrunde "Textähnlichkeiten"
 - 16:00 - 18:00 Offenes Treffen der AG "Annotationen"
 - 18:00 Allgemeine Verabschiedung
 
