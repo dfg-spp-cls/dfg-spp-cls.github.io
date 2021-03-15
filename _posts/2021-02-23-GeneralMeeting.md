@@ -15,8 +15,8 @@ Neben verschiedenen Vorträgen, Diskussionsrunden und offenen Arbeitsgruppen  or
 
 ## Programm
 **Dienstag, 16. März**
-- 13:00 - 14:20 Berichte aus den Projekten Teil 1
-- 14:30 - 16:50 Berichte aus den Projekten Teil 2
+- 13:00 - 14:50 Berichte aus den Projekten Teil 1
+- 15:00 - 16:50 Berichte aus den Projekten Teil 2
 - 17:00 - 18:00 Offenes Treffen der AG "Drama"
 
 **Mittwoch, 17. März**
