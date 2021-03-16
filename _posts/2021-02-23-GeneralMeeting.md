@@ -30,7 +30,8 @@ Neben verschiedenen Vorträgen, Diskussionsrunden und offenen Arbeitsgruppen  or
 - 14:00 - 14:50 virtuelle Postersession
 - 15:00 - 15:50 Diskussionsrunde "Textähnlichkeiten"
 - 16:00 - 18:00 Offenes Treffen der AG "Annotationen"
-- 18:00 Allgemeine Verabschiedung
+- 18:00 - 18:30 EU-Projekt "Computational Litarary Studies Infrastructure"
+- 18:30 Allegemeine Verabschiedung
 
 ## Anmeldung
 Anmeldungen erfolgen per Email an pielstroem@biozentrum.uni-wuerzburg.de. Ein [Zoom-Link](https://zoom.us/de-de/meetings.html) wird am Tag vor der Veranstaltung per Email zugeschickt.
