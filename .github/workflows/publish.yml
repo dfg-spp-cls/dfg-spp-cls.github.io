@@ -7,20 +7,21 @@ jobs:
   jekyll:
     runs-on: ubuntu-16.04
     steps:
-      - uses: actions/checkout@v2
-      - name: Build the site in the jekyll/builder container
-        run: |
-          docker run \
-          -v ${{ github.workspace }}:/srv/jekyll -v ${{ github.workspace }}/_site:/srv/jekyll/_site \
-          jekyll/builder:latest /bin/bash -c "chmod 777 /srv/jekyll && jekyll build --future"
-      - name: Push the site to the gh-pages branch
-        run: |
-          sudo chown $( whoami ):$( whoami ) ${{ github.workspace }}/_site
-          cd ${{ github.workspace }}/_site
-          git init -b gh-pages
-          git config user.name ${{ github.actor }}
-          git config user.email ${{ github.actor }}@users.noreply.github.com
-          git remote add origin https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git
-          git add .
-          git commit -m "Deploy site built from commit ${{ github.sha }}"
-          git push -f -u origin gh-pages
+    - uses: actions/checkout@v2
+
+    # Use GitHub Actions' cache to shorten build times and decrease load on servers
+    - uses: actions/cache@v1
+      with:
+        path: vendor/bundle
+        key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
+        restore-keys: |
+          ${{ runner.os }}-gems-
+    # Standard usage
+    - uses:  helaili/jekyll-action@2.0.3
+      env:
+        JEKYLL_PAT: ${{ secrets.JEKYLL_PAT }}
+
+    # Specify the Jekyll source location as a parameter
+    - uses: helaili/jekyll-action@2.0.3
+      env:
+        JEKYLL_PAT: ${{ secrets.JEKYLL_PAT }}
