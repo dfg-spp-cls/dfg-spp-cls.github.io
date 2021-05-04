@@ -1,5 +1,5 @@
 ---
-title: Forschungsdatenmanagement im Schwerpunktprogramm Computational Literary Studies (in German)
+title: Forschungsdatenmanagement im Schwerpunktprogramm Computational Literary Studies
 excerpt: "Eine Kernaufgabe des Zentralprojekts im DFG Schwerpunktprogramm „Computational Literary Studies“ (SPP CLS) ist die Entwicklung von passgenauen Lösungsstrategien für das Management digitaler Forschungsdaten..."
 lang: de
 ---
