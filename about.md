@@ -46,7 +46,7 @@ The central project is organizing central events, networking opportunities inter
 
 ### Contact
 
-spp-cls-coordination@clariah.de
+cls-fdm-coordination@clariah.de
 
 Lehrstuhl für Comuterphilologie und neuere deutsche Literaturgeschichte\
 Am Hubland\
