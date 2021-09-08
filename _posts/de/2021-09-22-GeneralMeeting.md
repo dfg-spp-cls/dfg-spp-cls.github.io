@@ -26,7 +26,7 @@ erneut zu einem virtuellen General Meeting. Neben Beiträgen zu aktuellen Entwic
 - 1830 - 1930 Diskussion Urheberrecht (Melanie Andresen / Axel Pichler / Christof Schöch) 
 
 **Mittwoch, 22. September**
-- 1015 - 1145 Aktuelle Entwicklungen: Community und Inrastruktur
+- 1015 - 1145 Aktuelle Entwicklungen: Community und Infrastruktur
   - NFDI4Text+
   - CLSInfra
   - CLS Journal
