@@ -8,7 +8,7 @@ Da die Pandiemiesituation ein phyisches Treffen weiterhin schwierig macht, triff
 
 **21.-22. September 2021**
 
-erneut zu einem virtuellen General Meeting. Neben Beiträgen zu aktuelle Entwicklungen in den SPP-geförderten Projekten werden auch allgemeine Themen aus dem Forschungsfeld sowie wichtige Entwicklungen in der Community und ihrer Infrastruktur auf der Tagesordnung stehen. Interessierte außerhalb der SPP-geförderten Projekte sind herzlich zur Teilnahme eingeladen.
+erneut zu einem virtuellen General Meeting. Neben Beiträgen zu aktuellen Entwicklungen in den SPP-geförderten Projekten werden auch allgemeine Themen aus dem Forschungsfeld sowie wichtige Entwicklungen in der Community und ihrer Infrastruktur auf der Tagesordnung stehen. Interessierte außerhalb der SPP-geförderten Projekte sind herzlich zur Teilnahme eingeladen.
 
 ## Programm
 **Dienstag, 21. September**
