@@ -5,19 +5,21 @@ on:
 
 jobs:
   jekyll:
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-18.04 # ubuntu-latest is now 20.04 and doesn't seem to work
     steps:
     - uses: actions/checkout@v2
 
     # Use GitHub Actions' cache to shorten build times and decrease load on servers
-    - uses: actions/cache@v1
+    - uses: actions/cache@v2
       with:
         path: vendor/bundle
         key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
         restore-keys: |
           ${{ runner.os }}-gems-
     # Standard usage
-    - uses:  helaili/jekyll-action@2.0.1
+    - uses:  helaili/jekyll-action@2.0.5
+      with:
+          target_branch: 'gh-pages'
       env:
         JEKYLL_PAT: ${{ secrets.JEKYLL_PAT }}
 
@@ -25,3 +27,4 @@ jobs:
     - uses: helaili/jekyll-action@2.0.1
       env:
         JEKYLL_PAT: ${{ secrets.JEKYLL_PAT }}
+        JEKYLL_ENV: production
