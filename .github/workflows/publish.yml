@@ -20,10 +20,10 @@ jobs:
     # Standard usage
     - uses:  helaili/jekyll-action@v2
       with:
-          JEKYLL_PAT: ${{ secrets.JEKYLL_PAT }}
+          repo-token:: ${{ secrets.JEKYLL_PAT }}
           
     # Specify the Jekyll source location as a parameter
     - uses: helaili/jekyll-action@v2
       with:
-          JEKYLL_PAT: ${{ secrets.JEKYLL_PAT }}
+          repo-token:: ${{ secrets.JEKYLL_PAT }}
           jekyll_src: 'sample_site'
