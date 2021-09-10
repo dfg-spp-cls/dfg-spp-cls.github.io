@@ -16,6 +16,7 @@ jobs:
         key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
         restore-keys: |
           ${{ runner.os }}-gems-
+          
     # Standard usage
     - uses:  helaili/jekyll-action@v2
       with:
@@ -26,9 +27,3 @@ jobs:
       with:
           JEKYLL_PAT: ${{ secrets.JEKYLL_PAT }}
           jekyll_src: 'sample_site'
-
-    # Specify the target branch (optional)
-    - uses: helaili/jekyll-action@v2
-      with:
-        JEKYLL_PAT: ${{ secrets.JEKYLL_PAT }}
-        target_branch: 'gh-pages'
