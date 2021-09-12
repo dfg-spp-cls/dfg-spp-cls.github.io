@@ -4,7 +4,7 @@ excerpt: "Genereal Meeting am 21.-22. September 2021"
 lang: de
 ---
 
-Da die Pandiemiesituation ein phyisches Treffen weiterhin schwierig macht, trifft sich das [DFG](https://www.dfg.de/) Schwerpunktprogramm (SPP) 2207 *Computational Literary Studies* am
+Da die Pandiemiesituation ein phyisches Jahrestreffen weiterhin schwierig macht, trifft sich das [DFG](https://www.dfg.de/) Schwerpunktprogramm (SPP) 2207 *Computational Literary Studies* am
 
 **21.-22. September 2021**
 

@@ -1,5 +1,5 @@
 # Created by .ignore support plugin (hsz.mobi)
 .jekyll-cache
+.gitignore
 _site
-Gemfile.lock
 
