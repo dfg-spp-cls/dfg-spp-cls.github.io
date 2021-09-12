@@ -16,14 +16,14 @@ jobs:
         key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
         restore-keys: |
           ${{ runner.os }}-gems-
-          
+
     # Standard usage
     - uses:  helaili/jekyll-action@v2
       with:
-          token:: ${{ secrets.JEKYLL_PAT }}
+          token:: ${{ secrets.CLS }}
           
     # Specify the Jekyll source location as a parameter
     - uses: helaili/jekyll-action@v2
       with:
-          token:: ${{ secrets.JEKYLL_PAT }}
+          token:: ${{ secrets.CLS }}
           jekyll_src: 'sample_site'
