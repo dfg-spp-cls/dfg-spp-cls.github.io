@@ -1,5 +1,5 @@
 ---
-title: Virtuelles Jahrestreffen des SPP Computational Literary Studies
+title: Virtuelles Treffen des SPP Computational Literary Studies
 excerpt: "Genereal Meeting on 21.-22. September, 2021"
 lang: en
 ---
