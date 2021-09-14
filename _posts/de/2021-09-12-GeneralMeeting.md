@@ -22,8 +22,6 @@ erneut zu einem virtuellen General Meeting. Neben Beiträgen zu aktuellen Entwic
   - 1630 - 1715 Emotions in Drama / CHYLSA
   - 1715 - 1730 Pause
   - 1730 - 1815 Moderne Lyrik / Anomaliebasierte Stilanalyse
-  - 1815 - 1830 Pause
-- 1830 - 1930 Diskussion Urheberrecht (Melanie Andresen / Axel Pichler / Christof Schöch) 
 
 **Mittwoch, 22. September**
 - 1015 - 1145 Aktuelle Entwicklungen: Community und Infrastruktur
@@ -34,7 +32,7 @@ erneut zu einem virtuellen General Meeting. Neben Beiträgen zu aktuellen Entwic
 - 1315 - 1900 Arbeitsgruppen
   - 1315 - 1415 Wordembeddings (Leonard Konle)
   - 1415 - 1430 Pause
-  - 1430 - 1530 Drama (Katrin Dennerlein)
+  - 1430 - 1530 Diskussion Urheberrecht (Melanie Andresen / Axel Pichler / Christof Schöch) 
   - 1530 - 1600 Pause
   - 1600 - 1700 Textähnlichkeiten (Fotis Jannidis)
   - 1700 - 1715 Pause
