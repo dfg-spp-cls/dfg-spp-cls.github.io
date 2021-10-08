@@ -23,7 +23,7 @@ Currently, the programme is comprised of 10 funded projects and one associated p
 
 [Prof. Dr. Jonas Kuhn](http://www.ims.uni-stuttgart.de/institut/mitarbeiter/jonas/), Universität Stuttgart, Professor, Informatik/Computerlinguistik
 
-[Dr. Nils Reiter](http://www.nilsreiter.de), Universität zu Köln, Vertretungsprofessur, Computerlinguistik/Digital Humanities
+[Prof. Dr. Nils Reiter](http://www.nilsreiter.de), Universität zu Köln, Professor, Computerlinguistik/Digital Humanities
 
 [Prof. Dr. Christof Schöch](https://christof-schoech.de), Universität Trier, Professor, Digital Humanities
 
