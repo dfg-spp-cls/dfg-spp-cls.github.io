@@ -12,7 +12,7 @@ titles:
   # @end locale config
 key: page-about
 ---
-Computational Literary Studies is an emerging interdisciplinary research field at the intersection of literary studies computer science aiming to apply computational methods to digitized literary texts to learn more literary history, narratology or literary writing style. In the priority programme SPP 2207 'Computational Literary Studies', starting in 2020, the [German Research Foundation (DFG)](https://www.dfg.de/) funds innovative projects from this research field.  
+Computational Literary Studies is an emerging interdisciplinary research field at the intersection of literary studies computer and science aiming to apply computational methods to digitized literary texts to learn more literary history, narratology or literary writing style. In the priority programme SPP 2207 'Computational Literary Studies', starting in 2020, the [German Research Foundation (DFG)](https://www.dfg.de/) funds innovative projects from this research field.  
 Currently, the programme is comprised of 10 funded projects and one associated project, including researchers from 12 different research institutions in Germany and Switzerland.
 
 ## The program committee
