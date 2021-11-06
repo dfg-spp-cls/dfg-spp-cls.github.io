@@ -1,10 +1,10 @@
 ---
+layout: article
 title: Emotions in Drama
 excerpt: "Christian Wolff & Katrin Dennerlein"
 lang: de
-permalink: /blog/TP-Emotions_in_Drama/
 redirect_to:
-- /projects_en/2020/01/24/TP-Emotions_in_Drama/
+- https://dfg-spp-cls.github.io/projects_en/2020/01/24/TP-Emotions_in_Drama/
 ---
 ***Christian Wolff & Katrin Dennerlein***
 
