@@ -2,17 +2,16 @@
 layout: article
 title: Emotions in Drama
 excerpt: "Christian Wolff & Katrin Dennerlein"
-lang: de
 redirect_to:
 - https://dfg-spp-cls.github.io/projects_en/2020/01/24/TP-Emotions_in_Drama/
 ---
 ***Christian Wolff & Katrin Dennerlein***
 
-Obwohl die Darstellung und Evokation von Emotionen in Dramen und Dramenpoetiken seit Aristoteles grundlegend zur Dramengeschichte gehören, sind sie bisher in der quantitativen Dramenanalyse nicht berücksichtigt worden. Aus diesem Grund widmet sich das vorliegende Projekt der Extraktion, Analyse und Bewertung von Figurenemotionen. Da Emotionen und ihre Darstellung stark von kulturellen und historischen Faktoren abhängig sind, wird dies für ein spezifisches Korpus versucht: das deutschsprachige Drama in derjenigen Phase, die mit  Ende des Dreißigjährigen Krieges beginnt und bis zum Anfang der Restaurationsepoche geht. Dieser Zeitraum bietet sich deshalb an, weil hier das deutschsprachige Drama etabliert wird und weil der ‚Affekt‘ im Sinne eines vorübergehenden emotionalen Zustandes zum Zentralbegriff wird. Für eine bessere Erforschung der Emotionen wurde das Dramenkorpus von Textgrid um 25 Libretti von Opern der Hamburger Gänsemarktoper aus der Zeit von 1678-1730, 20 Libretti aus der Zeit um 1800 und 20 Wanderbühnenstücke erweitert. Durch diese Ergänzung können nun auch Musiktheatertexte, die vom Beginn des Untersuchungszeitraumes an unabhängig von ihrer Vertonung als die wichtigste Gattung bei der Gestaltung von Emotionen verstanden werden, untersucht werden. 
-Im Projekt sollen bestehende Modelle für die Emotionsanalyse in Dramen auf ihre Verwendbarkeit für die digitale Dramenanalyse hin ausgewertet werden. Dazu sollen diejenigen sprachlichen und rhetorischen Elemente identifiziert werden, die sich computergestützt extrahieren lassen. Die Extraktion soll sowohl für ganze Texte probiert als auch getrennt für diejenigen Elemente versucht werden, in denen Emotionen besonders häufig vorkommen: Bühnenanweisungen, Monologe, Arientexte und Dramenausgänge. Menschliche Annotatoren werden dann getrennt nach Subkorpora für einzelne Dramengenres auszeichnen, welche Emotionen jeweils gemeint sind und wie diese bewertet werden. Dieses Material soll dann dazu eingesetzt werden, einen Algorithmus für die Sentiment Analysis zu trainieren. Die Verbesserung der Sentiment Analysis für die Anwendung auf fiktionale historische Texte ist ein wesentliches Ziel des Projekts, das in einem methodisch genau reflektierten Verfahren verfolgt wird. Dieses Verfahren wurde bereits von den Projektpartnern getestet und mit dem Dariah-DE DH-Award ausgezeichnet.
-Als Ergebnis für die Literaturwissenschaft sollte es dann möglich sein, Pathos-Strategien zu identifizieren. Dabei handelt es sich um diejenigen Textstellen, in denen besonders starke Emotionen dargestellt werden. Ein besonderer Gewinn wäre die automatische Erkennung der gemeinten Emotionen, aber in jedem Fall wird die Frage beantwortbar sein, ob die dargestellten Emotionen positiv oder negativ bewertet werden. Ein anderer Anwendungsfall soll die Revision der Geschichte der komischen Figur und ihrer Verbindung zur Emotion der (Schaden-)Freude sein.
+Although the depiction and evocation of emotions are at the heart of dramatic production and poetological reflection since Aristotle quantitative drama analysis has neglected them so far. This is why the project aims at extracting emotions of characters and analyzing their appraisal with sentiment analysis. As emotions are highly depended on cultural and historical circumstances we chose to look at the historical phase starting from the  end of Thirty Years’ War up to restoration period in the 19th century during which German drama was established. This is a story of developing various subgenres which vary with respect to their thematization and presentation of emotions, mostly termed ‘Affekte’ in that period. The project relies on a corpus of German drama which is significantly enlarged compared to the available one for that period, the Textgrid corpus. It now comprises another 25 libretti of the Hamburger Gänsemarktoper from the period between 1678 and 1730, another 20 libretti from around 1800 as well as 20 texts from the strolling players. This enables us to research the most important dramatic (sub-)genre for the development of affect expression, the libretti of musical theatre, in its influences on spoken theatre.
+In a first step models for the analysis of emotion in dramatic texts shall be evaluated with regard to their use for digital analysis. Retrievable linguistic as well as rhetorical means are specified and extracted for whole texts as well as for elements of dramatic texts specifically dedicated to the depiction of affects: stage directions, soliloquies, arias and endings of drama. Human annotators will specify for genre-specific subcorpora which emotions are mentioned (for example happiness, love, sorrow, envy). They will also annotate if these emotions are evaluated positively or negatively. In a next step algorithms of sentiment analysis shall be trained on this material. It is an important goal of the project to approve the method of sentiment analysis for its use on historical, especially fictional, corpora.
+Having done all this work we should be able to identify pathos-strategies, id est passages of texts with a high arousal of emotions and to give first hints as to which emotions are thematized with which appraisal. Another objective is the revision of the history of the comic character and its relation to the emotion of happiness.
 
-<h2>Kontakt:</h2>
+<h2>Contact:</h2>
 <ul>
   <li>Christian Wolff:</li>
   <ul>
@@ -32,8 +31,8 @@ Als Ergebnis für die Literaturwissenschaft sollte es dann möglich sein, Pathos
       <li><a href="https://www.uni-regensburg.de/sprache-literatur-kultur/medieninformatik/sekretariat-team/thomas-schmidt/index.html">Webseite</a></li>
     </ul>
   </ul>
-
-<h2>Aufgaben/Projekt Plan - Übersicht</h2>
+  
+<h2>Tasks/Project Plan - Overview</h2>
 <ul>
   <li>Development of emotion annotation schemes</li>
   <li>Annotation of plays of different epochs with emotion and source/target information</li>
@@ -43,29 +42,29 @@ Als Ergebnis für die Literaturwissenschaft sollte es dann möglich sein, Pathos
   <li>Exploration and evaluation of prediction results</li>
 </ul>
 
-<h2>Organisatorische Aufgaben im übergeordneten Programm Computational Literary Studies</h2>
+<h2>Organizational tasks in the  priority programme Computational Literary Studies</h2>
   <ul>
     <li>Head of organization: Working Group Sentiment Analysis</li>
     <li>Head of organization: Working Group Drama</li>
   </ul>
-
-<h2>Publikationen:</h2>
+  
+<h2>Publications:</h2>
   You can find regular updates about our publications in our <a href="https://www.researchgate.net/project/Emotions-in-Drama">Research Gate group</a>.
   <ul>
-
+  
   <li>Schmidt, T., Dennerlein, K. & Wolff, C. (2022, submitted). Evaluation computergestützter Verfahren der Emotionsklassifikation für deutschsprachige Dramen um 1800. In <em>8. Jahrestagung des Verbands Digital Humanities im deutschsprachigen Raum (DHd 2022)</em>.</li>
-
+  
   <li>Dennerlein, K., Schmidt, T. & Wolff, C. (2022, submitted). Emotionen im kulturellen Gedächtnis bewahren. In <em>8. Jahrestagung des Verbands Digital Humanities im deutschsprachigen Raum (DHd 2022)</em>.</li>
-
+  
   <li>Schmidt, T., Dennerlein, K. & Wolff, C. (2021, accepted). Emotion Classification in German Plays with Transformer-based Language Models Pretrained on Historical and Contemporary Language. In <em>Proceedings of the Fifth Joint SIGHUM Workshop on Computational Linguistics for Cultural Heritage, Social Sciences, Humanities and Literature.</em></li>
-
+  
   <li>Schmidt, T., Dennerlein, K. & Wolff, C. (2021, submitted). Using Deep Neural Networks for Emotion Analysis of 18th and 19th century German Plays. In <em>Fabrikation von Erkenntnis: Experimente in den Digital Humanities (vDHd Sonderband)</em>. Melusina Press. <a href="https://doi.org/10.26298/melusina.8f8w-y749-udlf">DOI:10.26298/melusina.8f8w-y749-udlf</a> <a href="https://doi.org/10.26298/melusina.8f8w-y749">[online]</a></li>
-
+  
   <li>Schmidt, T., Dennerlein, K. & Wolff, C. (2021). Towards a Corpus of Historical German Plays with Emotion Annotations. In <em>LDK 2021 – 3rd Conference on Language, Data and Knowledge (LDK 2021)</em>. Zaragoza, Spain.<a href="https://doi.org/10.4230/OASIcs.LDK.2021.9">DOI:10.4230/OASIcs.LDK.2021.9</a> <a href="https://drops.dagstuhl.de/opus/volltexte/2021/14545/pdf/OASIcs-LDK-2021-9.pdf">[pdf]</a><a href="https://youtu.be/A5fVGfgd86E">[video]</a></li> 
-
+  
   </ul>
 
-<h2>Weiterführende Informationen:</h2>
+<h2>Further Material:</h2>
 
 <ul>
   <li>Keynote at the workshop "Sentiment Analysis in Literary Studies" at the University of Graz in February 2021.</li>
@@ -80,5 +79,5 @@ Als Ergebnis für die Literaturwissenschaft sollte es dann möglich sein, Pathos
       <li><a href="https://fdhl.info/wp-content/uploads/2020/12/Poster_DINA4.pdf">Poster (in German)</a></li>
       <li><a href="https://youtu.be/9DdybUzN92E">Video for the Poster Slam (in German)</a></li>
   </ul>
-
+  
  </ul>
