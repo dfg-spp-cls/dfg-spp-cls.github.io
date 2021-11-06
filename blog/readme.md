@@ -1,1 +1,0 @@
-This is a workaround to conserve the old link to the "Emotions in Drama" project site.
