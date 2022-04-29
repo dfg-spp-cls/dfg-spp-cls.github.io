@@ -38,6 +38,6 @@ The DFG Priority Programme *Computational Literary Studies* will hold a **public
 
 - Thomas Weitin, Ulrik Brandes: Relating the Unread. Network Models in Literary History
 
-## Anmeldung
+## Registration
 
 If you want to join us, please register per Email to **SPP2207(at)uni-wuerzburg.de**.
