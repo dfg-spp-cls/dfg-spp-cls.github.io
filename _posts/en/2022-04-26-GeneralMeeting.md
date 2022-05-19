@@ -12,7 +12,7 @@ The DFG Priority Programme *Computational Literary Studies* will hold a **public
 
 - Christof Schöch: Zeta and Company. Measures of Distinctiveness for Computational Literary Studies
 
-- Robert Jäschke, Steffen Martus: What matters? Key passages in literary works
+- Katrin Dennerlein, Christian Wolff: Emotions in Drama
 
 - Anke Holler, Caroline Sporleder, Benjamin Gittel: Structuring Literature: Variants and Functions of Reflective Passages in Narrative Fiction
 
@@ -20,9 +20,9 @@ The DFG Priority Programme *Computational Literary Studies* will hold a **public
 
 - Nils Reiter: Quantitative Drama Analytics: Tracking Character Knowledge (Q:TRACK)
 
-- Christian Biemann, Evelyn Gius: Evaluating Events in Narrative Theory (EvENT)
+- Robert Jäschke, Steffen Martus: What matters? Key passages in literary works
 
-- Katrin Dennerlein, Christian Wolff: Emotions in Drama
+- Christian Biemann, Evelyn Gius: Evaluating Events in Narrative Theory (EvENT)
 
 ### 16:00 - 17:00 Session 3
 
