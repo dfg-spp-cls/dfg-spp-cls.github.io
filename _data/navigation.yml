@@ -42,7 +42,7 @@ header:
         de   : &DE       Achievements
         de-DE: *DE
         # @end locale config
-    url: /achievements.html
+        url: /achievements.html
   - titles:
       # @start locale config
       en      : &EN       About
