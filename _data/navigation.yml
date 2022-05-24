@@ -33,6 +33,17 @@ header:
 #      # @end locale config
 #    url: /archive.html
   - titles:
+        # @start locale config
+        en   : &EN       Achievements
+        en-GB: *EN
+        en-US: *EN
+        en-CA: *EN
+        en-AU: *EN
+        de   : &DE       Achievements
+        de-DE: *DE
+        # @end locale config
+        url: /achievements.html
+  - titles:
       # @start locale config
       en      : &EN       About
       en-GB   : *EN
