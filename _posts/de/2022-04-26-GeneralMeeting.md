@@ -14,7 +14,7 @@ Das DFG Schwerpunkprogramm *Computational Literary Studies* veranstaltet am **31
 
 - Robert Jäschke, Steffen Martus: What matters? Key passages in literary works
 
-- Anke Holler, Caroline Sporleder, Benjamin Gittel: Structuring Literature: Variants and Functions of Reflective Passages in Narrative Fiction
+- Fotis Jannidis, Simone Winko: The beginnings of modern poetry - Modeling literary history with text similarities
 
 ### 14:30 - 15:30 Session 2
 
@@ -28,7 +28,7 @@ Das DFG Schwerpunkprogramm *Computational Literary Studies* veranstaltet am **31
 
 - Arthur M. Jacobs, Gerhard Lauer, Berenike Herrmann, Jana Lüdtke: Advanced sentiment analysis for understanding affective-aesthetic responses to literary texts: A computational and experimental psychology approach to children’s literature
 
-- Fotis Jannidis, Simone Winko: The beginnings of modern poetry - Modeling literary history with text similarities
+- Anke Holler, Caroline Sporleder, Benjamin Gittel: Structuring Literature: Variants and Functions of Reflective Passages in Narrative Fiction
 
 - Joachim Denzler, Sophie Marshall: Anomaly-based large-scale analysis of style and genre reflected in the use of stylistic devices in medieval literature 
 
