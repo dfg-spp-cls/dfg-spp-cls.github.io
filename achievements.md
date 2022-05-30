@@ -106,4 +106,26 @@ Several of the achievements listed here have been published in a community of th
 *  Vauth, Michael, and Evelyn Gius. 2021. ‘Richtlinien Für Die Annotation Narratologischer Ereigniskonzepte’. Annotation Guidelines. https://doi.org/10.5281/zenodo.5078175.
 
 
+## Tools and platforms
+
+*  Arnold, Frederik. 2022. Quid. https://doi.org/10.5281/zenodo.6123228.
+*  Arnold, Frederik. n.d. QuidEx-Wh. Accessed 29 April 2022. https://hu.berlin/quidex-wh.
+*  Du, Keli, Julia Dudar, and Christof Schöch. 2021. Pydistinto - a Python Implementation of Different Measures of Distinctiveness for Contrastive Text Analysis. https://doi.org/10.5281/zenodo.5094345.
+*  End-to-End Coreference For German. n.d. https://github.com/uhh-lt/neural-coref.
+*  ‘Narrativity Graphs’. n.d. Demo. https://narrativity.ltdemos.informatik.uni-hamburg.de/.
+*  Ocr2struc. n.d. https://github.com/LeKonArD/ocr2struc.
+*  ‘QuidEx’. n.d. Demo. Accessed 29 April 2022. https://hu.berlin/quidex.
+*  Reiter, Nils, Börge Kiss, Andreas van Cranenburgh, and The Gitter Badger. 2022. Nilsreiter/CorefAnnotator. https://doi.org/10.5281/zenodo.1228105.
+*  Reiter, Nils, and Janis Pagel. 2020. Quadrama/DramaNLP. https://doi.org/10.5281/zenodo.597866.
+*  Reiter, Nils, Janis Pagel, and The Gitter Badger. 2020. Quadrama/DramaAnalysis. https://doi.org/10.5281/zenodo.597509.
+*  Vauth, Michael, Malte Meister, Hans Ole Hatzel, Dominik Gerstorfer, and Evelyn Gius. 2022. GitMA. https://doi.org/10.5281/zenodo.5669221.
+
+
+## Datasets and analyses
+
+*  Kröncke, Merten, Leonard Konle, Simone Winko, and Fotis Jannidis. 2022. ‘Lyrik-Anthologien 1850-1920 Annotationen’. Zenodo. https://doi.org/10.5281/zenodo.6047513.
+*  Pagel, Janis. 2022. ‘GerDraCor-Coref’. Zenodo. https://doi.org/10.5281/zenodo.3559206.
+*  Vauth, Michael, and Evelyn Gius. 2022. ‘ForTEXT/EvENT_Dataset: V.1.1’. Zenodo. https://doi.org/10.5281/ZENODO.6414926.
+*  Winko, Simone, Leonard Konle, Merten Kröncke, and Fotis Jannidis. 2022. ‘Lyrik-Anthologien 1850-1910’. Zenodo. https://doi.org/10.5281/zenodo.6053951.
+*  ‘ZfdG: Figurentypen (2020)’. 2020. https://quadrama.shinyapps.io/zfdg2020-pca/.
 
