@@ -87,45 +87,45 @@ Several of the achievements listed here have been published in a community of th
 
 ## Dissemination
 
-*  Emmerich, Robert. 2020. ‘Emotionen im Drama auf der Spur’. Online-Magazin der Universität Würzburg. einBLICK. 16 June 2020. https://www.uni-wuerzburg.de/aktuelles/einblick/single/news/emotionen-im-drama-auf-der-spur/.
-*  Helling, Patrick. 2020. ‘Forschungsdatenmanagement Im Schwerpunktprogramm Computational Literary Studies. Zwischenbericht Der FDM-Landschaftsvermessung Des Zentralprojekts’. Blog. 12 November 2020. https://dfg-spp-cls.github.io/de/2020/11/12/Landschaftvermessung.html.
-*  Jung, Kerstin. 2020. ‘FAIR in Der Praxis – Erster Beitrag’. Blog. 22 December 2020. https://dfg-spp-cls.github.io/de/2020/12/22/FAIR-I.html.
-*  ‘QuaDramA Blog’. n.d. Blog. QuaDramA. Accessed 29 April 2022. https://quadrama.github.io/blog/index.de.
-*  Reiter, Nils. 2019. ‘DramaAnalysis’. Tutorial. 13 July 2019. https://quadrama.github.io/DramaAnalysis/tutorial/3/.
+*  Emmerich, Robert. 2020. ‘Emotionen im Drama auf der Spur’. Online-Magazin der Universität Würzburg. einBLICK. 16 June 2020. <https://www.uni-wuerzburg.de/aktuelles/einblick/single/news/emotionen-im-drama-auf-der-spur/>.
+*  Helling, Patrick. 2020. ‘Forschungsdatenmanagement Im Schwerpunktprogramm Computational Literary Studies. Zwischenbericht Der FDM-Landschaftsvermessung Des Zentralprojekts’. Blog. 12 November 2020. <https://dfg-spp-cls.github.io/de/2020/11/12/Landschaftvermessung.html>.
+*  Jung, Kerstin. 2020. ‘FAIR in Der Praxis – Erster Beitrag’. Blog. 22 December 2020. <https://dfg-spp-cls.github.io/de/2020/12/22/FAIR-I.html>.
+*  ‘QuaDramA Blog’. n.d. Blog. QuaDramA. Accessed 29 April 2022. <https://quadrama.github.io/blog/index.de>.
+*  Reiter, Nils. 2019. ‘DramaAnalysis’. Tutorial. 13 July 2019. <https://quadrama.github.io/DramaAnalysis/tutorial/3/>.
 
 
 
 ## Annotation guidelines
 
-*  Andresen, Melanie, Benjamin Krautter, Janis Pagel, and Nils Reiter. 2021. ‘Wissensvermittlungen im Drama annotieren. Annotationsguideline’. Annotation Guidelines. Zenodo. https://doi.org/10.5281/zenodo.5729707.
-*  Barth, Florian, Tillmann Dönicke, Benjamin Gittel, Luisa Gödeke, Anna Mareike Weimer, Anke Holler, Caroline Sporleder, and Hanna Varachkina. 2022. ‘Annotationsrichtlinien Narrative Modi Und Attributionsphänomene’. Annotation Guidelines. https://gitlab.gwdg.de/mona/korpus-public/-/blob/master/Annotationsrichtlinien.pdf.
-*  Dennerlein, Katrin, Thomas Schmidt, and Christian Wolff. 2022. ‘Figurenemotionen in deutschsprachigen Dramen annotieren’. Annotation Guidelines. https://doi.org/10.5281/zenodo.6228152.
-*  Kröncke, Merten, Anton Ehrmanntraut, Thora Hagen, Fotis Jannidis, Leonard Konle, and Simone Winko. 2022. ‘Annotationsrichtlinien Gedichtähnlichkeit’. Annotation Guidelines. https://doi.org/10.5281/zenodo.6020760.
-*  Kröncke, Merten, Fotis Jannidis, Leonard Konle, and Simone Winko. 2022. ‘Annotationsrichtlinien Emotionsmarker und Emotionen’. Annotation Guidelines. https://doi.org/10.5281/zenodo.6021152.
-*  Kröncke, Merten, Fotis Jannidis, Leonard Konle, and Simone Winko. 2022. ‘Annotationsrichtlinien Lyrische Gattungen’. Annotation Guidelines. https://doi.org/10.5281/zenodo.6021007.
-*  Vauth, Michael, and Evelyn Gius. 2021. ‘Richtlinien Für Die Annotation Narratologischer Ereigniskonzepte’. Annotation Guidelines. https://doi.org/10.5281/zenodo.5078175.
+*  Andresen, Melanie, Benjamin Krautter, Janis Pagel, and Nils Reiter. 2021. ‘Wissensvermittlungen im Drama annotieren. Annotationsguideline’. Annotation Guidelines. Zenodo. <https://doi.org/10.5281/zenodo.5729707>.
+*  Barth, Florian, Tillmann Dönicke, Benjamin Gittel, Luisa Gödeke, Anna Mareike Weimer, Anke Holler, Caroline Sporleder, and Hanna Varachkina. 2022. ‘Annotationsrichtlinien Narrative Modi Und Attributionsphänomene’. Annotation Guidelines. <https://gitlab.gwdg.de/mona/korpus-public/-/blob/master/Annotationsrichtlinien.pdf>.
+*  Dennerlein, Katrin, Thomas Schmidt, and Christian Wolff. 2022. ‘Figurenemotionen in deutschsprachigen Dramen annotieren’. Annotation Guidelines. <https://doi.org/10.5281/zenodo.6228152>.
+*  Kröncke, Merten, Anton Ehrmanntraut, Thora Hagen, Fotis Jannidis, Leonard Konle, and Simone Winko. 2022. ‘Annotationsrichtlinien Gedichtähnlichkeit’. Annotation Guidelines. <https://doi.org/10.5281/zenodo.6020760>.
+*  Kröncke, Merten, Fotis Jannidis, Leonard Konle, and Simone Winko. 2022. ‘Annotationsrichtlinien Emotionsmarker und Emotionen’. Annotation Guidelines. <https://doi.org/10.5281/zenodo.6021152>.
+*  Kröncke, Merten, Fotis Jannidis, Leonard Konle, and Simone Winko. 2022. ‘Annotationsrichtlinien Lyrische Gattungen’. Annotation Guidelines. <https://doi.org/10.5281/zenodo.6021007>.
+*  Vauth, Michael, and Evelyn Gius. 2021. ‘Richtlinien Für Die Annotation Narratologischer Ereigniskonzepte’. Annotation Guidelines. <https://doi.org/10.5281/zenodo.5078175>.
 
 
 ## Tools and platforms
 
-*  Arnold, Frederik. 2022. Quid. https://doi.org/10.5281/zenodo.6123228.
-*  Arnold, Frederik. n.d. QuidEx-Wh. Accessed 29 April 2022. https://hu.berlin/quidex-wh.
-*  Du, Keli, Julia Dudar, and Christof Schöch. 2021. Pydistinto - a Python Implementation of Different Measures of Distinctiveness for Contrastive Text Analysis. https://doi.org/10.5281/zenodo.5094345.
-*  End-to-End Coreference For German. n.d. https://github.com/uhh-lt/neural-coref.
-*  ‘Narrativity Graphs’. n.d. Demo. https://narrativity.ltdemos.informatik.uni-hamburg.de/.
-*  Ocr2struc. n.d. https://github.com/LeKonArD/ocr2struc.
-*  ‘QuidEx’. n.d. Demo. Accessed 29 April 2022. https://hu.berlin/quidex.
-*  Reiter, Nils, Börge Kiss, Andreas van Cranenburgh, and The Gitter Badger. 2022. Nilsreiter/CorefAnnotator. https://doi.org/10.5281/zenodo.1228105.
-*  Reiter, Nils, and Janis Pagel. 2020. Quadrama/DramaNLP. https://doi.org/10.5281/zenodo.597866.
-*  Reiter, Nils, Janis Pagel, and The Gitter Badger. 2020. Quadrama/DramaAnalysis. https://doi.org/10.5281/zenodo.597509.
-*  Vauth, Michael, Malte Meister, Hans Ole Hatzel, Dominik Gerstorfer, and Evelyn Gius. 2022. GitMA. https://doi.org/10.5281/zenodo.5669221.
+*  Arnold, Frederik. 2022. Quid. <https://doi.org/10.5281/zenodo.6123228>.
+*  Arnold, Frederik. n.d. QuidEx-Wh. Accessed 29 April 2022. <https://hu.berlin/quidex-wh>.
+*  Du, Keli, Julia Dudar, and Christof Schöch. 2021. Pydistinto - a Python Implementation of Different Measures of Distinctiveness for Contrastive Text Analysis. <https://doi.org/10.5281/zenodo.5094345>.
+*  End-to-End Coreference For German. n.d. <https://github.com/uhh-lt/neural-coref>.
+*  ‘Narrativity Graphs’. n.d. Demo. <https://narrativity.ltdemos.informatik.uni-hamburg.de/>.
+*  Ocr2struc. n.d. <https://github.com/LeKonArD/ocr2struc>.
+*  ‘QuidEx’. n.d. Demo. Accessed 29 April 2022. <https://hu.berlin/quidex>.
+*  Reiter, Nils, Börge Kiss, Andreas van Cranenburgh, and The Gitter Badger. 2022. Nilsreiter/CorefAnnotator. <https://doi.org/10.5281/zenodo.1228105>.
+*  Reiter, Nils, and Janis Pagel. 2020. Quadrama/DramaNLP. <https://doi.org/10.5281/zenodo.597866>.
+*  Reiter, Nils, Janis Pagel, and The Gitter Badger. 2020. Quadrama/DramaAnalysis. <https://doi.org/10.5281/zenodo.597509>.
+*  Vauth, Michael, Malte Meister, Hans Ole Hatzel, Dominik Gerstorfer, and Evelyn Gius. 2022. GitMA. <https://doi.org/10.5281/zenodo.5669221>.
 
 
 ## Datasets and analyses
 
-*  Kröncke, Merten, Leonard Konle, Simone Winko, and Fotis Jannidis. 2022. ‘Lyrik-Anthologien 1850-1920 Annotationen’. Zenodo. https://doi.org/10.5281/zenodo.6047513.
-*  Pagel, Janis. 2022. ‘GerDraCor-Coref’. Zenodo. https://doi.org/10.5281/zenodo.3559206.
-*  Vauth, Michael, and Evelyn Gius. 2022. ‘ForTEXT/EvENT_Dataset: V.1.1’. Zenodo. https://doi.org/10.5281/ZENODO.6414926.
-*  Winko, Simone, Leonard Konle, Merten Kröncke, and Fotis Jannidis. 2022. ‘Lyrik-Anthologien 1850-1910’. Zenodo. https://doi.org/10.5281/zenodo.6053951.
-*  ‘ZfdG: Figurentypen (2020)’. 2020. https://quadrama.shinyapps.io/zfdg2020-pca/.
+*  Kröncke, Merten, Leonard Konle, Simone Winko, and Fotis Jannidis. 2022. ‘Lyrik-Anthologien 1850-1920 Annotationen’. Zenodo. <https://doi.org/10.5281/zenodo.6047513>.
+*  Pagel, Janis. 2022. ‘GerDraCor-Coref’. Zenodo. <https://doi.org/10.5281/zenodo.3559206>.
+*  Vauth, Michael, and Evelyn Gius. 2022. ‘ForTEXT/EvENT_Dataset: V.1.1’. Zenodo. <https://doi.org/10.5281/ZENODO.6414926>.
+*  Winko, Simone, Leonard Konle, Merten Kröncke, and Fotis Jannidis. 2022. ‘Lyrik-Anthologien 1850-1910’. Zenodo. <https://doi.org/10.5281/zenodo.6053951>.
+*  ‘ZfdG: Figurentypen (2020)’. 2020. <https://quadrama.shinyapps.io/zfdg2020-pca/>.
 
