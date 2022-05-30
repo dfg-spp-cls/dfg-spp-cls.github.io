@@ -12,7 +12,7 @@ Das DFG Schwerpunkprogramm *Computational Literary Studies* veranstaltet am **31
 
 - Christof Schöch: Zeta and Company. Measures of Distinctiveness for Computational Literary Studies
 
-- Robert Jäschke, Steffen Martus: What matters? Key passages in literary works
+- Katrin Dennerlein, Christian Wolff: Emotions in Drama
 
 - Fotis Jannidis, Simone Winko: The beginnings of modern poetry - Modeling literary history with text similarities
 
@@ -20,9 +20,9 @@ Das DFG Schwerpunkprogramm *Computational Literary Studies* veranstaltet am **31
 
 - Nils Reiter: Quantitative Drama Analytics: Tracking Character Knowledge (Q:TRACK)
 
-- Christian Biemann, Evelyn Gius: Evaluating Events in Narrative Theory (EvENT)
+- Robert Jäschke, Steffen Martus: What matters? Key passages in literary works
 
-- Katrin Dennerlein, Christian Wolff: Emotions in Drama
+- Christian Biemann, Evelyn Gius: Evaluating Events in Narrative Theory (EvENT)
 
 ### 16:00 - 17:00 Session 3
 
