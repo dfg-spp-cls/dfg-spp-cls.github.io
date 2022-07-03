@@ -123,9 +123,10 @@ Several of the achievements listed here have been published in a community of th
 
 ## Datasets and analyses
 
-*  Barth, Florian, Tillmann Dönicke, Benjamin Gittel, Luisa Gödeke, Anna Mareike Weimer, Anke Holler, Caroline Sporleder, and Hanna Varachkina. 2021. 'MONACO: Modes of Narration and Attribution Corpus'. URL: <https://gitlab.gwdg.de/mona/korpus-public>.
+*  Barth, Florian, Tillmann Dönicke, Benjamin Gittel, Luisa Gödeke, Anna Mareike Weimer, Anke Holler, Caroline Sporleder, and Hanna Varachkina. 2021. ’MONACO: Modes of Narration and Attribution Corpus’. URL: <https://gitlab.gwdg.de/mona/korpus-public>.
 *  Kröncke, Merten, Leonard Konle, Simone Winko, and Fotis Jannidis. 2022. ‘Lyrik-Anthologien 1850-1920 Annotationen’. Zenodo. <https://doi.org/10.5281/zenodo.6047513>.
 *  Pagel, Janis. 2022. ‘GerDraCor-Coref’. Zenodo. <https://doi.org/10.5281/zenodo.3559206>.
+*  Schmidt, Tomas, Katrin Dennerlein and Christian Wolff. 2022. ’Emorions in Drama Annotations’. URL: <https://github.com/lauchblatt/Emotions_in_Drama>
 *  Vauth, Michael, and Evelyn Gius. 2022. ‘forTEXT/EvENT_Dataset: V.1.1’. Zenodo. <https://doi.org/10.5281/ZENODO.6414926>.
 *  Winko, Simone, Leonard Konle, Merten Kröncke, and Fotis Jannidis. 2022. ‘Lyrik-Anthologien 1850-1910’. Zenodo. <https://doi.org/10.5281/zenodo.6053951>.
 *  ‘ZfdG: Figurentypen (2020)’. 2020. <https://quadrama.shinyapps.io/zfdg2020-pca/>.
