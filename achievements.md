@@ -120,6 +120,7 @@ Several of the achievements listed here have been published in a community of th
 *  Arnold, Frederik. 2022. Quid. <https://doi.org/10.5281/zenodo.6123228>.
 *  Arnold, Frederik. n.d. QuidEx-Wh. Accessed 29 April 2022. <https://hu.berlin/quidex-wh>.
 *  Du, Keli, Julia Dudar, and Christof Schöch. 2021. pydistinto - a Python Implementation of Different Measures of Distinctiveness for Contrastive Text Analysis. <https://doi.org/10.5281/zenodo.5094345>.
+*  Dönicke, Tillmann, Florian Barth, and Hanna Varachkina. 2022. MONAPipe: Modes of Narration and Attribution Pipeline. <https://doi.org/10.5281/ZENODO.6466327>.
 *  End-to-End Coreference For German. n.d. <https://github.com/uhh-lt/neural-coref>.
 *  ‘Narrativity Graphs’. n.d. Demo. <https://narrativity.ltdemos.informatik.uni-hamburg.de/>.
 *  Ocr2struc. n.d. <https://github.com/LeKonArD/ocr2struc>.
