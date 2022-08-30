@@ -91,6 +91,11 @@ Several of the achievements listed here have been published in a community of th
 *  Schmidt, Thomas, and Katrin Dennerlein. 2022 accepted. ‘Insights and Perspectives of the Research project "Emotions in Drama"’. In Computational Stylistics Workshop on Emotion and Sentiment Analysis in Literature. Paris, France.
 *  Schöch, Christof, Julia Dudar, Cora Rok, and Keli Du. 2021. ‘Deviation of Proportions as the Basis for a Keyness’. Presented at the DGfS workshop “Contrastive Corpus Methodology for Language Modeling and Analysis”, February 26. <https://www.linguistik.hu-berlin.de/de/institut/professuren/korpuslinguistik/events/kurz-ag-msc>.
 *  Varachkina, Hanna, Florian Barth, Luisa Gödeke, Anna Mareike Hofmann, and Tillmann Dönicke. 2022. ‘Reflexive Passagen und ihre Attribution’. Poster presented at the DHd 2022 Kulturen des digitalen Gedächtnisses. 8. Tagung des Verbands ‘Digital Humanities im deutschsprachigen Raum’ (DHd 2022), Potsdam, March 7. <https://doi.org/10.5281/zenodo.6322587>.
+*  Helling, Patrick, Jung, Kerstin, and Pielström, Steffen. 2022. “Making Research Data FAIR. Seriously? - Reflections on Research Data Management in the Computational Literary Studies,” August. https://doi.org/10.5281/ZENODO.6966537.
+* Arnold, Frederik, Benjamin Fiechter, Evelyn Gius, Robert Jäschke, Steffen Martus, and Michael Vauth. 2022. “Salience in Literary Texts: A Combined Approach to the Relevance of Passages.” DH2022, July 27.
+* Brottrager, Judith. 2022. “Relating the Unread: A Data-Rich Approach to the Literary Canon and the "Great Unread“.” DH2022, July 27.
+* Dennerlein, Katrin, Thomas Schmidt, and Wolff Christian. 2022. “Emotion Courses in German Historical Comedies and Tragedies.” DH2022, July 27.
+* Pagel, Jannis. 2022. “Co-Reference Networks for Dramatic Texts: Network Analysis of German Dramas Based on Co-Referential Information.” DH2022, July 27.
 
 
 
