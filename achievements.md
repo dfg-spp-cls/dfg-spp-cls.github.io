@@ -65,6 +65,7 @@ Several of the achievements listed here have been published in a community of th
 *  Varachkina, Hanna, Florian Barth, Luisa Gödeke, Anna Mareike Hofmann, and Tillmann Dönicke. 2022. ‘Reflexive Passagen und ihre Attribution’. In DHd2022: Kulturen des digitalen Gedächtnisses. Konferenzabstracts. Potsdam. <https://doi.org/10.5281/zenodo.6328207>.
 *  Vauth, Michael, Hans Ole Hatzel, Evelyn Gius, and Chris Biemann. 2021. ‘Automated Event Annotation in Literary Texts’. In Proceedings of the Conference on Computational Humanities Research 2021, edited by Maud Ehrmann, Folgert Karsdorp, Melvin Wevers, Tara Lee Andrews, Manuel Burghardt, Mike Kestemont, Enrique Manjavacas, Michael Piotrowski, and Joris van Zundert, 333–45. Amsterdam, the Netherlands: CEUR Workshop Proceedings. <http://ceur-ws.org/Vol-2989/short_paper18.pdf>.
 *  Weitin, Thomas. 2021. Digitale Literaturgeschichte. Eine Versuchsreihe mit sieben Experimenten. 1st ed. Digitale Literaturwissenschaft. J.B. Metzler Berlin, Heidelberg. <https://doi.org/10.1007/978-3-662-63663-3>.
+* Dönicke, Tillman, Florian Barth, Hanna Varachkina, and Caroline Sporleder. 2022. “MONAPipe: Modes of Narration and Attribution Pipeline for German Computational Literary Studies and Language Analysis in SpaCy.” In Proceedings of the 18th Conference on Natural Language Processing (KONVENS 2022), 8–15. Potsdam: KONVENS 2022 Organizers. https://aclanthology.org/2022.konvens-1.2.
 
 
 ## Presentations
