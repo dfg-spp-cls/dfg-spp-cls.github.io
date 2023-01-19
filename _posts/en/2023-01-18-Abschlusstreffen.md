@@ -1,5 +1,5 @@
 ---
-title: Abschlusstreffen am 20.+21.02.2023 in Göttingen
+title: Abschlusstreffen am 20. bis 21.02.2023 in Göttingen
 excerpt: "Für das DFG Schwerpunktprogramm 'Computational Literary Studies' endet 2023 die erste Förderphase."
 lang: en
 ---
