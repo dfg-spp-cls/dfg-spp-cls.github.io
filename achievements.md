@@ -20,6 +20,8 @@ Several of the achievements listed here have been published in a community of th
 ## Publications
 
 * Andresen, Melanie, Benjamin Krautter, Janis Pagel, and Nils Reiter. 2022. ‘Nathan nicht ihr Vater? Wissensvermittlungen im Drama annotieren’. In DHd2022: Kulturen des digitalen Gedächtnisses. Konferenzabstracts. Potsdam. <https://doi.org/10.5281/zenodo.6327913>.
+* Krautter, Benjamin, Janis Pagel, Nils Reiter, and Marcus Willand. 2022. “Properties of Dramatic Characters: Automatically Detecting Gender, Age, and Social Status.” In Computational Stylistics in Poetry, Prose, and Drama, edited by Anne-Sophie Bories, Petr Plecháč, and Pablo Ruiz Fabo, 179–202. De Gruyter. https://doi.org/10.1515/9783110781502-010.
+* Melanie Andresen, Benjamin Krautter, Janis Pagel, and Nils Reiter. 2022. “Who Knows What in German Dramas? A Composite Annotation Scheme for Knowledge Transfer.” https://doi.org/10.48694/JCLS.107.
 * Arnold, Frederik, and Benjamin Fiechter. 2022. ‘Lesen, was wirklich wichtig ist - Die Identifikation von Schlüsselstellen durch ein neues Instrument zur Zitatanalyse’. In DHd2022: Kulturen des digitalen Gedächtnisses. Konferenzabstracts. Potsdam. <https://doi.org/10.5281/zenodo.6327917>.
 *  Arnold, Frederik, and Robert Jäschke. 2021. ‘Lotte and Annette: A Framework for Finding and Exploring Key Passages in Literary Works’. In Proceedings of the Workshop on Natural Language Processing for Digital Humanities (NLP4DH).
 *  Brandes, Philipp, Katrin Dennerlein, Janina Jacke, Sophie Marshall, Steffen Pielström, and Felix Schneider. 2022, accepted. ’Modelling and Operationalizing Concepts in Computational Literary Studies’. In 16th Annual International Conference of the Alliance of Digital Humanities Organizations (DH 2022). Tokyo, Japan.
