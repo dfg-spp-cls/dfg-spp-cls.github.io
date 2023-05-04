@@ -40,4 +40,4 @@ The DFG Priority Programme *Computational Literary Studies* will hold a **public
 
 ## Registration
 
-If you want to join us, please register per Email to **SPP2207(at)uni-wuerzburg.de**.
+If you want to join us, please register **until June 6th** per Email to **SPP2207(at)uni-wuerzburg.de**.
