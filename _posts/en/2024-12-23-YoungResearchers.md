@@ -10,7 +10,7 @@ The Priority Programme's Young Researcher Vising Programme offers funding for yo
 
 The funding is oﬀered to young researchers from Pre- to PostDoc.
 
-**Bewerbung:** 
+**Application:** 
 
 Applicants should ﬁrst contact their potential guest project to coordinate application. The application should outline former research activities and plans for the funded visit on no more than 2 pages. It should also include an academic CV and a calculation of the estimated costs of the visit. Applications can be sent until January 26th 2025 23:59 (MET) to
 
