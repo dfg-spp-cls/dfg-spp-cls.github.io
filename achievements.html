@@ -1,0 +1,1263 @@
+<!DOCTYPE html><html lang="en">
+  <head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"><title>Achievements - Computational Literary Studies (CLS)</title>
+
+<meta name="description" content="The priority programme SPP 2207 Computational Literary Studies (CLS), funded by the German Research Foundation (DFG), is dedicated to developig and establishing innovative computational methods in the field of literary studies
+">
+<link rel="canonical" href="http://dfg-spp-cls.github.io/achievements.html"><link rel="alternate" type="application/rss+xml" title="Computational Literary Studies (CLS)" href="/"><!--&lt;!&ndash; start favicons snippet, use https://realfavicongenerator.net/ &ndash;&gt;-->
+<!---->
+<!--<link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">-->
+
+<!---->
+<!--<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">-->
+
+<!---->
+<!--<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">-->
+
+<!---->
+<!--<link rel="manifest" href="/assets/site.webmanifest">-->
+
+<!---->
+<!--<link rel="mask-icon" href="/assets/safari-pinned-tab.svg" color="#fc4d50">-->
+
+<!---->
+<!--<link rel="shortcut icon" href="/assets/favicon.ico">-->
+
+<!--<meta name="msapplication-TileColor" content="#ffc40d">-->
+
+<!---->
+<!--<meta name="msapplication-config" content="/assets/browserconfig.xml">-->
+
+<!--<meta name="theme-color" content="#ffffff">-->
+<!--&lt;!&ndash; end favicons snippet &ndash;&gt;-->
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="manifest" href="site.webmanifest">
+<link rel="mask-icon" href="safari-pinned-tab.svg" color="#ffffff">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="theme-color" content="#ffffff">
+<link rel="stylesheet" href="/assets/css/main.css"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" ><!-- start custom head snippets -->
+
+<!-- end custom head snippets -->
+<script>(function() {
+  window.isArray = function(val) {
+    return Object.prototype.toString.call(val) === '[object Array]';
+  };
+  window.isString = function(val) {
+    return typeof val === 'string';
+  };
+
+  window.hasEvent = function(event) {
+    return 'on'.concat(event) in window.document;
+  };
+
+  window.isOverallScroller = function(node) {
+    return node === document.documentElement || node === document.body || node === window;
+  };
+
+  window.isFormElement = function(node) {
+    var tagName = node.tagName;
+    return tagName === 'INPUT' || tagName === 'SELECT' || tagName === 'TEXTAREA';
+  };
+
+  window.pageLoad = (function () {
+    var loaded = false, cbs = [];
+    window.addEventListener('load', function () {
+      var i;
+      loaded = true;
+      if (cbs.length > 0) {
+        for (i = 0; i < cbs.length; i++) {
+          cbs[i]();
+        }
+      }
+    });
+    return {
+      then: function(cb) {
+        cb && (loaded ? cb() : (cbs.push(cb)));
+      }
+    };
+  })();
+})();
+(function() {
+  window.throttle = function(func, wait) {
+    var args, result, thisArg, timeoutId, lastCalled = 0;
+
+    function trailingCall() {
+      lastCalled = new Date;
+      timeoutId = null;
+      result = func.apply(thisArg, args);
+    }
+    return function() {
+      var now = new Date,
+        remaining = wait - (now - lastCalled);
+
+      args = arguments;
+      thisArg = this;
+
+      if (remaining <= 0) {
+        clearTimeout(timeoutId);
+        timeoutId = null;
+        lastCalled = now;
+        result = func.apply(thisArg, args);
+      } else if (!timeoutId) {
+        timeoutId = setTimeout(trailingCall, remaining);
+      }
+      return result;
+    };
+  };
+})();
+(function() {
+  var Set = (function() {
+    var add = function(item) {
+      var i, data = this._data;
+      for (i = 0; i < data.length; i++) {
+        if (data[i] === item) {
+          return;
+        }
+      }
+      this.size ++;
+      data.push(item);
+      return data;
+    };
+
+    var Set = function(data) {
+      this.size = 0;
+      this._data = [];
+      var i;
+      if (data.length > 0) {
+        for (i = 0; i < data.length; i++) {
+          add.call(this, data[i]);
+        }
+      }
+    };
+    Set.prototype.add = add;
+    Set.prototype.get = function(index) { return this._data[index]; };
+    Set.prototype.has = function(item) {
+      var i, data = this._data;
+      for (i = 0; i < data.length; i++) {
+        if (this.get(i) === item) {
+          return true;
+        }
+      }
+      return false;
+    };
+    Set.prototype.is = function(map) {
+      if (map._data.length !== this._data.length) { return false; }
+      var i, j, flag, tData = this._data, mData = map._data;
+      for (i = 0; i < tData.length; i++) {
+        for (flag = false, j = 0; j < mData.length; j++) {
+          if (tData[i] === mData[j]) {
+            flag = true;
+            break;
+          }
+        }
+        if (!flag) { return false; }
+      }
+      return true;
+    };
+    Set.prototype.values = function() {
+      return this._data;
+    };
+    return Set;
+  })();
+
+  window.Lazyload = (function(doc) {
+    var queue = {js: [], css: []}, sources = {js: {}, css: {}}, context = this;
+    var createNode = function(name, attrs) {
+      var node = doc.createElement(name), attr;
+      for (attr in attrs) {
+        if (attrs.hasOwnProperty(attr)) {
+          node.setAttribute(attr, attrs[attr]);
+        }
+      }
+      return node;
+    };
+    var end = function(type, url) {
+      var s, q, qi, cbs, i, j, cur, val, flag;
+      if (type === 'js' || type ==='css') {
+        s = sources[type], q = queue[type];
+        s[url] = true;
+        for (i = 0; i < q.length; i++) {
+          cur = q[i];
+          if (cur.urls.has(url)) {
+            qi = cur, val = qi.urls.values();
+            qi && (cbs = qi.callbacks);
+            for (flag = true, j = 0; j < val.length; j++) {
+              cur = val[j];
+              if (!s[cur]) {
+                flag = false;
+              }
+            }
+            if (flag && cbs && cbs.length > 0) {
+              for (j = 0; j < cbs.length; j++) {
+                cbs[j].call(context);
+              }
+              qi.load = true;
+            }
+          }
+        }
+      }
+    };
+    var load = function(type, urls, callback) {
+      var s, q, qi, node, i, cur,
+        _urls = typeof urls === 'string' ? new Set([urls]) : new Set(urls), val, url;
+      if (type === 'js' || type ==='css') {
+        s = sources[type], q = queue[type];
+        for (i = 0; i < q.length; i++) {
+          cur = q[i];
+          if (_urls.is(cur.urls)) {
+            qi = cur;
+            break;
+          }
+        }
+        val = _urls.values();
+        if (qi) {
+          callback && (qi.load || qi.callbacks.push(callback));
+          callback && (qi.load && callback());
+        } else {
+          q.push({
+            urls: _urls,
+            callbacks: callback ? [callback] : [],
+            load: false
+          });
+          for (i = 0; i < val.length; i++) {
+            node = null, url = val[i];
+            if (s[url] === undefined) {
+              (type === 'js' ) && (node = createNode('script', { src: url }));
+              (type === 'css') && (node = createNode('link', { rel: 'stylesheet', href: url }));
+              if (node) {
+                node.onload = (function(type, url) {
+                  return function() {
+                    end(type, url);
+                  };
+                })(type, url);
+                (doc.head || doc.body).appendChild(node);
+                s[url] = false;
+              }
+            }
+          }
+        }
+      }
+    };
+    return {
+      js: function(url, callback) {
+        load('js', url, callback);
+      },
+      css: function(url, callback) {
+        load('css', url, callback);
+      }
+    };
+  })(this.document);
+})();
+</script><script>
+  (function() {
+    var TEXT_VARIABLES = {
+      version: '2.2.6',
+      sources: {
+        font_awesome: 'https://use.fontawesome.com/releases/v5.0.13/css/all.css',
+        jquery: 'https://cdn.bootcss.com/jquery/3.1.1/jquery.min.js',
+        leancloud_js_sdk: '//cdn.jsdelivr.net/npm/leancloud-storage@3.13.2/dist/av-min.js',
+        chart: 'https://cdn.bootcss.com/Chart.js/2.7.2/Chart.bundle.min.js',
+        gitalk: {
+          js: 'https://cdn.bootcss.com/gitalk/1.2.2/gitalk.min.js',
+          css: 'https://cdn.bootcss.com/gitalk/1.2.2/gitalk.min.css'
+        },
+        valine: 'https://unpkg.com/valine/dist/Valine.min.js',
+        mathjax: 'https://cdn.bootcss.com/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML',
+        mermaid: 'https://cdn.bootcss.com/mermaid/8.0.0-rc.8/mermaid.min.js'
+      },
+      site: {
+        toc: {
+          selectors: 'h1,h2,h3'
+        }
+      },
+      paths: {
+        search_js: '/assets/search.js'
+      }
+    };
+    window.TEXT_VARIABLES = TEXT_VARIABLES;
+  })();
+</script>
+</head>
+  <body>
+    <div class="root" data-is-touch="false">
+      <div class="layout--page js-page-root"><div class="page__main js-page-main page__viewport cell cell--auto">
+
+      <div class="page__main-inner"><div class="page__header d-print-none"><header class="header"><div class="main">
+      <div class="header__title">
+        <div class="header__brand"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="290mm"
+   height="190mm"
+   viewBox="0 0 89 19"
+   version="1.1"
+   id="svg8"
+   inkscape:version="0.92.5 (2060ec1f9f, 2020-04-08)"
+   sodipodi:docname="logo.svg">
+  <defs
+     id="defs2" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.979899"
+     inkscape:cx="257.7006"
+     inkscape:cy="89.270039"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1920"
+     inkscape:window-height="1016"
+     inkscape:window-x="0"
+     inkscape:window-y="27"
+     inkscape:window-maximized="1">
+    <inkscape:grid
+       type="xygrid"
+       id="grid22" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-278)">
+    <g
+       aria-label="Computational"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.51193523px;line-height:1.25;font-family:'Latin Modern Mono Light';-inkscape-font-specification:'Latin Modern Mono Light, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:1.93145835px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.25478396"
+       id="text12-3-3-3-4">
+      <path
+         d="m 5.1440664,283.90451 c 0,-0.22829 -0.1712148,-0.22829 -0.2473103,-0.22829 -0.057072,0 -0.2187745,0 -0.2377984,0.19024 -0.066584,1.0368 -0.9321697,1.29363 -1.3602067,1.29363 -0.9321697,0 -1.8453155,-1.07485 -1.8453155,-2.61579 0,-1.53142 0.9226577,-2.60627 1.8358035,-2.60627 0.6277877,0 1.2175277,0.4756 1.3602068,1.33167 0.028536,0.12366 0.04756,0.2378 0.2473103,0.2378 0.2473103,0 0.2473103,-0.15219 0.2473103,-0.30438 v -1.36021 c 0,-0.11414 0,-0.30438 -0.1997506,-0.30438 -0.095119,0 -0.152191,0.0666 -0.1902388,0.11415 -0.00951,0.038 -0.019024,0.0761 -0.1997506,0.40901 -0.3995013,-0.34243 -0.8275384,-0.52316 -1.3031351,-0.52316 -1.2270397,0 -2.27335254,1.2746 -2.27335254,3.00577 0,1.74069 1.04631284,3.01529 2.28286444,3.01529 1.0748487,0 1.8833632,-0.81803 1.8833632,-1.65508 z"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.51193523px;font-family:'Latin Modern Mono Light';-inkscape-font-specification:'Latin Modern Mono Light, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:1.93145835px;writing-mode:lr-tb;text-anchor:start;stroke-width:0.25478396"
+         id="path44" />
+      <path
+         d="m 11.907584,283.42891 c 0,-1.16996 -0.875098,-2.10213 -1.9214105,-2.10213 -1.0463128,0 -1.9214109,0.93217 -1.9214109,2.10213 0,1.189 0.8941219,2.08312 1.9214109,2.08312 1.0272895,0 1.9214105,-0.90364 1.9214105,-2.08312 z m -0.485108,-0.0666 c 0,0.97022 -0.665836,1.7502 -1.4363025,1.7502 -0.7799786,0 -1.4363022,-0.77998 -1.4363022,-1.7502 0,-0.96071 0.6943713,-1.63605 1.4363022,-1.63605 0.7514425,0 1.4363025,0.67534 1.4363025,1.63605 z"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.51193523px;font-family:'Latin Modern Mono Light';-inkscape-font-specification:'Latin Modern Mono Light, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:1.93145835px;writing-mode:lr-tb;text-anchor:start;stroke-width:0.25478396"
+         id="path46" />
+      <path
+         d="m 19.308402,285.25521 c 0,-0.19976 -0.161703,-0.19976 -0.54218,-0.19976 v -2.48261 c 0,-0.18073 -0.01902,-1.21753 -0.789491,-1.21753 -0.275846,0 -0.646811,0.11415 -0.998753,0.60877 -0.199751,-0.44707 -0.437549,-0.60877 -0.722907,-0.60877 -0.29487,0 -0.54218,0.12366 -0.913146,0.46609 -0.02854,-0.40902 -0.180727,-0.40902 -0.313894,-0.40902 h -0.313894 c -0.104631,0 -0.304381,0 -0.304381,0.19975 0,0.19975 0.161702,0.19975 0.54218,0.19975 v 3.24357 c -0.380478,0 -0.54218,0 -0.54218,0.19976 0,0.19975 0.209262,0.19975 0.304381,0.19975 h 0.865587 c 0.114143,0 0.304382,0 0.304382,-0.19975 0,-0.19976 -0.161703,-0.19976 -0.542181,-0.19976 v -1.86433 c 0,-0.9512 0.437549,-1.43631 0.875098,-1.43631 0.256822,0 0.437549,0.17122 0.437549,0.90364 v 2.397 c -0.237798,0 -0.409013,0 -0.409013,0.19976 0,0.19975 0.199751,0.19975 0.304382,0.19975 h 0.732419 c 0.114143,0 0.304382,0 0.304382,-0.19975 0,-0.19976 -0.161703,-0.19976 -0.54218,-0.19976 v -1.86433 c 0,-0.9512 0.447061,-1.43631 0.894122,-1.43631 0.256822,0 0.437549,0.17122 0.437549,0.90364 v 2.397 c -0.237799,0 -0.409014,0 -0.409014,0.19976 0,0.19975 0.199751,0.19975 0.304382,0.19975 h 0.732419 c 0.104632,0 0.304382,0 0.304382,-0.19975 z"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.51193523px;font-family:'Latin Modern Mono Light';-inkscape-font-specification:'Latin Modern Mono Light, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:1.93145835px;writing-mode:lr-tb;text-anchor:start;stroke-width:0.25478396"
+         id="path48" />
+      <path
+         d="m 25.957778,283.42891 c 0,-1.15094 -0.827539,-2.0736 -1.81678,-2.0736 -0.447061,0 -0.865586,0.17122 -1.350695,0.60877 0,-0.44707 -0.0095,-0.5517 -0.29487,-0.5517 h -0.713395 c -0.114143,0 -0.304382,0 -0.304382,0.20927 0,0.19023 0.190239,0.19023 0.29487,0.19023 h 0.54218 v 5.42181 h -0.532668 c -0.114143,0 -0.304382,0 -0.304382,0.20926 0,0.19975 0.190239,0.19975 0.29487,0.19975 h 1.559957 c 0.104632,0 0.29487,0 0.29487,-0.19975 0,-0.20926 -0.190238,-0.20926 -0.304382,-0.20926 h -0.532668 v -2.36847 c 0.551692,0.5612 0.951194,0.64681 1.246064,0.64681 1.017777,0 1.921411,-0.89412 1.921411,-2.08312 z m -0.475597,0 c 0,1.00827 -0.741931,1.68362 -1.47435,1.68362 -0.837051,0 -1.217528,-0.93217 -1.217528,-1.43631 v -0.7229 c 0,-0.62779 0.618276,-1.19851 1.293623,-1.19851 0.779979,0 1.398255,0.76096 1.398255,1.6741 z"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.51193523px;font-family:'Latin Modern Mono Light';-inkscape-font-specification:'Latin Modern Mono Light, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:1.93145835px;writing-mode:lr-tb;text-anchor:start;stroke-width:0.25478396"
+         id="path50" />
+      <path
+         d="m 33.120796,285.24569 c 0,-0.19024 -0.190238,-0.19024 -0.29487,-0.19024 h -0.54218 v -3.33868 c 0,-0.22829 -0.03805,-0.30439 -0.29487,-0.30439 h -0.713395 c -0.114143,0 -0.304382,0 -0.304382,0.20927 0,0.19023 0.190239,0.19023 0.29487,0.19023 h 0.54218 v 2.19726 c 0,0.97022 -0.865586,1.10339 -1.217527,1.10339 -0.875098,0 -0.875098,-0.38048 -0.875098,-0.74193 v -2.65383 c 0,-0.22829 -0.03805,-0.30439 -0.29487,-0.30439 h -0.713396 c -0.114143,0 -0.304381,0 -0.304381,0.20927 0,0.19023 0.190238,0.19023 0.294869,0.19023 h 0.542181 v 2.61579 c 0,0.8751 0.627788,1.08436 1.293623,1.08436 0.380477,0 0.770467,-0.0951 1.265087,-0.46609 0.0095,0.40902 0.171215,0.40902 0.304382,0.40902 h 0.713395 c 0.114144,0 0.304382,0 0.304382,-0.20927 z"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.51193523px;font-family:'Latin Modern Mono Light';-inkscape-font-specification:'Latin Modern Mono Light, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:1.93145835px;writing-mode:lr-tb;text-anchor:start;stroke-width:0.25478396"
+         id="path52" />
+      <path
+         d="m 39.427739,284.31352 c 0,-0.13316 0,-0.28535 -0.24731,-0.28535 -0.237799,0 -0.237799,0.15219 -0.237799,0.27584 -0.0095,0.69437 -0.637299,0.80852 -0.894121,0.80852 -0.856075,0 -0.856075,-0.58023 -0.856075,-0.85608 v -2.44457 h 1.712149 c 0.104631,0 0.29487,0 0.29487,-0.19023 0,-0.20927 -0.180727,-0.20927 -0.29487,-0.20927 h -1.712149 v -0.90363 c 0,-0.13317 0,-0.30438 -0.237798,-0.30438 -0.237798,0 -0.237798,0.1617 -0.237798,0.30438 v 0.90363 h -0.960706 c -0.114143,0 -0.304382,0 -0.304382,0.20927 0,0.19023 0.190239,0.19023 0.29487,0.19023 h 0.970218 v 2.50164 c 0,0.8751 0.618275,1.19851 1.284111,1.19851 0.675347,0 1.42679,-0.38048 1.42679,-1.19851 z"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.51193523px;font-family:'Latin Modern Mono Light';-inkscape-font-specification:'Latin Modern Mono Light, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:1.93145835px;writing-mode:lr-tb;text-anchor:start;stroke-width:0.25478396"
+         id="path54" />
+      <path
+         d="m 46.999775,285.24569 c 0,-0.19024 -0.190239,-0.19024 -0.304382,-0.19024 -0.389989,0 -0.532668,-0.0571 -0.684859,-0.11414 v -2.18774 c 0,-0.66584 -0.513645,-1.42679 -1.845316,-1.42679 -0.389989,0 -1.331671,0 -1.331671,0.61827 0,0.22829 0.161703,0.35194 0.34243,0.35194 0.114143,0 0.332918,-0.0666 0.34243,-0.35194 0,-0.18072 0.361453,-0.21877 0.656323,-0.21877 0.808515,0 1.350695,0.34243 1.350695,1.1985 -1.759708,0.0285 -2.9487,0.46609 -2.9487,1.36972 0,0.6373 0.58974,1.21753 1.531422,1.21753 0.342429,0 0.932169,-0.0666 1.455326,-0.40902 0.24731,0.35195 0.694371,0.35195 1.036801,0.35195 0.209262,0 0.399501,0 0.399501,-0.20927 z m -1.47435,-1.00826 c 0,0.25682 0,0.49462 -0.437549,0.69437 -0.370965,0.18073 -0.83705,0.18073 -0.913146,0.18073 -0.675347,0 -1.112896,-0.38999 -1.112896,-0.81803 0,-0.50413 0.865586,-0.94168 2.463591,-0.98924 z"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.51193523px;font-family:'Latin Modern Mono Light';-inkscape-font-specification:'Latin Modern Mono Light, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:1.93145835px;writing-mode:lr-tb;text-anchor:start;stroke-width:0.25478396"
+         id="path56" />
+      <path
+         d="m 53.278184,284.31352 c 0,-0.13316 0,-0.28535 -0.24731,-0.28535 -0.237799,0 -0.237799,0.15219 -0.237799,0.27584 -0.0095,0.69437 -0.637299,0.80852 -0.894122,0.80852 -0.856074,0 -0.856074,-0.58023 -0.856074,-0.85608 v -2.44457 h 1.712149 c 0.104631,0 0.29487,0 0.29487,-0.19023 0,-0.20927 -0.180727,-0.20927 -0.29487,-0.20927 h -1.712149 v -0.90363 c 0,-0.13317 0,-0.30438 -0.237798,-0.30438 -0.237799,0 -0.237799,0.1617 -0.237799,0.30438 v 0.90363 h -0.960705 c -0.114143,0 -0.304382,0 -0.304382,0.20927 0,0.19023 0.190239,0.19023 0.29487,0.19023 h 0.970217 v 2.50164 c 0,0.8751 0.618276,1.19851 1.284112,1.19851 0.675347,0 1.42679,-0.38048 1.42679,-1.19851 z"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.51193523px;font-family:'Latin Modern Mono Light';-inkscape-font-specification:'Latin Modern Mono Light, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:1.93145835px;writing-mode:lr-tb;text-anchor:start;stroke-width:0.25478396"
+         id="path58" />
+      <path
+         d="m 60.260476,285.25521 c 0,-0.19976 -0.199751,-0.19976 -0.304382,-0.19976 h -1.13192 v -3.33868 c 0,-0.22829 -0.03805,-0.30439 -0.29487,-0.30439 h -1.398255 c -0.104631,0 -0.304382,0 -0.304382,0.19975 0,0.19975 0.199751,0.19975 0.304382,0.19975 h 1.217528 v 3.24357 h -1.293623 c -0.114143,0 -0.304382,0 -0.304382,0.19976 0,0.19975 0.199751,0.19975 0.304382,0.19975 h 2.90114 c 0.104631,0 0.304382,0 0.304382,-0.19975 z m -1.398254,-5.15547 c 0,-0.22829 -0.171215,-0.3995 -0.38999,-0.3995 -0.218774,0 -0.389989,0.17121 -0.389989,0.3995 0,0.21877 0.171215,0.38999 0.389989,0.38999 0.218775,0 0.38999,-0.17122 0.38999,-0.38999 z"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.51193523px;font-family:'Latin Modern Mono Light';-inkscape-font-specification:'Latin Modern Mono Light, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:1.93145835px;writing-mode:lr-tb;text-anchor:start;stroke-width:0.25478396"
+         id="path60" />
+      <path
+         d="m 67.309352,283.42891 c 0,-1.16996 -0.875098,-2.10213 -1.921411,-2.10213 -1.046313,0 -1.921411,0.93217 -1.921411,2.10213 0,1.189 0.894122,2.08312 1.921411,2.08312 1.027289,0 1.921411,-0.90364 1.921411,-2.08312 z m -0.485109,-0.0666 c 0,0.97022 -0.665835,1.7502 -1.436302,1.7502 -0.779979,0 -1.436302,-0.77998 -1.436302,-1.7502 0,-0.96071 0.694371,-1.63605 1.436302,-1.63605 0.751443,0 1.436302,0.67534 1.436302,1.63605 z"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.51193523px;font-family:'Latin Modern Mono Light';-inkscape-font-specification:'Latin Modern Mono Light, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:1.93145835px;writing-mode:lr-tb;text-anchor:start;stroke-width:0.25478396"
+         id="path62" />
+      <path
+         d="m 74.672117,285.25521 c 0,-0.19976 -0.190238,-0.19976 -0.304382,-0.19976 h -0.532668 v -2.38749 c 0,-0.91315 -0.456573,-1.31265 -1.17948,-1.31265 -0.618276,0 -1.036801,0.3139 -1.388742,0.65633 0,-0.4756 0,-0.59926 -0.29487,-0.59926 h -0.713396 c -0.114143,0 -0.304381,0 -0.304381,0.20927 0,0.19023 0.190238,0.19023 0.29487,0.19023 h 0.54218 v 3.24357 h -0.532669 c -0.114143,0 -0.304381,0 -0.304381,0.19976 0,0.19975 0.190238,0.19975 0.29487,0.19975 h 1.559957 c 0.104631,0 0.29487,0 0.29487,-0.19975 0,-0.19976 -0.190239,-0.19976 -0.304382,-0.19976 h -0.532668 v -1.84531 c 0,-1.05583 0.78949,-1.45533 1.331671,-1.45533 0.58974,0 0.760954,0.30439 0.760954,0.97022 v 2.33042 h -0.485108 c -0.114144,0 -0.304382,0 -0.304382,0.19976 0,0.19975 0.19975,0.19975 0.304382,0.19975 h 1.502885 c 0.104632,0 0.29487,0 0.29487,-0.19975 z"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.51193523px;font-family:'Latin Modern Mono Light';-inkscape-font-specification:'Latin Modern Mono Light, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:1.93145835px;writing-mode:lr-tb;text-anchor:start;stroke-width:0.25478396"
+         id="path64" />
+      <path
+         d="m 81.625878,285.24569 c 0,-0.19024 -0.190239,-0.19024 -0.304382,-0.19024 -0.38999,0 -0.532669,-0.0571 -0.68486,-0.11414 v -2.18774 c 0,-0.66584 -0.513644,-1.42679 -1.845315,-1.42679 -0.38999,0 -1.331671,0 -1.331671,0.61827 0,0.22829 0.161703,0.35194 0.34243,0.35194 0.114143,0 0.332917,-0.0666 0.342429,-0.35194 0,-0.18072 0.361454,-0.21877 0.656324,-0.21877 0.808514,0 1.350695,0.34243 1.350695,1.1985 -1.759708,0.0285 -2.9487,0.46609 -2.9487,1.36972 0,0.6373 0.58974,1.21753 1.531421,1.21753 0.34243,0 0.93217,-0.0666 1.455326,-0.40902 0.247311,0.35195 0.694372,0.35195 1.036801,0.35195 0.209263,0 0.399502,0 0.399502,-0.20927 z m -1.47435,-1.00826 c 0,0.25682 0,0.49462 -0.437549,0.69437 -0.370966,0.18073 -0.837051,0.18073 -0.913146,0.18073 -0.675348,0 -1.112897,-0.38999 -1.112897,-0.81803 0,-0.50413 0.865586,-0.94168 2.463592,-0.98924 z"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.51193523px;font-family:'Latin Modern Mono Light';-inkscape-font-specification:'Latin Modern Mono Light, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:1.93145835px;writing-mode:lr-tb;text-anchor:start;stroke-width:0.25478396"
+         id="path66" />
+      <path
+         d="m 88.085017,285.25521 c 0,-0.19976 -0.180727,-0.19976 -0.29487,-0.19976 h -1.379231 v -5.1079 c 0,-0.22829 -0.04756,-0.30439 -0.29487,-0.30439 h -1.559957 c -0.114143,0 -0.304382,0 -0.304382,0.20927 0,0.19023 0.199751,0.19023 0.29487,0.19023 h 1.379231 v 5.01279 h -1.369719 c -0.114143,0 -0.304382,0 -0.304382,0.19976 0,0.19975 0.199751,0.19975 0.29487,0.19975 h 3.24357 c 0.104631,0 0.29487,0 0.29487,-0.19975 z"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.51193523px;font-family:'Latin Modern Mono Light';-inkscape-font-specification:'Latin Modern Mono Light, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:1.93145835px;writing-mode:lr-tb;text-anchor:start;stroke-width:0.25478396"
+         id="path68" />
+    </g>
+    <g
+       aria-label="LiteraryStudies"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.58333302px;line-height:1.25;font-family:'Latin Modern Roman Caps';-inkscape-font-specification:'Latin Modern Roman Caps';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#800000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       id="text20-3-7-3-8">
+      <path
+         d="M 7.3751259,290.66614 H 7.1105426 c -0.1164167,1.05833 -0.2645834,2.40241 -2.2119166,2.40241 H 3.9037927 c -0.4974167,0 -0.5185834,-0.0741 -0.5185834,-0.42333 v -5.64092 c 0,-0.35983 0,-0.508 1.0054167,-0.508 h 0.34925 v -0.32808 c -0.381,0.0317 -1.3440833,0.0317 -1.778,0.0317 -0.41275,0 -1.2382499,0 -1.6086666,-0.0317 v 0.32808 h 0.254 c 0.8149166,0 0.8360833,0.11642 0.8360833,0.49742 v 5.57742 c 0,0.381 -0.021167,0.49741 -0.8360833,0.49741 h -0.254 v 0.32809 h 5.7255832 z"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.58333302px;font-family:'Latin Modern Roman Caps';-inkscape-font-specification:'Latin Modern Roman Caps';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#800000;stroke-width:0.26458332"
+         id="path13" />
+      <path
+         d="m 10.782945,293.39664 v -0.26459 c -0.751417,0 -0.8043335,-0.0529 -0.8043335,-0.508 v -3.89466 c 0,-0.45509 0.052917,-0.508 0.8043335,-0.508 v -0.26459 l -1.1853335,0.0317 -1.1853333,-0.0317 v 0.26459 c 0.7514167,0 0.8043333,0.0529 0.8043333,0.508 v 3.89466 c 0,0.45509 -0.052917,0.508 -0.8043333,0.508 v 0.26459 l 1.1853333,-0.0317 z"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.58333302px;font-family:'Latin Modern Roman Caps';-inkscape-font-specification:'Latin Modern Roman Caps';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#800000;stroke-width:0.26458332"
+         id="path15" />
+      <path
+         d="m 17.069425,289.80889 -0.148167,-1.78859 h -5.196416 l -0.148167,1.78859 h 0.264584 c 0.09525,-1.3335 0.306916,-1.524 1.481666,-1.524 0.592667,0 0.624417,0 0.624417,0.45508 v 3.85233 c 0,0.42334 -0.04233,0.53975 -0.85725,0.53975 h -0.22225 v 0.26459 c 0.41275,-0.0317 1.037166,-0.0317 1.4605,-0.0317 0.423333,0 1.04775,0 1.4605,0.0317 v -0.26459 h -0.22225 c -0.814917,0 -0.85725,-0.11641 -0.85725,-0.53975 v -3.85233 c 0,-0.45508 0.03175,-0.45508 0.624416,-0.45508 1.143,0 1.375834,0.17991 1.471084,1.524 z"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.58333302px;font-family:'Latin Modern Roman Caps';-inkscape-font-specification:'Latin Modern Roman Caps';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#800000;stroke-width:0.26458332"
+         id="path17" />
+      <path
+         d="m 23.049004,291.34347 h -0.264583 c -0.179917,1.28058 -0.433917,1.78858 -1.788584,1.78858 h -1.143 c -0.370416,0 -0.423333,-0.0317 -0.423333,-0.45508 v -1.95792 h 0.740833 c 0.783167,0 0.910167,0.21167 0.910167,0.92075 h 0.264583 v -2.10608 h -0.264583 c 0,0.70908 -0.127,0.92075 -0.910167,0.92075 h -0.740833 v -1.74625 c 0,-0.42333 0.05292,-0.45508 0.423333,-0.45508 h 1.0795 c 1.227667,0 1.502834,0.37041 1.61925,1.524 h 0.264584 l -0.201084,-1.78859 h -4.709583 v 0.26459 c 0.709083,0 0.762,0.0635 0.762,0.49741 v 3.88409 c 0,0.43391 -0.05292,0.49741 -0.762,0.49741 v 0.26459 h 4.836583 z"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.58333302px;font-family:'Latin Modern Roman Caps';-inkscape-font-specification:'Latin Modern Roman Caps';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#800000;stroke-width:0.26458332"
+         id="path19" />
+      <path
+         d="m 29.631822,292.67697 c 0,-0.0529 0,-0.15875 -0.137583,-0.15875 -0.116417,0 -0.127,0.0953 -0.127,0.13758 -0.07408,0.64559 -0.455083,0.65617 -0.529167,0.65617 -0.211666,0 -0.306916,-0.13758 -0.370416,-0.254 -0.08467,-0.16933 -0.148167,-0.46567 -0.28575,-1.143 -0.08467,-0.37042 -0.1905,-0.91017 -0.98425,-1.21708 0.740833,-0.1905 1.397,-0.66675 1.397,-1.31234 0,-0.74083 -0.941917,-1.42875 -2.2225,-1.42875 h -2.54 v 0.26459 c 0.709083,0 0.762,0.0635 0.762,0.49741 v 3.91584 c 0,0.43391 -0.05292,0.49741 -0.762,0.49741 v 0.26459 l 1.121833,-0.0317 1.132417,0.0317 v -0.26459 c -0.709084,0 -0.762,-0.0635 -0.762,-0.49741 v -1.8415 h 0.9525 c 0.264583,0 0.53975,0.0106 0.867833,0.33866 0.22225,0.23284 0.22225,0.48684 0.22225,0.9525 0,0.59267 0,0.78317 0.338667,1.11125 0.1905,0.1905 0.613833,0.34925 1.090083,0.34925 0.677333,0 0.836083,-0.65616 0.836083,-0.86783 z m -1.947333,-3.29142 c 0,0.41275 -0.05292,1.17475 -1.42875,1.17475 h -0.931333 v -1.88383 c 0,-0.26458 0.02117,-0.37042 0.127,-0.42333 0.07408,-0.0317 0.359833,-0.0317 0.550333,-0.0317 0.783167,0 1.68275,0.0317 1.68275,1.16416 z"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.58333302px;font-family:'Latin Modern Roman Caps';-inkscape-font-specification:'Latin Modern Roman Caps';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#800000;stroke-width:0.26458332"
+         id="path21" />
+      <path
+         d="m 35.854816,293.39664 v -0.26459 c -0.592666,0 -0.687916,-0.0529 -0.8255,-0.42333 l -1.820333,-4.699 c -0.0635,-0.16933 -0.116417,-0.23283 -0.232833,-0.23283 -0.148167,0 -0.169334,0.0635 -0.22225,0.20108 l -1.703917,4.37092 c -0.116417,0.28575 -0.296333,0.762 -0.963083,0.78316 v 0.26459 c 0.232833,-0.0212 0.53975,-0.0317 0.772583,-0.0317 l 0.878417,0.0317 v -0.26459 c -0.4445,-0.0212 -0.47625,-0.381 -0.47625,-0.47625 0,-0.0847 0,-0.10583 0.359833,-1.04775 h 2.19075 l 0.232833,0.59267 c 0.08467,0.21167 0.22225,0.5715 0.22225,0.635 0,0.29633 -0.381,0.29633 -0.560916,0.29633 v 0.26459 l 1.121833,-0.0317 c 0.359833,0 0.772583,0.0212 1.026583,0.0317 z M 33.7064,291.34347 h -1.979084 l 0.994834,-2.55058 z"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.58333302px;font-family:'Latin Modern Roman Caps';-inkscape-font-specification:'Latin Modern Roman Caps';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#800000;stroke-width:0.26458332"
+         id="path23" />
+      <path
+         d="m 42.490555,292.67697 c 0,-0.0529 0,-0.15875 -0.137584,-0.15875 -0.116416,0 -0.127,0.0953 -0.127,0.13758 -0.07408,0.64559 -0.455083,0.65617 -0.529166,0.65617 -0.211667,0 -0.306917,-0.13758 -0.370417,-0.254 -0.08467,-0.16933 -0.148167,-0.46567 -0.28575,-1.143 -0.08467,-0.37042 -0.1905,-0.91017 -0.98425,-1.21708 0.740833,-0.1905 1.397,-0.66675 1.397,-1.31234 0,-0.74083 -0.941917,-1.42875 -2.2225,-1.42875 h -2.54 v 0.26459 c 0.709083,0 0.762,0.0635 0.762,0.49741 v 3.91584 c 0,0.43391 -0.05292,0.49741 -0.762,0.49741 v 0.26459 l 1.121833,-0.0317 1.132417,0.0317 v -0.26459 c -0.709083,0 -0.762,-0.0635 -0.762,-0.49741 v -1.8415 h 0.9525 c 0.264583,0 0.53975,0.0106 0.867833,0.33866 0.22225,0.23284 0.22225,0.48684 0.22225,0.9525 0,0.59267 0,0.78317 0.338667,1.11125 0.1905,0.1905 0.613833,0.34925 1.090083,0.34925 0.677334,0 0.836084,-0.65616 0.836084,-0.86783 z m -1.947334,-3.29142 c 0,0.41275 -0.05292,1.17475 -1.42875,1.17475 h -0.931333 v -1.88383 c 0,-0.26458 0.02117,-0.37042 0.127,-0.42333 0.07408,-0.0317 0.359833,-0.0317 0.550333,-0.0317 0.783167,0 1.68275,0.0317 1.68275,1.16416 z"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.58333302px;font-family:'Latin Modern Roman Caps';-inkscape-font-specification:'Latin Modern Roman Caps';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#800000;stroke-width:0.26458332"
+         id="path25" />
+      <path
+         d="m 48.163198,288.22139 v -0.26459 c -0.22225,0.0212 -0.518584,0.0317 -0.740834,0.0317 -0.28575,0 -0.582083,-0.0106 -0.867833,-0.0317 v 0.26459 c 0.232833,0.0212 0.306917,0.14816 0.306917,0.3175 0,0.15875 -0.08467,0.28575 -0.15875,0.40216 l -1.30175,1.92617 -1.4605,-2.14842 c -0.05292,-0.0741 -0.127,-0.17991 -0.127,-0.28575 0,-0.21166 0.306916,-0.21166 0.433916,-0.21166 v -0.26459 l -1.143,0.0317 c -0.28575,0 -0.709083,-0.0106 -1.026583,-0.0317 v 0.26459 c 0.550333,0 0.677333,0.0635 0.867833,0.33866 l 1.80975,2.65642 v 1.41817 c 0,0.43391 -0.05292,0.49741 -0.762,0.49741 v 0.26459 l 1.121834,-0.0317 1.132416,0.0317 v -0.26459 c -0.719666,0 -0.762,-0.0635 -0.762,-0.52916 v -1.37584 l 1.534584,-2.26483 c 0.381,-0.5715 0.73025,-0.71967 1.143,-0.74083 z"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.58333302px;font-family:'Latin Modern Roman Caps';-inkscape-font-specification:'Latin Modern Roman Caps';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#800000;stroke-width:0.26458332"
+         id="path27" />
+      <path
+         d="m 54.058103,291.43872 c 0,-0.84667 -0.508,-1.85208 -1.672167,-2.13783 l -1.439333,-0.34925 c -0.92075,-0.22225 -1.143,-0.9525 -1.143,-1.3335 0,-0.71967 0.60325,-1.38642 1.502833,-1.38642 1.4605,0 2.021417,1.06892 2.169583,2.14842 0.02117,0.13758 0.02117,0.1905 0.137584,0.1905 0.137583,0 0.137583,-0.0529 0.137583,-0.254 v -2.12725 c 0,-0.17992 0,-0.254 -0.116417,-0.254 -0.07408,0 -0.07408,0.0106 -0.15875,0.13758 l -0.391583,0.62442 c -0.28575,-0.28575 -0.772583,-0.762 -1.788583,-0.762 -1.227667,0 -2.169583,0.93133 -2.169583,2.05316 0,0.67734 0.359833,1.15359 0.497416,1.31234 0.497417,0.51858 0.814917,0.59266 1.693333,0.80433 0.169334,0.0423 0.34925,0.0741 0.518584,0.11642 0.624416,0.14816 0.836083,0.20108 1.164166,0.56091 0.0635,0.0741 0.381,0.43392 0.381,1.00542 0,0.75142 -0.560916,1.51342 -1.524,1.51342 -0.4445,0 -1.153583,-0.0847 -1.735666,-0.53975 -0.687917,-0.53975 -0.719667,-1.31234 -0.73025,-1.67217 -0.01058,-0.0741 -0.07408,-0.0953 -0.127,-0.0953 -0.137583,0 -0.137583,0.0741 -0.137583,0.26458 v 2.11667 c 0,0.17992 0,0.254 0.116416,0.254 0.07408,0 0.09525,-0.0318 0.15875,-0.127 l 0.391584,-0.635 c 0.296333,0.30692 0.984249,0.762 2.074333,0.762 1.322916,0 2.19075,-1.06892 2.19075,-2.19075 z"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.58333302px;font-family:'Latin Modern Roman Caps';-inkscape-font-specification:'Latin Modern Roman Caps';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#800000;stroke-width:0.26458332"
+         id="path29" />
+      <path
+         d="m 60.704416,289.80889 -0.148167,-1.78859 h -5.196416 l -0.148167,1.78859 h 0.264583 c 0.09525,-1.3335 0.306917,-1.524 1.481667,-1.524 0.592666,0 0.624416,0 0.624416,0.45508 v 3.85233 c 0,0.42334 -0.04233,0.53975 -0.85725,0.53975 h -0.222249 v 0.26459 c 0.412749,-0.0317 1.037166,-0.0317 1.460499,-0.0317 0.423334,0 1.04775,0 1.4605,0.0317 v -0.26459 h -0.22225 c -0.814916,0 -0.85725,-0.11641 -0.85725,-0.53975 v -3.85233 c 0,-0.45508 0.03175,-0.45508 0.624417,-0.45508 1.143,0 1.375833,0.17991 1.471083,1.524 z"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.58333302px;font-family:'Latin Modern Roman Caps';-inkscape-font-specification:'Latin Modern Roman Caps';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#800000;stroke-width:0.26458332"
+         id="path31" />
+      <path
+         d="m 67.117911,288.22139 v -0.26459 c -0.264583,0.0212 -0.8255,0.0317 -0.889,0.0317 -0.296333,0 -0.60325,-0.0106 -0.899583,-0.0317 v 0.26459 c 0.762,0 0.762,0.56091 0.762,0.80433 v 2.48708 c 0,1.22767 -0.910167,1.76742 -1.629833,1.76742 -0.3175,0 -1.397,-0.127 -1.397,-1.7145 v -2.84692 c 0,-0.43391 0.05292,-0.49741 0.762,-0.49741 v -0.26459 l -1.143,0.0317 -1.143,-0.0317 v 0.26459 c 0.719666,0 0.762,0.0635 0.762,0.51858 v 2.29658 c 0,0.26459 0,0.65617 0.02117,0.79375 0.09525,0.85725 0.941917,1.7145 2.116667,1.7145 1.227667,0 1.905,-1.0795 1.915583,-1.85208 v -2.81517 c 0.01058,-0.42333 0.28575,-0.65616 0.762,-0.65616 z"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.58333302px;font-family:'Latin Modern Roman Caps';-inkscape-font-specification:'Latin Modern Roman Caps';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#800000;stroke-width:0.26458332"
+         id="path33" />
+      <path
+         d="m 73.637233,290.71905 c 0,-1.4605 -1.090083,-2.76225 -2.614083,-2.76225 h -2.973917 v 0.26459 c 0.709083,0 0.762,0.0635 0.762,0.49741 v 3.91584 c 0,0.43391 -0.05292,0.49741 -0.762,0.49741 v 0.26459 h 2.973917 c 1.49225,0 2.614083,-1.22767 2.614083,-2.67759 z m -0.878417,0 c 0,0.86784 -0.15875,1.31234 -0.381,1.651 -0.169333,0.23284 -0.624416,0.762 -1.598083,0.762 h -0.814917 c -0.370416,0 -0.423333,-0.0317 -0.423333,-0.45508 v -4.0005 c 0,-0.42333 0.05292,-0.45508 0.423333,-0.45508 h 0.814917 c 0.910167,0 1.36525,0.49741 1.513417,0.68791 0.232833,0.29634 0.465666,0.74084 0.465666,1.80975 z"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.58333302px;font-family:'Latin Modern Roman Caps';-inkscape-font-specification:'Latin Modern Roman Caps';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#800000;stroke-width:0.26458332"
+         id="path35" />
+      <path
+         d="m 76.960388,293.39664 v -0.26459 c -0.751416,0 -0.804333,-0.0529 -0.804333,-0.508 v -3.89466 c 0,-0.45509 0.05292,-0.508 0.804333,-0.508 v -0.26459 l -1.185333,0.0317 -1.185333,-0.0317 v 0.26459 c 0.751416,0 0.804333,0.0529 0.804333,0.508 v 3.89466 c 0,0.45509 -0.05292,0.508 -0.804333,0.508 v 0.26459 l 1.185333,-0.0317 z"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.58333302px;font-family:'Latin Modern Roman Caps';-inkscape-font-specification:'Latin Modern Roman Caps';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#800000;stroke-width:0.26458332"
+         id="path37" />
+      <path
+         d="m 82.971699,291.34347 h -0.264583 c -0.179917,1.28058 -0.433917,1.78858 -1.788584,1.78858 h -1.143 c -0.370416,0 -0.423333,-0.0317 -0.423333,-0.45508 v -1.95792 h 0.740833 c 0.783167,0 0.910167,0.21167 0.910167,0.92075 h 0.264583 v -2.10608 h -0.264583 c 0,0.70908 -0.127,0.92075 -0.910167,0.92075 h -0.740833 v -1.74625 c 0,-0.42333 0.05292,-0.45508 0.423333,-0.45508 h 1.0795 c 1.227667,0 1.502834,0.37041 1.61925,1.524 h 0.264584 l -0.201084,-1.78859 h -4.709583 v 0.26459 c 0.709083,0 0.762,0.0635 0.762,0.49741 v 3.88409 c 0,0.43391 -0.05292,0.49741 -0.762,0.49741 v 0.26459 h 4.836583 z"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.58333302px;font-family:'Latin Modern Roman Caps';-inkscape-font-specification:'Latin Modern Roman Caps';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#800000;stroke-width:0.26458332"
+         id="path39" />
+      <path
+         d="m 87.586019,291.8938 c 0,-0.66675 -0.41275,-1.10066 -0.41275,-1.10066 -0.391583,-0.40217 -0.560916,-0.43392 -1.4605,-0.64559 -0.22225,-0.0529 -0.592666,-0.13758 -0.656166,-0.15875 -0.529167,-0.21166 -0.6985,-0.62441 -0.6985,-0.94191 0,-0.48684 0.423333,-1.00542 1.132416,-1.00542 1.344084,0 1.534584,1.23825 1.576917,1.57692 0.02117,0.0741 0.02117,0.13758 0.137583,0.13758 0.137584,0 0.137584,-0.0529 0.137584,-0.254 v -1.43933 c 0,-0.16934 0,-0.254 -0.105834,-0.254 -0.0635,0 -0.07408,0.0106 -0.232833,0.24341 -0.05292,0.0529 -0.15875,0.21167 -0.201083,0.27517 -0.402167,-0.39158 -0.889,-0.51858 -1.322917,-0.51858 -0.963083,0 -1.661583,0.71966 -1.661583,1.54516 0,0.59267 0.338667,0.94192 0.465667,1.06892 0.3175,0.3175 0.529166,0.35983 1.502833,0.58208 0.5715,0.13759 0.677333,0.15875 0.92075,0.381 0.05292,0.0423 0.338666,0.32809 0.338666,0.79375 0,0.52917 -0.41275,1.10067 -1.143,1.10067 -0.275166,0 -0.846666,-0.0423 -1.301749,-0.41275 -0.47625,-0.37042 -0.508,-0.889 -0.518584,-1.17475 -0.01058,-0.0847 -0.09525,-0.0953 -0.127,-0.0953 -0.137583,0 -0.137583,0.0741 -0.137583,0.26458 v 1.42875 c 0,0.16934 0,0.254 0.105833,0.254 0.0635,0 0.07408,-0.0106 0.232834,-0.24341 0.05292,-0.0529 0.15875,-0.21167 0.201083,-0.27517 0.306917,0.27517 0.85725,0.51858 1.545166,0.51858 1.026584,0 1.68275,-0.81491 1.68275,-1.651 z"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.58333302px;font-family:'Latin Modern Roman Caps';-inkscape-font-specification:'Latin Modern Roman Caps';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#800000;stroke-width:0.26458332"
+         id="path41" />
+    </g>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.28525296px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 1.2288952,295.88476 H 87.339336"
+       id="path63-3-6-9"
+       inkscape:connector-curvature="0"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+  </g>
+</svg>
+<!--<a title="The priority programme SPP 2207 Computational Literary Studies (CLS), funded by the German Research Foundation (DFG), is dedicated to developig and establishing innovative computational methods in the field of literary studies
+" href="/">Computational Literary Studies (CLS)</a>-->
+        </div><button class="button button--secondary button--circle search-button js-search-toggle"><i class="fas fa-search"></i></button></div><nav class="navigation">
+        <ul><li class="navigation__item"><a href="/">Home</a></li><li class="navigation__item"><a href="http://dfg-spp-cls.github.io/projects_en/">Projects</a></li><li class="navigation__item navigation__item--active"><a href="/achievements.html">Achievements</a></li><li class="navigation__item"><a href="/about.html">About</a></li><!--<li><button class="button button--secondary button--circle search-button js-search-toggle"><i class="fas fa-search"></i></button></li>-->
+        </ul>
+      </nav></div>
+  </header>
+</div><div class="page__content"><div class ="main"><div class="grid grid--reverse">
+
+              <div class="col-aside d-print-none js-col-aside"></div>
+
+              <div class="col-main cell cell--auto"><!-- start custom main top snippet -->
+
+<!-- end custom main top snippet -->
+<article itemscope itemtype="http://schema.org/Article"><div class="article__header"><header><h1>Achievements</h1></header></div><meta itemprop="headline" content="Achievements"><meta itemprop="author" content="Dr. Steffen Pielström"/><div class="js-article-content"><div class="layout--article"><!-- start custom article top snippet --><!--
+    
+en
+    
+
+    
+        
+           / <a href="/de/achievements.html"> de</a>
+        
+    
+-->
+<!-- end custom article top snippet -->
+<div class="article__content" itemprop="articleBody"><p>This page lists publications and resources from the SPP 2207. For additional filtering and export in several citation styles the references are also available in the web library of the Zotero group <a href="https://www.zotero.org/groups/4667571/spp-cls-achievements">SPP-CLS-Achievements</a>.</p>
+
+<p>Several of the achievements listed here have been published in a community of the Zenodo repository: <a href="https://zenodo.org/communities/spp_cls/">SPP 2207 Computational Literary Studies</a>.</p>
+
+<h2 id="publications">Publications</h2>
+
+<ul>
+  <li>Andresen, Melanie, Benjamin Krautter, Janis Pagel, and Nils Reiter. 2022a. ‘Nathan nicht ihr Vater? Wissensvermittlungen im Drama annotieren’. In DHd2022: Kulturen des digitalen Gedächtnisses. Konferenzabstracts. Potsdam. <a href="https://doi.org/10.5281/zenodo.6327913">https://doi.org/10.5281/zenodo.6327913</a>.</li>
+  <li>Andresen, Melanie, Benjamin Krautter, Janis Pagel, and Nils Reiter. 2022b. “Who Knows What in German Dramas? A Composite Annotation Scheme for Knowledge Transfer.” <a href="https://doi.org/10.48694/JCLS.107">https://doi.org/10.48694/JCLS.107</a>.</li>
+  <li>Andresen, Melanie, and Nils Reiter, eds. 2024a. Computational Drama Analysis: Reflecting on Methods and Interpretations. De Gruyter. <a href="https://www.degruyter.com/document/isbn/9783111071763/html">https://www.degruyter.com/document/isbn/9783111071763/html</a>.</li>
+  <li>Andresen, Melanie, and Nils Reiter. 2024b. ‘Introduction’. In Computational Drama Analysis: Reflecting on Methods and Interpretations, edited by Melanie Andresen and Nils Reiter. De Gruyter. <a href="https://www.degruyter.com/document/isbn/9783111071763/html">https://www.degruyter.com/document/isbn/9783111071763/html</a>.</li>
+  <li>Arnold, Frederik, and Benjamin Fiechter. 2022. ‘Lesen, was wirklich wichtig ist - Die Identifikation von Schlüsselstellen durch ein neues Instrument zur Zitatanalyse’. In DHd2022: Kulturen des digitalen Gedächtnisses. Konferenzabstracts. Potsdam. <a href="https://doi.org/10.5281/zenodo.6327917">https://doi.org/10.5281/zenodo.6327917</a>.</li>
+  <li>Arnold, Frederik, and Robert Jäschke. 2021. ‘Lotte and Annette: A Framework for Finding and Exploring Key Passages in Literary Works’. In Proceedings of the Workshop on Natural Language Processing for Digital Humanities (NLP4DH).</li>
+  <li>Brandes, Philipp, Katrin Dennerlein, Janina Jacke, Sophie Marshall, Steffen Pielström, and Felix Schneider. 2022, accepted. ’Modelling and Operationalizing Concepts in Computational Literary Studies’. In 16th Annual International Conference of the Alliance of Digital Humanities Organizations (DH 2022). Tokyo, Japan.</li>
+  <li>Brottrager, Judith. 2022. ‘Relating the Unread - Modellierungen der Literaturgeschichte’. In DHd2022: Kulturen des digitalen Gedächtnisses. Konferenzabstracts. Potsdam. <a href="https://doi.org/10.5281/zenodo.6327937">https://doi.org/10.5281/zenodo.6327937</a>.</li>
+  <li>Brottrager, Judith, Annina Stahl, and Arda Arslan. 2021. ‘Predicting Canonization: Comparing Canonization Scores Based on Text-Extrinsic and -Intrinsic Features’. In Proceedings of the Conference on Computational Humanities Research 2021, edited by Maud Ehrmann, Folgert Karsdorp, Melvin Wevers, Tara Lee Andrews, Manuel Burghardt, Mike Kestemont, Enrique Manjavacas, Michael Piotrowski, and Joris van Zundert, 195–205. Amsterdam, the Netherlands: CEUR Workshop Proceedings. <a href="http://ceur-ws.org/Vol-2989/short_paper21.pdf">http://ceur-ws.org/Vol-2989/short_paper21.pdf</a>.</li>
+  <li>Dennerlein, Katrin, Thomas Schmidt, and Christian Wolff. 2022. ‘Emotionen im kulturellen Gedächtnis bewahren’. In DHd2022: Kulturen des digitalen Gedächtnisses. Konferenzabstracts. Potsdam. <a href="https://doi.org/10.5281/zenodo.6327957">https://doi.org/10.5281/zenodo.6327957</a>.</li>
+  <li>Dennerlein, Katrin, Michael Huber. 2022. ‘Reports on Modelling dramatic metadata. With examples of communicative relevance of female playwrights in the second half of the 18th century‘. In Book of Abstracts, Digital Humanities Nord 2022. Uppsala, Sweden.</li>
+  <li>Dennerlein, Katrin, Thomas Schmidt and Christian Wolff. 2022 accepted. ‘Emotion Classification in German Historical Tragedies and Comedies‘. In 16th Annual International Conference of the Alliance of Digital Humanities Organizations (DH 2022). Tokyo, Japan.</li>
+  <li>Dennerlein, Katrin, Thomas Schmidt and Christian Wolff. 2022 accepted. ‘Stagedirections and Emotions - First Explorations‘. (Working Title). In Workshop on Computational Drama Analysis: Achievements and Opportunities. Cologne, Germany.</li>
+  <li>Dönicke, Tillman, Florian Barth, Hanna Varachkina, and Caroline Sporleder. 2022. “MONAPipe: Modes of Narration and Attribution Pipeline for German Computational Literary Studies and Language Analysis in SpaCy.” In Proceedings of the 18th Conference on Natural Language Processing (KONVENS 2022), 8–15. Potsdam: KONVENS 2022 Organizers. https://aclanthology.org/2022.konvens-1.2.</li>
+  <li>Dönicke, Tillmann, Luisa Gödeke, and Hanna Varachkina. 2021. ‘Annotating Quantified Phenomena in Complex Sentence Structures Using the Example of Generalising Statements in Literary Texts’. In Proceedings of the 17th Joint ACL - ISO Workshop on Interoperable Semantic Annotation, 20–32. Groningen, The Netherlands (online): Association for Computational Linguistics. <a href="https://aclanthology.org/2021.isa-1.3">https://aclanthology.org/2021.isa-1.3</a>.</li>
+  <li>Dönicke, Tillmann, Hanna Varachkina, Anna Mareike Weimer, Luisa Gödeke, Florian Barth, Benjamin Gittel, Anke Holler, and Caroline Sporleder. 2022. ‘Modelling Speaker Attribution in Narrative Texts With Biased and Bias-Adjustable Neural Networks’. Frontiers in Artificial Intelligence 4. <a href="https://doi.org/10.3389/frai.2021.725321">https://doi.org/10.3389/frai.2021.725321</a>.</li>
+  <li>Du, Keli, Julia Dudar, Cora Rok, and Christof Schöch. 2021. ‘Zeta &amp; Eta: An Exploration and Evaluation of Two Dispersion-Based Measures of Distinctiveness’. In Proceedings of the Conference on Computational Humanities Research 2021, edited by Maud Ehrmann, Folgert Karsdorp, Melvin Wevers, Tara Lee Andrews, Manuel Burghardt, Mike Kestemont, Enrique Manjavacas, Michael Piotrowski, and Joris van Zundert, 181–94. Amsterdam, the Netherlands: CEUR Workshop Proceedings. <a href="http://ceur-ws.org/Vol-2989/short_paper11.pdf">http://ceur-ws.org/Vol-2989/short_paper11.pdf</a>.</li>
+  <li>Du, Keli, Julia Dudar, Cora Rok, and Christof Schöch. 2022. ‘Kontrastive Textanalyse mit pydistinto - Ein Python-Paket zur Nutzung unterschiedlicher Distinktivitätsmaße’. In DHd2022: Kulturen des digitalen Gedächtnisses. Konferenzabstracts. Potsdam. <a href="https://doi.org/10.5281/zenodo.6327967">https://doi.org/10.5281/zenodo.6327967</a>.</li>
+  <li>Ehlers, Lena, and Melanie Andresen. 2023. ‘Klassifikation von Figurenauf- Und -Abtritten in XML-Kodierten Dramen’. In DHd2023: Open Humanities, Open Culture. Luxemburg und Trier. <a href="https://doi.org/10.5281/zenodo.7715259">https://doi.org/10.5281/zenodo.7715259</a>.</li>
+  <li>Ehrlicher, Hanno, Jörg Lehmann, Nils Reiter, and Marcus Willand. 2020. ‘Gattungspoetik in quantitativer Sicht. Das Werk Calderón de la Barcas und die zeitgenössischen Dramenpoetiken’. Edited by Thomas Weitin, LitLab Pamphlets, 9 (April): 1–29. <a href="https://www.digitalhumanitiescooperation.de/pamphlet-9-gattungspoetik-in-quantitativer-sicht/">https://www.digitalhumanitiescooperation.de/pamphlet-9-gattungspoetik-in-quantitativer-sicht/</a>.</li>
+  <li>Ehrlicher, Hanno, Jörg Lehmann, Nils Reiter, and Marcus Willand. 2020. ‘La poética dramática desde una perspectiva cuantitativa: la obra de Calderón de la Barca’. Revista de Humanidades Digitales 5 (November): 1–25. <a href="https://doi.org/10.5944/rhd.vol.5.2020.27716">https://doi.org/10.5944/rhd.vol.5.2020.27716</a>.</li>
+  <li>Gius, Evelyn, and Michael Vauth. 2022. ‘Inter Annotator Agreement und Intersubjektivität - Ein Vorschlag zur Messbarkeit der Qualität literaturwissenschaftlicher Annotationen’. In DHd2022: Kulturen des digitalen Gedächtnisses. Konferenzabstracts. Potsdam. <a href="https://doi.org/10.5281/zenodo.6328209">https://doi.org/10.5281/zenodo.6328209</a>.</li>
+  <li>Hatzel, Hans Ole, and Chris Biemann. 2021. ‘Towards Layered Events and Schema Representations in Long Documents’. In Proceedings of the 2021 Conference of the North American Chapter of the Association for Computational Linguistics: Student Research Workshop, 32–39. Online: Association for Computational Linguistics. <a href="https://doi.org/10.18653/v1/2021.naacl-srw.5">https://doi.org/10.18653/v1/2021.naacl-srw.5</a>.</li>
+  <li>Hatzel, Hans Ole, and Chris Biemann. 2021. ‘LTUHH@STSS: Applying Coreference to Literary Scene Segmentation’. In Proceedings of the Shared Task on Scene Segmentation-Located with the 17th Conference on Natural Language Processing (KONVENS 2021), edited by Albin Zehe, Leonard Konle, Lea Dümpelmann, Evelyn Gius, Svenja Guhr, Andreas Hotho, Fotis Jannids, et al., 29–34. Düsseldorf, Germany: CEUR Workshop Proceedings. <a href="http://ceur-ws.org/Vol-3001/paper3.pdf">http://ceur-ws.org/Vol-3001/paper3.pdf</a>.</li>
+  <li>Hatzel, Hans Ole, Gius, Evelyn, Stiemer, Haimo, and Biemann, Chris. 2023. ‘Narrativität Und Handlung’. In DHd2023: Open Humanities, Open Culture. Luxemburg und Trier. <a href="https://doi.org/10.5281/ZENODO.7715347">https://doi.org/10.5281/ZENODO.7715347</a>.</li>
+  <li>Helling, Patrick, Kerstin Jung, and Steffen Pielström. 2021. ‘Disziplinspezifisches Forschungsdatenmanagement. FDM-Bedarfserfassung in den Computational Literary Studies’. In FORGE 2021 - Forschungsdaten in den Geisteswissenschaften: MAPPING THE LANDSCAPE - Geisteswissenschaftliches Forschungsdatenmanagement zwischen lokalen und globalen, generischen und spezifischen Lösungen. Konferenzabstracts. Cologne. <a href="https://doi.org/10.5281/zenodo.5379629">https://doi.org/10.5281/zenodo.5379629</a>.</li>
+  <li>Helling, Patrick, Kerstin Jung, and Steffen Pielström. 2022. ‘Pragmatisches Forschungsdatenmanagement - Qualitative und Quantitative Analyse der Bedarfslandschaft in den Computational Literary Studies’. In DHd2022: Kulturen des digitalen Gedächtnisses. Konferenzabstracts. Potsdam. <a href="https://doi.org/10.5281/zenodo.6328021">https://doi.org/10.5281/zenodo.6328021</a>.</li>
+  <li>Jacobs, Arthur M., Berenike Herrmann, Gerhard Lauer, Jana Lüdtke, and Sascha Schroeder. 2020. ‘Sentiment Analysis of Children and Youth Literature: Is There a Pollyanna Effect?’ Frontiers in Psychology 11. <a href="https://doi.org/10.3389/fpsyg.2020.574746">https://doi.org/10.3389/fpsyg.2020.574746</a>.</li>
+  <li>Jacke, Janina. 2023. ‘Vom Sprachlichen Indikator Zum Komplexen Phänomen?’ In DHd2023: Open Humanities, Open Culture. Luxemburg und Trier. <a href="https://doi.org/10.5281/ZENODO.7715376">https://doi.org/10.5281/ZENODO.7715376</a>.</li>
+  <li>Jannidis, Fotis, Leonard Konle, and Steffen Martus. 2021. ‘Disruptionen der Literaturwissenschaft am Beispiel der DVjs. Methodische Validierung durch Simulation und Anwendung’. In Fabrikation von Erkenntnis: Experimente in den Digital Humanities, edited by Manuel Burghardt, Lisa Dieckmann, Timo Steyer, Peer Trilcke, Niels-Oliver Walkowski, Joëlle Weis, and Ulrike Wuttke. Esch-sur-Alzette: Melusina Press. <a href="https://doi.org/10.26298/melusina.8f8w-y749-ddla">https://doi.org/10.26298/melusina.8f8w-y749-ddla</a>.</li>
+  <li>Jannidis, Fotis, Leonard Konle, and Steffen Martus. 2021. ‘Stil der Literaturwissenschaft? Vorläufige Überlegungen aus der Perspektive quantitativer Verfahren (mit einem Seitenblick auf Peter Szondi)’. Edited by Eva Geulen and Claude Haas 140: 155–82.</li>
+  <li>Jung, Kerstin, Patrick Helling, and Steffen Pielström. 2024. ‘Vom DMP Zum DDP – Erstellen Fachspezifischer Datenmanagementpläne Für Die Computational Literary Studies Im Research Data Management Organizer (RDMO)’. In DHd 2024 Quo Vadis DH, Conference Abstracts. Passau. <a href="https://doi.org/10.5281/ZENODO.10698435">https://doi.org/10.5281/ZENODO.10698435</a>.</li>
+  <li>Konle, Leonard, Merten Kröncke, Fotis Jannidis, and Simone Winko. 2022. “Emotions and Literary Periods.” In DH2022: Responding to Asian Diversity. Tokyo.</li>
+  <li>Krautter, Benjamin. 2022. ‘Die Operationalisierung Als Interdisziplinäre Schnittstelle Der Digital Humanities’. Scientia Poetica 26 (1): 215–44. <a href="https://doi.org/10.1515/scipo-2022-009">https://doi.org/10.1515/scipo-2022-009</a>.</li>
+  <li>Krautter, Benjamin. 2023a. ‘Skalierungspraktiken in Der Computergestützten Analyse von Literarischen Texten’. In DHd2023: Open Humanities, Open Culture. Luxemburg und Trier. <a href="https://doi.org/10.5281/ZENODO.7715408">https://doi.org/10.5281/ZENODO.7715408</a>.</li>
+  <li>Krautter, Benjamin. 2023b. ‘Kopräsenz-, Koreferenz- Und Wissens-Netzwerke. Kantenkriterien in Dramatischen Figurennetzwerken Am Beispiel von Kleists Die Familie Schroffenstein (1803)’. Journal of Literary Theory 17 (2): 261–89. <a href="https://doi.org/10.1515/jlt-2023-2012">https://doi.org/10.1515/jlt-2023-2012</a>.</li>
+  <li>Krautter, Benjamin, and Janis Pagel. 2024. ‘The Schemer in German Drama. Identification and Quantitative Characterization’. In Computational Drama Analysis: Reflecting on Methods and Interpretations, edited by Melanie Andresen and Nils Reiter. De Gruyter. <a href="https://www.degruyter.com/document/isbn/9783111071763/html">https://www.degruyter.com/document/isbn/9783111071763/html</a>.</li>
+  <li>Krautter, Benjamin, Janis Pagel, Nils Reiter, and Marcus Willand. 2020. ‘»[E]in Vater, dächte ich, ist doch immer ein Vater«. Figurentypen im Drama und ihre Operationalisierung’. Zeitschrift für digitale Geisteswissenschaften 5. <a href="https://doi.org/10.17175/2020_007">https://doi.org/10.17175/2020_007</a>.</li>
+  <li>Krautter, Benjamin, Janis Pagel, Nils Reiter, and Marcus Willand. 2022. “Properties of Dramatic Characters: Automatically Detecting Gender, Age, and Social Status.” In Computational Stylistics in Poetry, Prose, and Drama, edited by Anne-Sophie Bories, Petr Plecháč, and Pablo Ruiz Fabo, 179–202. De Gruyter. <a href="https://doi.org/10.1515/9783110781502-010">https://doi.org/10.1515/9783110781502-010</a>.</li>
+  <li>Krautter, Benjamin, and Michael Vauth. 2023. ‘Konstellationen Kommunikativer Macht. Hypothesengeleitete Netzwerkanalyse in Der Literaturwissenschaft’. In Figurenkonstellation Und Gesellschaftsentwurf: Annäherungen an Eine Narratologische Kategorie Und Ihre Deutungspotentiale, edited by Henrike Schwab, 205–38. Beiträge Zur Älteren Literaturgeschichte. Heidelberg: Universitätsverlag Winter.</li>
+  <li>Krautter, Benjamin, and Marcus Willand. 2021. ‘Vermessene Figuren. Karl und Franz Moor im quantitativen Vergleich’. In Schillers Feste der Rhetorik, edited by Peter-André Alt and Stefanie Hundehege, 107–38. De Gruyter. <a href="https://doi.org/10.1515/9783110686173-006">https://doi.org/10.1515/9783110686173-006</a>.</li>
+  <li>Kröncke, Merten, Leonard Konle, Fotis Jannidis, and Simone Winko. 2022. ‘Genitivmetaphern in der Lyrik des Realismus und der frühen Moderne’. In DHd2022: Kulturen des digitalen Gedächtnisses. Konferenzabstracts. Potsdam. <a href="https://doi.org/10.5281/zenodo.6328069">https://doi.org/10.5281/zenodo.6328069</a>.</li>
+  <li>Kröncke, Merten, Leonard Konle, Simone Winko, and Fotis Jannidis. 2023. ‘Gattungen Und Emotionen in Der Lyrik Des Realismus Und Der Frühen Moderne’. In DHd2023: Open Humanities, Open Culture. Luxemburg und Trier. <a href="https://doi.org/10.5281/ZENODO.7715402">https://doi.org/10.5281/ZENODO.7715402</a>.</li>
+  <li>Kröncke, Merten, Leonard Konle, Simone Winko, and Fotis Jannidis. 2024. ‘Modellierung von Gattungsunterschieden. Emotionen in Lyrik, Prosa Und Drama’. In DHd 2024 Quo Vadis DH, Conference Abstracts. Passau. <a href="https://doi.org/10.5281/zenodo.10698335">https://doi.org/10.5281/zenodo.10698335</a>.</li>
+  <li>Lemke, Marc, Ulrike Henny-Krahmer, and Nils Kellner. 2024. ‘CANSpiN: Zur Computergestützten Analyse Narrativen Raums Im Roman Des 19. Und 20. Jahrhunderts’. In DHd 2024 Quo Vadis DH, Conference Abstracts. Passau. <a href="https://doi.org/10.5281/ZENODO.10698288">https://doi.org/10.5281/ZENODO.10698288</a>.</li>
+  <li>Martus, Steffen. 2023. ‘»What matters?«: Schlüsselstellen in Theorie und Praxis’. Sonderausgabe # 7 von Textpraxis (2.2023). <a href="https://doi.org/10.17879/19958518314">https://doi.org/10.17879/19958518314</a>.</li>
+  <li>Pagel, Janis. 2022. ‘Co-Reference Networks for Dramatic Texts: Network Analysis of German Dramas Based on Co-Referential Information’. In Book of Abstracts of DH2022, 326–29. Tokyo, Japan.</li>
+  <li>Pagel, Janis, Benjamin Krautter, Melanie Andresen, Marcus Willand, and Nils Reiter. 2023. ‘On Designing Collaboration in a Mixed-Methods Scenario. Reflecting Quantitative Drama Analytics (QuaDrama)’. In Mixing Methods: Practical Insights from the Humanities in the Digital Age, edited by Birgit Schneider, Beate Löffler, Tino Mager, and Carola Hein, 1st ed., 7:81–102. Digital Humanities Research. Bielefeld, Germany: Bielefeld University Press / transcript Verlag. <a href="https://doi.org/10.14361/9783839469132">https://doi.org/10.14361/9783839469132</a>.</li>
+  <li>Pagel, Janis, and Nils Reiter. 2020. ‘GerDraCor-Coref: A Coreference Corpus for Dramatic Texts in German’. In Proceedings of the 12th Language Resources and Evaluation Conference, 55–64. Marseille, France: European Language Resources Association. <a href="https://aclanthology.org/2020.lrec-1.7">https://aclanthology.org/2020.lrec-1.7</a>.</li>
+  <li>Pagel, Janis, and Nils Reiter. 2021. ‘DramaCoref: A Hybrid Coreference Resolution System for German Theater Plays’. In Proceedings of the Fourth Workshop on Computational Models of Reference, Anaphora and Coreference, 36–46. Punta Cana, Dominican Republic: Association for Computational Linguistics. <a href="https://doi.org/10.18653/v1/2021.crac-1.4">https://doi.org/10.18653/v1/2021.crac-1.4</a>.</li>
+  <li>Pagel, Janis, Nidhi Sihag, and Nils Reiter. 2021. ‘Predicting Structural Elements in German Drama’. In Proceedings of the Second Conference on Computational Humanities Research 2021, 217–27. Amsterdam, the Netherlands: CEUR Workshop Proceedings. <a href="http://ceur-ws.org/Vol-2989/short_paper34.pdf">http://ceur-ws.org/Vol-2989/short_paper34.pdf</a>.</li>
+  <li>Pielström, Steffen, and Kerstin Jung. 2022. ‘Das DFG Schwerpunktprogramm Computational Literary Studies’. In DHd2022: Kulturen des digitalen Gedächtnisses. Konferenzabstracts. Potsdam. <a href="https://doi.org/10.5281/zenodo.6328129">https://doi.org/10.5281/zenodo.6328129</a>.</li>
+  <li>Reiter, Nils. 2021. ‘Möglichkeiten Quantitativer Dramenanalyse’. Comparatio 12 (2): 39–52. <a href="https://comp.winter-verlag.de/article/COMP/2020/2/7">https://comp.winter-verlag.de/article/COMP/2020/2/7</a>.</li>
+  <li>Schmidt, Thomas, Katrin Dennerlein, and Christian Wolff. 2021. ‘Emotion Classification in German Plays with Transformer-based Language Models Pretrained on Historical and Contemporary Language’. In Proceedings of the 5th Joint SIGHUM Workshop on Computational Linguistics for Cultural Heritage, Social Sciences, Humanities and Literature (pp. 67-79). <a href="https://doi.org/10.18653/v1/2021.latechclfl-1.8">https://doi.org/10.18653/v1/2021.latechclfl-1.8</a></li>
+  <li>Schmidt, Thomas, Katrin Dennerlein, and Christian Wolff. 2021. ‘Towards a Corpus of Historical German Plays with Emotion Annotations’. In 3rd Conference on Language, Data and Knowledge (LDK 2021), edited by Dagmar Gromann, Gilles Sérasset, Thierry Declerck, John P. McCrae, Jorge Gracia, Julia Bosque-Gil, Fernando Bobillo, and Barbara Heinisch, 93:9:1–9:11. Open Access Series in Informatics (OASIcs). Dagstuhl, Germany: Schloss Dagstuhl – Leibniz-Zentrum für Informatik. <a href="https://doi.org/10.4230/OASIcs.LDK.2021.9">https://doi.org/10.4230/OASIcs.LDK.2021.9</a>.</li>
+  <li>Schmidt, Thomas, Katrin Dennerlein, and Christian Wolff. 2021. ‘Using Deep Learning for Emotion Analysis of 18th and 19th Century German Plays’. In Fabrikation von Erkenntnis. Experimente in den Digital Humanities, edited by Manuel Burghardt, Lisa Dieckmann, Timo Steyer, Peer Trilcke, Niels-Oliver Walkowski, Joëlle Weis, and Ulrike Wuttke. Esch-sur-Alzette: Melusina Press. <a href="https://doi.org/10.26298/melusina.8f8w-y749-udlf">https://doi.org/10.26298/melusina.8f8w-y749-udlf</a>.</li>
+  <li>Schmidt, Thomas, Katrin Dennerlein, and Christian Wolff. 2022. ‘Evaluation computergestützter Verfahren der Emotionsklassifikation für deutschsprachige Dramen um 1800’. In DHd2022: Kulturen des digitalen Gedächtnisses. Konferenzabstracts. Potsdam. <a href="https://doi.org/10.5281/zenodo.6328169">https://doi.org/10.5281/zenodo.6328169</a>.</li>
+  <li>Schneider, Felix, Björn Barz, Phillip Brandes, Sophie Marshall, and Joachim Denzler. 2021. ‘Data-Driven Detection of General Chiasmi Using Lexical and Semantic Features’. In Proceedings of the 5th Joint SIGHUM Workshop on Computational Linguistics for Cultural Heritage, Social Sciences, Humanities and Literature, 96–100. Punta Cana, Dominican Republic (online): Association for Computational Linguistics. <a href="https://doi.org/10.18653/v1/2021.latechclfl-1.11">https://doi.org/10.18653/v1/2021.latechclfl-1.11</a>.</li>
+  <li>Schneider, Felix, Björn Barz, and Joachim Denzler. 2021. ‘Detecting Scenes in Fiction Using the Embedding Delta Signal’. In Proceedings of the Shared Task on Scene Segmentation-Located with the 17th Conference on Natural Language Processing (KONVENS 2021), edited by Albin Zehe, Leonard Konle, Lea Dümpelmann, Evelyn Gius, Svenja Guhr, Andreas Hotho, Fotis Jannids, et al., 22–28. Düsseldorf, Germany: CEUR Workshop Proceedings. <a href="http://ceur-ws.org/Vol-3001/paper2.pdf">http://ceur-ws.org/Vol-3001/paper2.pdf</a>.</li>
+  <li>Schneider, Felix, Sven Sickert, Phillip Brandes, Sophie Marshall, and Joachim Denzler. 2022. ‘Metaphor Detection for Low Resource Languages: From Zero-Shot to Few-Shot Learning in Middle High German’. In 18th Workshop on Multiword Expressions (MWE 2022). Marseille, France. <a href="http://www.lrec-conf.org/proceedings/lrec2022/workshops/MWE/pdf/2022.mwe2022-1.11.pdf">http://www.lrec-conf.org/proceedings/lrec2022/workshops/MWE/pdf/2022.mwe2022-1.11.pdf</a>.</li>
+  <li>Schröder, Fynn, Hans Ole Hatzel, and Chris Biemann. 2021. ‘Neural End-to-End Coreference Resolution for German in Different Domains’. In Proceedings of the 17th Conference on Natural Language Processing (KONVENS 2021), 170–181. Düsseldorf, Germany: KONVENS 2021 Organizers. <a href="https://aclanthology.org/2021.konvens-1.15">https://aclanthology.org/2021.konvens-1.15</a>.</li>
+  <li>Schröter, Julian, Keli Du, Julia Dudar, Cora Rok, and Christof Schöch. 2021. ‘From Keyness to Distinctiveness – Triangulation and Evaluation in Computational Literary Studies’. Journal of Literary Theory 15 (1–2): 81–108. <a href="https://doi.org/10.1515/jlt-2021-2011">https://doi.org/10.1515/jlt-2021-2011</a>.</li>
+  <li>Varachkina, Hanna, Florian Barth, Tillmann Dönicke, Johannes Biermann, Friederike Altmann, Thorben Neitzke, and Sporleder, Caroline. 2023. ‘Pipelines Für Natural Language Processing Und Digitale Literaturanalyse in SpaCy’. In DHd2023: Open Humanities, Open Culture. Luxemburg und Trier. <a href="https://doi.org/10.5281/ZENODO.7715520">https://doi.org/10.5281/ZENODO.7715520</a>.</li>
+  <li>Varachkina, Hanna, Florian Barth, Luisa Gödeke, Anna Mareike Hofmann, and Tillmann Dönicke. 2022. ‘Reflexive Passagen und ihre Attribution’. In DHd2022: Kulturen des digitalen Gedächtnisses. Konferenzabstracts. Potsdam. <a href="https://doi.org/10.5281/zenodo.6328207">https://doi.org/10.5281/zenodo.6328207</a>.</li>
+  <li>Vauth, Michael, Hans Ole Hatzel, Evelyn Gius, and Chris Biemann. 2021. ‘Automated Event Annotation in Literary Texts’. In Proceedings of the Conference on Computational Humanities Research 2021, edited by Maud Ehrmann, Folgert Karsdorp, Melvin Wevers, Tara Lee Andrews, Manuel Burghardt, Mike Kestemont, Enrique Manjavacas, Michael Piotrowski, and Joris van Zundert, 333–45. Amsterdam, the Netherlands: CEUR Workshop Proceedings. <a href="http://ceur-ws.org/Vol-2989/short_paper18.pdf">http://ceur-ws.org/Vol-2989/short_paper18.pdf</a>.</li>
+  <li>Weitin, Thomas. 2021. Digitale Literaturgeschichte. Eine Versuchsreihe mit sieben Experimenten. 1st ed. Digitale Literaturwissenschaft. J.B. Metzler Berlin, Heidelberg. <a href="https://doi.org/10.1007/978-3-662-63663-3">https://doi.org/10.1007/978-3-662-63663-3</a>.</li>
+</ul>
+
+<h2 id="presentations">Presentations</h2>
+
+<ul>
+  <li>Andresen, Melanie. 2020. ‘„Lucie meine Schwester Und schwanger von mir?“ – Wissensvermittlung in Dramen’. Presented at the Ringvorlesung: Digital Humanities – Grundlagen, Methoden und Reflexionen in interdisziplinärer Perspektive, Universität Hamburg, December 17.</li>
+  <li>Andresen, Melanie, Benjamin Krautter, Janis Pagel, and Axel Pichler. 2022. ‘From Concepts to Textual Phenomena and Back: Operationalization in the Digital Humanities. Vom Begriff Über Das Phänomen Zur Analyse – Ein CRETA-Workshop Zur Operationalisierung in Den DH’. Workshop presented at the DHd 2022 Kulturen des digitalen Gedächtnisses. 8. Tagung des Verbands ‘Digital Humanities im deutschsprachigen Raum’ (DHd 2022), Postdam. <a href="https://zenodo.org/doi/10.5281/zenodo.6328126">https://zenodo.org/doi/10.5281/zenodo.6328126</a>.</li>
+  <li>‘Annotating Ambiguity’. 2021. Presented at the Ambiguity and Narratology. Interdisciplinary and Diachronic Workshop, Tübingen University, April 23.</li>
+  <li>Arnold, Frederik. 2021. ‘Verfahren zur Entdeckung und Charakterisierung von Schlüsselstellen’. Poster presented at the Virtuelles Jahrestreffen des SPP Computational Literary Studies, March 17. <a href="https://doi.org/10.5281/zenodo.4737132">https://doi.org/10.5281/zenodo.4737132</a>.</li>
+  <li>Arnold, Frederick, Benjamin Fiechter, and Robert Jaeschke. 2022. ‘What Matters? Key Passages in Literary Works’. Presented at the DHLunch@GS, University of Texas at Austin, March 21.</li>
+  <li>Arnold, Frederik, Benjamin Fiechter, Evelyn Gius, Robert Jäschke, Steffen Martus, and Michael Vauth. 2022. ‘Salience in Literary Texts: A Combined Approach to the Relevance of Passages’. DH2022, July 27.</li>
+  <li>Börner, Ingo, and Janis Pagel. 2022. ‘Computerphilologisch Aufbereitete Korpora: Open Source in Den Literaturwissenschaften’. Workshop presented at the Korpora in Text+: Kennenlernen und nachhaltig nutzen, Frankfurt.</li>
+  <li>Brottrager, Judith. 2022. “Relating the Unread: A Data-Rich Approach to the Literary Canon and the “Great Unread“.” DH2022, July 27.</li>
+  <li>Brottrager, Judith, and Annina Stahl. 2021. ‘Relating the Unread. Network Models in Literary History’. Poster presented at the Virtuelles Jahrestreffen des SPP Computational Literary Studies, March 17. <a href="https://doi.org/10.5281/zenodo.4737134">https://doi.org/10.5281/zenodo.4737134</a>.</li>
+  <li>Dennerlein, Katrin, Thomas Schmidt, and Wolff Christian. 2022. “Emotion Courses in German Historical Comedies and Tragedies.” DH2022, July 27.</li>
+  <li>Du, Keli, Julia Dudar, Cora Rok, and Christof Schöch. 2021. ‘Implementation Framework of Measures of Distinctiveness’. Poster presented at the Virtuelles Jahrestreffen des SPP Computational Literary Studies, March 17. <a href="https://doi.org/10.5281/zenodo.5092328">https://doi.org/10.5281/zenodo.5092328</a>.</li>
+  <li>Du, Keli, Julia Dudar, Cora Rok, and Christof Schöch. 2022. ‘Kontrastive Textanalyse mit pydistinto - Ein Python-Paket zur Nutzung unterschiedlicher Distinktivitätsmaße’. Poster presented at the DHd 2022 Kulturen des digitalen Gedächtnisses. 8. Tagung des Verbands ‘Digital Humanities im deutschsprachigen Raum’ (DHd 2022), Potsdam, March 7. <a href="https://doi.org/10.5281/zenodo.6322466">https://doi.org/10.5281/zenodo.6322466</a>.</li>
+  <li>Du, Keli, Christof Schöch, Cora Rok, and Julia Dudar. 2021. ‘Workshop „Kontrastive Analyse literarischer Texte mit Zeta”. Einführung in die Implementierung und Evaluation von Distinktivitätsmaßen’. Workshop presented at the vDHd 2021. <a href="https://doi.org/10.5281/zenodo.5850756">https://doi.org/10.5281/zenodo.5850756</a>.</li>
+  <li>Du, Keli, Julia Dudar, and Christof Schöch. 2022. “Evaluation of Measures of Distinctiveness – Classification of Literary Texts on the Basis of Distinctive Words.” Presented at the 1st Annual Conference of Computational Literary Studies, Darmstadt.</li>
+  <li>Ehlers, Lena, and Melanie Andresen. 2023. ‘Klassifikation von Figurenauf- Und -Abtritten in XML-Kodierten Dramen’. Poster presented at the DHd 2023: Open Humanities, Open Culture. 9. Tagung des Verbands ‘Digital Humanities im deutschsprachigen Raum’ (DHd 2023), Trier. <a href="https://zenodo.org/doi/10.5281/zenodo.7711507">https://zenodo.org/doi/10.5281/zenodo.7711507</a>.</li>
+  <li>Fiechter, Benjamin. 2021. ‘“Das Verstehen der Welt beginnt bei der Stelle”. Grundlegendes zu Schlüsselstellen’. Poster presented at the Virtuelles Jahrestreffen des SPP Computational Literary Studies, March 17. <a href="https://doi.org/10.5281/zenodo.4761279">https://doi.org/10.5281/zenodo.4761279</a>.</li>
+  <li>Helling, Patrick, Jung, Kerstin, and Pielström, Steffen. 2022. “Making Research Data FAIR. Seriously? - Reflections on Research Data Management in the Computational Literary Studies,” August. <a href="https://doi.org/10.5281/ZENODO.6966537">https://doi.org/10.5281/ZENODO.6966537</a>.</li>
+  <li>Jannidis, Fotis, and Leonard Konle. 2021. ‘Schwäbische Explorationen’. Presented at the Marbacher ›Poesie-Hackathon‹ zu Hölderlin, Schiller, Mörike und Celan, June 18.</li>
+  <li>Jäschke, Robert. 2021. ‘What Matters? Key Passages in Literary Works’. Presented at the Coffee Talks, Humboldt-Universität zu Berlin, December 16.</li>
+  <li>Jung, Kerstin, Patrick Helling, and Steffen Pielström. 2024. ‘Vom DMP Zum DDP – Erstellen Fachspezifischer Datenmanagementpläne Für Die Computational Literary Studies Im Research Data Management Organizer (RDMO)’. Poster presented at the DHd 2024 Quo Vadis DH (DHd2024), Passau. <a href="https://doi.org/10.5281/zenodo.10706122">https://doi.org/10.5281/zenodo.10706122</a>.</li>
+  <li>Ketschik, Nora, Benjamin Krautter, Sandra Murr, Janis Pagel, and Nils Reiter. 2020. ‘Vom Phänomen Zur Analyse – Ein CRETA-Workshop Zur Reflektierten Operationalisierung in Den DH’. Workshop presented at the DHd 2020 Spielräume: Digital Humanities zwischen Modellierung und Interpretation. 7. Tagung des Verbands ‘Digital Humanities im deutschsprachigen Raum’ (DHd 2020), Paderborn. <a href="https://zenodo.org/doi/10.5281/zenodo.4621751">https://zenodo.org/doi/10.5281/zenodo.4621751</a>.</li>
+  <li>Konle, Leonard, Fotis Jannidis, Merten Kröncke, and Simone Winko. 2022. ‘Relevance Scores in BERT Sequence Classification’. Poster. <a href="https://doi.org/10.5281/zenodo.6047465">https://doi.org/10.5281/zenodo.6047465</a>.</li>
+  <li>Krautter, Benjamin. 2023. ‘Kleist between Weimar Classicism and Romanticism. A Case Study of Digital Drama History’. Presented at the Workshop ‘Data and theater big and small: The smart, the clean and the messy’, Strasbourg, November 29.</li>
+  <li>Kröncke, Merten. 2021. ‘Tagset zur Lyrikanalyse: Gattungen, Emotionen, Emotionsmarker.’ Poster presented at the Virtuelles Jahrestreffen des SPP Computational Literary Studies, March 17. <a href="https://doi.org/10.5281/zenodo.5521438">https://doi.org/10.5281/zenodo.5521438</a>.</li>
+  <li>Kröncke, Merten, and Simone Winko. 2022. “Wann Beginnt Die Moderne Lyrik? Literaturwissenschaft Meets Digital Humanities.” Presented at the Networking-Event des Göttinger Zentrums „Textstrukturen“, Göttingen, October 18.</li>
+  <li>Kröncke, Merten, and Simone Winko. 2023. “Wie Misst Man Literarischen Wandel? Digitale Analysen Der Lyrik Des Realismus Und Der Frühen Moderne.” Presented at the Ringvorlesung: Computational Literary Studies, Göttingen, January 26.</li>
+  <li>Lemke, Marc, Ulrike Henny-Krahmer, and Nils Kellner. 2024. ‘CANSpiN: Zur Computergestützten Analyse Narrativen Raums Im Roman Des 19. Und 20. Jahrhunderts’. Poster presented at the DHd 2024 Quo Vadis DH (DHd2024), Passau. <a href="https://doi.org/10.5281/zenodo.10706058">https://doi.org/10.5281/zenodo.10706058</a>.</li>
+  <li>Pagel, Jannis. 2022. “Co-Reference Networks for Dramatic Texts: Network Analysis of German Dramas Based on Co-Referential Information.” DH2022, July 27.</li>
+  <li>Pagel, Janis, and Axel Pichler. 2021. ‘Vom Begriff Über Das Phänomen Zur Analyse – Zur Operationalisierung in Den Computational Literary Studies’. Workshop presented at the Workshop at Cluster of Excellence 2020 “Temporal Communities: Doing Literature in a Global Perspective” Research Area 5 “Building Digital Communities”, Freie Universität Berlin, Online.</li>
+  <li>Pagel, Janis, and Nils Reiter. 2021. ‘GerDraCor-Coref: A Coreference Corpus for Dramatic Texts in German’. Poster presented at the Virtuelles Jahrestreffen des SPP Computational Literary Studies, March 17. <a href="https://doi.org/10.5281/zenodo.4737164">https://doi.org/10.5281/zenodo.4737164</a>.</li>
+  <li>Pichler, Axel, Benjamin Krautter, Janis Pagel, and Melanie Andresen. 2022. From Concepts to Textual Phenomena and Back: Operationalization in the Digital Humanities. Workshop presented at DH2022, Tokyo, Japan.</li>
+  <li>Pielström, Steffen, Patrick Helling, and Kerstin Jung. 2021. ‘Zentralprojekt des DFG-Schwerpunktprogramms Computational Literary Studies’. Poster presented at the Virtuelles Jahrestreffen des SPP Computational Literary Studies, March 17. <a href="https://doi.org/10.5281/zenodo.5041338">https://doi.org/10.5281/zenodo.5041338</a>.</li>
+  <li>Pielström, Steffen, and Kerstin Jung. 2022. ‘Das DFG Schwerpunktprogramm Computational Literary Studies’. Poster presented at the DHd 2022 Kulturen des digitalen Gedächtnisses. 8. Tagung des Verbands ‘Digital Humanities im deutschsprachigen Raum’ (DHd 2022), Potsdam, March 7. <a href="https://doi.org/10.5281/zenodo.6322549">https://doi.org/10.5281/zenodo.6322549</a>.</li>
+  <li>Reiter, Nils. 2020. ‘Beyond the Mold: New Paths for Annotation Science’. Invited Talk presented at the 14th Linguistic Annotation Workshop, COLING 2020, December 12. <a href="https://sigann.github.io/LAW-XIV-2020/invited.html">https://sigann.github.io/LAW-XIV-2020/invited.html</a>.</li>
+  <li>Reiter, Nils. 2020. ‘References to Fictional Entities: Annotation and (Automatic) Resolution of Coreference in Dramatic Texts’. Presented at the CCLS Lecture Series, Universität zu Köln, December 14.</li>
+  <li>Reiter, Nils. 2023. ‘Quo Vaids, Computational Drama Analysis? Why We Need to Look at Plot and Why It Could Work’. Presented at the Workshop ‘Data and theater big and small: The smart, the clean and the messy’, November 29.</li>
+  <li>Rok, Cora, Du Keli, Julia Dudar, and Christof Schöch. 2021. “Inspecteur, Embrasser, Planète, Paris – Distinktivitätsmaße Für Die Analyse Literarischer Subgenres. Interpretierbarkeit, Generalisierbarkeit, Erkenntniswert.” Presented at the XXXVII. Romanistentag in Augsburg: Europa zwischen Regionalismus und Globalisierung, Augsburg.</li>
+  <li>Schmidt, Thomas. 2020. ‘Emotions in Drama – Emotionen im Drama’. Poster presented at the Vierter Digital Humanities Day, Leipzig, December 2. <a href="https://fdhl.info/dhdl-2020/">https://fdhl.info/dhdl-2020/</a>.</li>
+  <li>Schmidt, Thomas, Katrin Dennerlein, and Christian Wolff. 2021. ‘Annotating and Quantifying Sentiment and Emotions in German Plays from around 1800’. Keynote lecture presented at the Workshop ‘Sentiment Analysis in Literary Studies’, University of Graz, February 19.</li>
+  <li>Schmidt, Thomas, and Katrin Dennerlein. 2022 accepted. ‘Insights and Perspectives of the Research project “Emotions in Drama”’. In Computational Stylistics Workshop on Emotion and Sentiment Analysis in Literature. Paris, France.</li>
+  <li>Schöch, Christof, Julia Dudar, Cora Rok, and Keli Du. 2021. ‘Deviation of Proportions as the Basis for a Keyness’. Presented at the DGfS workshop “Contrastive Corpus Methodology for Language Modeling and Analysis”, February 26. <a href="https://www.linguistik.hu-berlin.de/de/institut/professuren/korpuslinguistik/events/kurz-ag-msc">https://www.linguistik.hu-berlin.de/de/institut/professuren/korpuslinguistik/events/kurz-ag-msc</a>.</li>
+  <li>Varachkina, Hanna, Florian Barth, Luisa Gödeke, Anna Mareike Hofmann, and Tillmann Dönicke. 2022. ‘Reflexive Passagen und ihre Attribution’. Poster presented at the DHd 2022 Kulturen des digitalen Gedächtnisses. 8. Tagung des Verbands ‘Digital Humanities im deutschsprachigen Raum’ (DHd 2022), Potsdam, March 7. <a href="https://doi.org/10.5281/zenodo.6322587">https://doi.org/10.5281/zenodo.6322587</a>.</li>
+</ul>
+
+<h2 id="dissemination">Dissemination</h2>
+
+<ul>
+  <li>Emmerich, Robert. 2020. ‘Emotionen im Drama auf der Spur’. Online-Magazin der Universität Würzburg. einBLICK. 16 June 2020. <a href="https://www.uni-wuerzburg.de/aktuelles/einblick/single/news/emotionen-im-drama-auf-der-spur/">https://www.uni-wuerzburg.de/aktuelles/einblick/single/news/emotionen-im-drama-auf-der-spur/</a>.</li>
+  <li>Helling, Patrick. 2020. ‘Forschungsdatenmanagement im Schwerpunktprogramm Computational Literary Studies. Zwischenbericht der FDM-Landschaftsvermessung des Zentralprojekts’. Blog. 12 November 2020. <a href="https://dfg-spp-cls.github.io/de/2020/11/12/Landschaftvermessung.html">https://dfg-spp-cls.github.io/de/2020/11/12/Landschaftvermessung.html</a>.</li>
+  <li>Jung, Kerstin. 2020. ‘FAIR in der Praxis – Erster Beitrag’. Blog. 22 December 2020. <a href="https://dfg-spp-cls.github.io/de/2020/12/22/FAIR-I.html">https://dfg-spp-cls.github.io/de/2020/12/22/FAIR-I.html</a>.</li>
+  <li>‘QuaDramA Blog’. n.d. Blog. QuaDramA. Accessed 29 April 2022. <a href="https://quadrama.github.io/blog/index.de">https://quadrama.github.io/blog/index.de</a>.</li>
+  <li>Reiter, Nils. 2019. ‘DramaAnalysis’. Tutorial. 13 July 2019. <a href="https://quadrama.github.io/DramaAnalysis/tutorial/3/">https://quadrama.github.io/DramaAnalysis/tutorial/3/</a>.</li>
+  <li>Reiter, Nils, and Benjamin Krautter. 2021. ‘Tutorial Zur Quantitativen Dramenanalyse’. Tutorial presented at the Projektseminar ‘Digitale Analyse großer Textkorpora’, Ruhr-Universität Bochum, Online, December 17.</li>
+</ul>
+
+<h2 id="annotation-guidelines">Annotation guidelines</h2>
+
+<ul>
+  <li>Andresen, Melanie, Benjamin Krautter, Janis Pagel, and Nils Reiter. 2021. ‘Wissensvermittlungen im Drama annotieren. Annotationsguideline’. Annotation Guidelines. Zenodo. <a href="https://doi.org/10.5281/zenodo.5729707">https://doi.org/10.5281/zenodo.5729707</a>.</li>
+  <li>Barth, Florian, Tillmann Dönicke, Benjamin Gittel, Luisa Gödeke, Anna Mareike Weimer, Anke Holler, Caroline Sporleder, and Hanna Varachkina. 2022. ‘Annotationsrichtlinien narrative Modi und Attributionsphänomene’. Annotation Guidelines. <a href="https://gitlab.gwdg.de/mona/korpus-public/-/blob/master/Annotationsrichtlinien.pdf">https://gitlab.gwdg.de/mona/korpus-public/-/blob/master/Annotationsrichtlinien.pdf</a>.</li>
+  <li>Dennerlein, Katrin, Thomas Schmidt, and Christian Wolff. 2022. ‘Figurenemotionen in deutschsprachigen Dramen annotieren’. Annotation Guidelines. <a href="https://doi.org/10.5281/zenodo.6228151">https://doi.org/10.5281/zenodo.6228151</a>.</li>
+  <li>Kröncke, Merten, Anton Ehrmanntraut, Thora Hagen, Fotis Jannidis, Leonard Konle, and Simone Winko. 2022. ‘Annotationsrichtlinien Gedichtähnlichkeit’. Annotation Guidelines. <a href="https://doi.org/10.5281/zenodo.6020760">https://doi.org/10.5281/zenodo.6020760</a>.</li>
+  <li>Kröncke, Merten, Fotis Jannidis, Leonard Konle, and Simone Winko. 2022. ‘Annotationsrichtlinien Emotionsmarker und Emotionen’. Annotation Guidelines. <a href="https://doi.org/10.5281/zenodo.6021152">https://doi.org/10.5281/zenodo.6021152</a>.</li>
+  <li>Kröncke, Merten, Fotis Jannidis, Leonard Konle, and Simone Winko. 2022. ‘Annotationsrichtlinien Lyrische Gattungen’. Annotation Guidelines. <a href="https://doi.org/10.5281/zenodo.6021007">https://doi.org/10.5281/zenodo.6021007</a>.</li>
+  <li>Vauth, Michael, and Evelyn Gius. 2021. ‘Richtlinien für die Annotation narratologischer Ereigniskonzepte’. Annotation Guidelines. <a href="https://doi.org/10.5281/zenodo.5078175">https://doi.org/10.5281/zenodo.5078175</a>.</li>
+</ul>
+
+<h2 id="tools-and-platforms">Tools and platforms</h2>
+
+<ul>
+  <li>Arnold, Frederik. 2022. Quid. <a href="https://doi.org/10.5281/zenodo.6123228">https://doi.org/10.5281/zenodo.6123228</a>.</li>
+  <li>Arnold, Frederik. n.d. QuidEx-Wh. Accessed 29 April 2022. <a href="https://hu.berlin/quidex-wh">https://hu.berlin/quidex-wh</a>.</li>
+  <li>Du, Keli, Julia Dudar, and Christof Schöch. 2021. pydistinto - a Python Implementation of Different Measures of Distinctiveness for Contrastive Text Analysis. <a href="https://doi.org/10.5281/zenodo.5094345">https://doi.org/10.5281/zenodo.5094345</a>.</li>
+  <li>Dönicke, Tillmann, Florian Barth, and Hanna Varachkina. 2022. MONAPipe: Modes of Narration and Attribution Pipeline. <a href="https://doi.org/10.5281/ZENODO.6466327">https://doi.org/10.5281/ZENODO.6466327</a>.</li>
+  <li>End-to-End Coreference For German. n.d. <a href="https://github.com/uhh-lt/neural-coref">https://github.com/uhh-lt/neural-coref</a>.</li>
+  <li>‘Narrativity Graphs’. n.d. Demo. <a href="https://narrativity.ltdemos.informatik.uni-hamburg.de/">https://narrativity.ltdemos.informatik.uni-hamburg.de/</a>.</li>
+  <li>Ocr2struc. n.d. <a href="https://github.com/LeKonArD/ocr2struc">https://github.com/LeKonArD/ocr2struc</a>.</li>
+  <li>‘QuidEx’. n.d. Demo. Accessed 29 April 2022. <a href="https://hu.berlin/quidex">https://hu.berlin/quidex</a>.</li>
+  <li>Reiter, Nils, Börge Kiss, Andreas van Cranenburgh, and The Gitter Badger. 2022. nilsreiter/CorefAnnotator. <a href="https://doi.org/10.5281/zenodo.1228105">https://doi.org/10.5281/zenodo.1228105</a>.</li>
+  <li>Reiter, Nils, and Janis Pagel. 2020. quadrama/DramaNLP. <a href="https://doi.org/10.5281/zenodo.597866">https://doi.org/10.5281/zenodo.597866</a>.</li>
+  <li>Reiter, Nils, Janis Pagel, and The Gitter Badger. 2020. quadrama/DramaAnalysis. <a href="https://doi.org/10.5281/zenodo.597509">https://doi.org/10.5281/zenodo.597509</a>.</li>
+  <li>Vauth, Michael, Malte Meister, Hans Ole Hatzel, Dominik Gerstorfer, and Evelyn Gius. 2022. GitMA. <a href="https://doi.org/10.5281/zenodo.5669221">https://doi.org/10.5281/zenodo.5669221</a>.</li>
+</ul>
+
+<h2 id="datasets-and-analyses">Datasets and analyses</h2>
+
+<ul>
+  <li>Barth, Florian, Tillmann Dönicke, Benjamin Gittel, Luisa Gödeke, Anna Mareike Weimer, Anke Holler, Caroline Sporleder, and Hanna Varachkina. 2021. ’MONACO: Modes of Narration and Attribution Corpus’. URL: <a href="https://gitlab.gwdg.de/mona/korpus-public">https://gitlab.gwdg.de/mona/korpus-public</a>. DOI: <a href="https://doi.org/10.5281/ZENODO.6467061">https://doi.org/10.5281/ZENODO.6467061</a>.</li>
+  <li>Kröncke, Merten, Leonard Konle, Simone Winko, and Fotis Jannidis. 2022. ‘Lyrik-Anthologien 1850-1920 Annotationen’. Zenodo. <a href="https://doi.org/10.5281/zenodo.6047513">https://doi.org/10.5281/zenodo.6047513</a>.</li>
+  <li>Pagel, Janis. 2022. ‘GerDraCor-Coref’. Zenodo. <a href="https://doi.org/10.5281/zenodo.3559206">https://doi.org/10.5281/zenodo.3559206</a>.</li>
+  <li>Schmidt, Tomas, Katrin Dennerlein and Christian Wolff. 2022. ’Emorions in Drama Annotations’. URL: <a href="https://github.com/lauchblatt/Emotions_in_Drama">https://github.com/lauchblatt/Emotions_in_Drama</a></li>
+  <li>Vauth, Michael, and Evelyn Gius. 2022. ‘forTEXT/EvENT_Dataset: V.1.1’. Zenodo. <a href="https://doi.org/10.5281/ZENODO.6414926">https://doi.org/10.5281/ZENODO.6414926</a>.</li>
+  <li>Winko, Simone, Leonard Konle, Merten Kröncke, and Fotis Jannidis. 2022. ‘Lyrik-Anthologien 1850-1910’. Zenodo. <a href="https://doi.org/10.5281/zenodo.6053951">https://doi.org/10.5281/zenodo.6053951</a>.</li>
+  <li>‘ZfdG: Figurentypen (2020)’. 2020. <a href="https://quadrama.shinyapps.io/zfdg2020-pca/">https://quadrama.shinyapps.io/zfdg2020-pca/</a>.</li>
+</ul>
+
+</div><div class="d-print-none"><footer class="article__footer"><!-- start custom article footer snippet -->
+
+<!-- end custom article footer snippet -->
+</footer>
+</div>
+
+</div>
+
+<script>(function() {
+  var SOURCES = window.TEXT_VARIABLES.sources;
+  window.Lazyload.js(SOURCES.jquery, function() {
+    $(function() {
+      var $this ,$scroll;
+      var $articleContent = $('.js-article-content');
+      var hasSidebar = $('.js-page-root').hasClass('layout--page--sidebar');
+      var scroll = hasSidebar ? '.js-page-main' : 'html, body';
+      $scroll = $(scroll);
+
+      $articleContent.find('.highlight').each(function() {
+        $this = $(this);
+        $this.attr('data-lang', $this.find('code').attr('data-lang'));
+      });
+      $articleContent.find('h1[id], h2[id], h3[id], h4[id], h5[id], h6[id]').each(function() {
+        $this = $(this);
+        $this.append($('<a class="anchor d-print-none" aria-hidden="true"></a>').html('<i class="fas fa-anchor"></i>'));
+      });
+      $articleContent.on('click', '.anchor', function() {
+        $scroll.scrollToAnchor('#' + $(this).parent().attr('id'), 400);
+      });
+    });
+  });
+})();
+</script>
+</div></article><!-- start custom main bottom snippet -->
+
+<!-- end custom main bottom snippet -->
+</div>
+            </div></div></div><div class="page__footer d-print-none">
+<footer class="footer py-4 js-page-footer">
+  <div class="main"><div itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Dr. Steffen Pielström"><meta itemprop="url" content="/"><div class="footer__author-links"><div class="author-links">
+  <ul class="menu menu--nowrap menu--inline"></ul>
+</div>
+</div>
+    </div><div class="site-info mt-2">
+      <div>© Computational Literary Studies (CLS)
+       <!-- © Computational Literary Studies (CLS) 2020,
+        Powered by <a title="Jekyll is a simple, blog-aware, static site generator." href="http://jekyllrb.com/">Jekyll</a> & <a
+        title="TeXt is a super customizable Jekyll theme." href="https://github.com/kitian616/jekyll-TeXt-theme">TeXt Theme</a>. -->
+      </div>
+    </div>
+  </div>
+</footer>
+</div></div>
+    </div><script>(function() {
+  var SOURCES = window.TEXT_VARIABLES.sources;
+  window.Lazyload.js(SOURCES.jquery, function() {
+    var $body = $('body'), $window = $(window);
+    var $pageRoot = $('.js-page-root'), $pageMain = $('.js-page-main');
+    var activeCount = 0;
+    function modal(options) {
+      var $root = this, visible, onChange, hideWhenWindowScroll = false;
+      var scrollTop;
+      function setOptions(options) {
+        var _options = options || {};
+        visible = _options.initialVisible === undefined ? false : show;
+        onChange = _options.onChange;
+        hideWhenWindowScroll = _options.hideWhenWindowScroll;
+      }
+      function init() {
+        setState(visible);
+      }
+      function setState(isShow) {
+        if (isShow === visible) {
+          return;
+        }
+        visible = isShow;
+        if (visible) {
+          activeCount++;
+          scrollTop = $(window).scrollTop() || $pageMain.scrollTop();
+          $root.addClass('modal--show');
+          $pageMain.scrollTop(scrollTop);
+          activeCount === 1 && ($pageRoot.addClass('show-modal'), $body.addClass('of-hidden'));
+          hideWhenWindowScroll && window.hasEvent('touchstart') && $window.on('scroll', hide);
+          $window.on('keyup', handleKeyup);
+        } else {
+          activeCount > 0 && activeCount--;
+          $root.removeClass('modal--show');
+          $window.scrollTop(scrollTop);
+          activeCount === 0 && ($pageRoot.removeClass('show-modal'), $body.removeClass('of-hidden'));
+          hideWhenWindowScroll && window.hasEvent('touchstart') && $window.off('scroll', hide);
+          $window.off('keyup', handleKeyup);
+        }
+        onChange && onChange(visible);
+      }
+      function show() {
+        setState(true);
+      }
+      function hide() {
+        setState(false);
+      }
+      function handleKeyup(e) {
+        // Char Code: 27  ESC
+        if (e.which ===  27) {
+          hide();
+        }
+      }
+      setOptions(options);
+      init();
+      return {
+        show: show,
+        hide: hide,
+        $el: $root
+      };
+    }
+    $.fn.modal = modal;
+  });
+})();
+</script><div class="modal modal--overflow page__search-modal d-print-none js-page-search-modal"><script>
+(function () {
+  var SOURCES = window.TEXT_VARIABLES.sources;
+  window.Lazyload.js(SOURCES.jquery, function() {
+    // search panel
+    var search = (window.search || (window.search = {}));
+    var useDefaultSearchBox = window.useDefaultSearchBox === undefined ?
+      true : window.useDefaultSearchBox ;
+
+    var $searchModal = $('.js-page-search-modal');
+    var $searchToggle = $('.js-search-toggle');
+    var searchModal = $searchModal.modal({ onChange: handleModalChange, hideWhenWindowScroll: true });
+    var modalVisible = false;
+    search.searchModal = searchModal;
+
+    var $searchBox = null;
+    var $searchInput = null;
+    var $searchClear = null;
+
+    function getModalVisible() {
+      return modalVisible;
+    }
+    search.getModalVisible = getModalVisible;
+
+    function handleModalChange(visible) {
+      modalVisible = visible;
+      if (visible) {
+        search.onShow && search.onShow();
+        useDefaultSearchBox && $searchInput[0] && $searchInput[0].focus();
+      } else {
+        search.onShow && search.onHide();
+        useDefaultSearchBox && $searchInput[0] && $searchInput[0].blur();
+        setTimeout(function() {
+          useDefaultSearchBox && ($searchInput.val(''), $searchBox.removeClass('not-empty'));
+          search.clear && search.clear();
+          window.pageAsideAffix && window.pageAsideAffix.refresh();
+        }, 400);
+      }
+    }
+
+    $searchToggle.on('click', function() {
+      modalVisible ? searchModal.hide() : searchModal.show();
+    });
+    // Char Code: 83  S, 191 /
+    $(window).on('keyup', function(e) {
+      if (!modalVisible && !window.isFormElement(e.target || e.srcElement) && (e.which === 83 || e.which === 191)) {
+        modalVisible || searchModal.show();
+      }
+    });
+
+    if (useDefaultSearchBox) {
+      $searchBox = $('.js-search-box');
+      $searchInput = $searchBox.children('input');
+      $searchClear = $searchBox.children('.js-icon-clear');
+      search.getSearchInput = function() {
+        return $searchInput.get(0);
+      };
+      search.getVal = function() {
+        return $searchInput.val();
+      };
+      search.setVal = function(val) {
+        $searchInput.val(val);
+      };
+
+      $searchInput.on('focus', function() {
+        $(this).addClass('focus');
+      });
+      $searchInput.on('blur', function() {
+        $(this).removeClass('focus');
+      });
+      $searchInput.on('input', window.throttle(function() {
+        var val = $(this).val();
+        if (val === '' || typeof val !== 'string') {
+          search.clear && search.clear();
+        } else {
+          $searchBox.addClass('not-empty');
+          search.onInputNotEmpty && search.onInputNotEmpty(val);
+        }
+      }, 400));
+      $searchClear.on('click', function() {
+        $searchInput.val(''); $searchBox.removeClass('not-empty');
+        search.clear && search.clear();
+      });
+    }
+  });
+})();
+</script><div class="search search--dark">
+  <div class="main">
+    <div class="search__header">Search</div>
+    <div class="search-bar">
+      <div class="search-box js-search-box">
+        <div class="search-box__icon-search"><i class="fas fa-search"></i></div>
+        <input type="text" />
+        <div class="search-box__icon-clear js-icon-clear">
+          <a><i class="fas fa-times"></i></a>
+        </div>
+      </div>
+      <button class="button button--theme-dark button--pill search__cancel js-search-toggle">
+        Cancel</button>
+    </div>
+    <div class="search-result js-search-result"></div>
+  </div>
+</div>
+<script>var SOURCES = window.TEXT_VARIABLES.sources;
+var PAHTS = window.TEXT_VARIABLES.paths;
+window.Lazyload.js([SOURCES.jquery, PAHTS.search_js], function() {
+  var search = (window.search || (window.search = {}));
+  var searchData = window.TEXT_SEARCH_DATA || {};
+
+  function memorize(f) {
+    var cache = {};
+    return function () {
+      var key = Array.prototype.join.call(arguments, ',');
+      if (key in cache) return cache[key];
+      else return cache[key] = f.apply(this, arguments);
+    };
+  }
+
+  /// search
+  function searchByQuery(query) {
+    var i, j, key, keys, cur, _title, result = {};
+    keys = Object.keys(searchData);
+    for (i = 0; i < keys.length; i++) {
+      key = keys[i];
+      for (j = 0; j < searchData[key].length; j++) {
+        cur = searchData[key][j], _title = cur.title;
+        if ((result[key] === undefined || result[key] && result[key].length < 4 )
+          && _title.toLowerCase().indexOf(query.toLowerCase()) >= 0) {
+          if (result[key] === undefined) {
+            result[key] = [];
+          }
+          result[key].push(cur);
+        }
+      }
+    }
+    return result;
+  }
+
+  var renderHeader = memorize(function(header) {
+    return $('<p class="search-result__header">' + header + '</p>');
+  });
+
+  var renderItem = function(index, title, url) {
+    return $('<li class="search-result__item" data-index="' + index + '"><a class="button" href="' + url + '">' + title + '</a></li>');
+  };
+
+  function render(data) {
+    if (!data) { return null; }
+    var $root = $('<ul></ul>'), i, j, key, keys, cur, itemIndex = 0;
+    keys = Object.keys(data);
+    for (i = 0; i < keys.length; i++) {
+      key = keys[i];
+      $root.append(renderHeader(key));
+      for (j = 0; j < data[key].length; j++) {
+        cur = data[key][j];
+        $root.append(renderItem(itemIndex++, cur.title, cur.url));
+      }
+    }
+    return $root;
+  }
+
+  // search box
+  var $result = $('.js-search-result'), $resultItems;
+  var lastActiveIndex, activeIndex;
+
+  function clear() {
+    $result.html(null);
+    $resultItems = $('.search-result__item'); activeIndex = 0;
+  }
+  function onInputNotEmpty(val) {
+    $result.html(render(searchByQuery(val)));
+    $resultItems = $('.search-result__item'); activeIndex = 0;
+    $resultItems.eq(0).addClass('active');
+  }
+
+  search.clear = clear;
+  search.onInputNotEmpty = onInputNotEmpty;
+
+  function updateResultItems() {
+    lastActiveIndex >= 0 && $resultItems.eq(lastActiveIndex).removeClass('active');
+    activeIndex >= 0 && $resultItems.eq(activeIndex).addClass('active');
+  }
+
+  function moveActiveIndex(direction) {
+    var itemsCount = $resultItems ? $resultItems.length : 0;
+    if (itemsCount > 1) {
+      lastActiveIndex = activeIndex;
+      if (direction === 'up') {
+        activeIndex = (activeIndex - 1 + itemsCount) % itemsCount;
+      } else if (direction === 'down') {
+        activeIndex = (activeIndex + 1 + itemsCount) % itemsCount;
+      }
+      updateResultItems();
+    }
+  }
+
+  // Char Code: 13  Enter, 37  ⬅, 38  ⬆, 39  ➡, 40  ⬇
+  $(window).on('keyup', function(e) {
+    var modalVisible = search.getModalVisible && search.getModalVisible();
+    if (modalVisible) {
+      if (e.which === 38) {
+        modalVisible && moveActiveIndex('up');
+      } else if (e.which === 40) {
+        modalVisible && moveActiveIndex('down');
+      } else if (e.which === 13) {
+        modalVisible && $resultItems && activeIndex >= 0 && $resultItems.eq(activeIndex).children('a')[0].click();
+      }
+    }
+  });
+
+  $result.on('mouseover', '.search-result__item > a', function() {
+    var itemIndex = $(this).parent().data('index');
+    itemIndex >= 0 && (lastActiveIndex = activeIndex, activeIndex = itemIndex, updateResultItems());
+  });
+});
+</script>
+</div></div>
+
+
+<script>(function() {
+  var SOURCES = window.TEXT_VARIABLES.sources;
+  window.Lazyload.js(SOURCES.jquery, function() {
+    function scrollToAnchor(anchor, duration, callback) {
+      var $root = this;
+      $root.animate({ scrollTop: $(anchor).position().top }, duration, function() {
+        window.history.replaceState(null, '', window.location.href.split('#')[0] + anchor);
+        callback && callback();
+      });
+    }
+    $.fn.scrollToAnchor = scrollToAnchor;
+  });
+})();
+(function() {
+  var SOURCES = window.TEXT_VARIABLES.sources;
+  window.Lazyload.js(SOURCES.jquery, function() {
+    function affix(options) {
+      var $root = this, $window = $(window), $scrollTarget, $scroll,
+        offsetBottom = 0, scrollTarget = window, scroll = window.document, disabled = false, isOverallScroller = true,
+        rootTop, rootLeft, rootHeight, scrollBottom, rootBottomTop,
+        hasInit = false, curState;
+
+      function setOptions(options) {
+        var _options = options || {};
+        _options.offsetBottom && (offsetBottom = _options.offsetBottom);
+        _options.scrollTarget && (scrollTarget = _options.scrollTarget);
+        _options.scroll && (scroll = _options.scroll);
+        _options.disabled !== undefined && (disabled = _options.disabled);
+        $scrollTarget = $(scrollTarget);
+        isOverallScroller = window.isOverallScroller($scrollTarget[0]);
+        $scroll = $(scroll);
+      }
+      function preCalc() {
+        top();
+        rootHeight = $root.outerHeight();
+        rootTop = $root.offset().top + (isOverallScroller ? 0 :  $scrollTarget.scrollTop());
+        rootLeft = $root.offset().left;
+      }
+      function calc(needPreCalc) {
+        needPreCalc && preCalc();
+        scrollBottom = $scroll.outerHeight() - offsetBottom - rootHeight;
+        rootBottomTop = scrollBottom - rootTop;
+      }
+      function top() {
+        if (curState !== 'top') {
+          $root.removeClass('fixed').css({
+            left: 0,
+            top: 0
+          });
+          curState = 'top';
+        }
+      }
+      function fixed() {
+        if (curState !== 'fixed') {
+          $root.addClass('fixed').css({
+            left: rootLeft + 'px',
+            top: 0
+          });
+          curState = 'fixed';
+        }
+      }
+      function bottom() {
+        if (curState !== 'bottom') {
+          $root.removeClass('fixed').css({
+            left: 0,
+            top: rootBottomTop + 'px'
+          });
+          curState = 'bottom';
+        }
+      }
+      function setState() {
+        var scrollTop = $scrollTarget.scrollTop();
+        if (scrollTop >= rootTop && scrollTop <= scrollBottom) {
+          fixed();
+        } else if (scrollTop < rootTop) {
+          top();
+        } else {
+          bottom();
+        }
+      }
+      function init() {
+        if(!hasInit) {
+          var interval, timeout;
+          calc(true); setState();
+          // run calc every 100 millisecond
+          interval = setInterval(function() {
+            calc();
+          }, 100);
+          timeout = setTimeout(function() {
+            clearInterval(interval);
+          }, 45000);
+          window.pageLoad.then(function() {
+            setTimeout(function() {
+              clearInterval(interval);
+              clearTimeout(timeout);
+            }, 3000);
+          });
+          $scrollTarget.on('scroll', function() {
+            disabled || setState();
+          });
+          $window.on('resize', function() {
+            disabled || (calc(true), setState());
+          });
+          hasInit = true;
+        }
+      }
+
+      setOptions(options);
+      if (!disabled) {
+        init();
+      }
+      $window.on('resize', window.throttle(function() {
+        init();
+      }, 200));
+      return {
+        setOptions: setOptions,
+        refresh: function() {
+          calc(true, { animation: false }); setState();
+        }
+      };
+    }
+    $.fn.affix = affix;
+  });
+})();
+(function() {
+  var SOURCES = window.TEXT_VARIABLES.sources;
+  window.Lazyload.js(SOURCES.jquery, function() {
+    function toc(options) {
+      var $root = this, $window = $(window), $scrollTarget, $scroller, $tocUl = $('<ul class="toc toc--ellipsis"></ul>'), $tocLi, $headings, $activeLast, $activeCur,
+        selectors = 'h1,h2,h3', container = 'body', scrollTarget = window, scroller = 'html, body', disabled = false,
+        headingsPos, scrolling = false, hasRendered = false, hasInit = false;
+
+      function setOptions(options) {
+        var _options = options || {};
+        _options.selectors && (selectors = _options.selectors);
+        _options.container && (container = _options.container);
+        _options.scrollTarget && (scrollTarget = _options.scrollTarget);
+        _options.scroller && (scroller = _options.scroller);
+        _options.disabled !== undefined && (disabled = _options.disabled);
+        $headings = $(container).find(selectors).filter('[id]');
+        $scrollTarget = $(scrollTarget);
+        $scroller = $(scroller);
+      }
+      function calc() {
+        headingsPos = [];
+        $headings.each(function() {
+          headingsPos.push(Math.floor($(this).position().top));
+        });
+      }
+      function setState(element, disabled) {
+        var scrollTop = $scrollTarget.scrollTop(), i;
+        if (disabled || !headingsPos || headingsPos.length < 1) { return; }
+        if (element) {
+          $activeCur = element;
+        } else {
+          for (i = 0; i < headingsPos.length; i++) {
+            if (scrollTop >= headingsPos[i]) {
+              $activeCur = $tocLi.eq(i);
+            } else {
+              $activeCur || ($activeCur = $tocLi.eq(i));
+              break;
+            }
+          }
+        }
+        $activeLast && $activeLast.removeClass('active');
+        ($activeLast = $activeCur).addClass('active');
+      }
+      function render() {
+        if(!hasRendered) {
+          $root.append($tocUl);
+          $headings.each(function() {
+            var $this = $(this);
+            $tocUl.append($('<li></li>').addClass('toc-' + $this.prop('tagName').toLowerCase())
+              .append($('<a></a>').text($this.text()).attr('href', '#' + $this.prop('id'))));
+          });
+          $tocLi = $tocUl.children('li');
+          $tocUl.on('click', 'a', function(e) {
+            e.preventDefault();
+            var $this = $(this);
+            scrolling = true;
+            setState($this.parent());
+            $scroller.scrollToAnchor($this.attr('href'), 400, function() {
+              scrolling = false;
+            });
+          });
+        }
+        hasRendered = true;
+      }
+      function init() {
+        var interval, timeout;
+        if(!hasInit) {
+          render(); calc(); setState(null, scrolling);
+          // run calc every 100 millisecond
+          interval = setInterval(function() {
+            calc();
+          }, 100);
+          timeout = setTimeout(function() {
+            clearInterval(interval);
+          }, 45000);
+          window.pageLoad.then(function() {
+            setTimeout(function() {
+              clearInterval(interval);
+              clearTimeout(timeout);
+            }, 3000);
+          });
+          $scrollTarget.on('scroll', function() {
+            disabled || setState(null, scrolling);
+          });
+          $window.on('resize', window.throttle(function() {
+            if (!disabled) {
+              render(); calc(); setState(null, scrolling);
+            }
+          }, 100));
+        }
+        hasInit = true;
+      }
+
+      setOptions(options);
+      if (!disabled) {
+        init();
+      }
+      $window.on('resize', window.throttle(function() {
+        init();
+      }, 200));
+      return {
+        setOptions: setOptions
+      };
+    }
+    $.fn.toc = toc;
+  });
+})();
+/*(function () {
+
+})();*/
+</script>
+    </div>
+    <script>(function () {
+  var $root = document.getElementsByClassName('root')[0];
+  if (window.hasEvent('touchstart')) {
+    $root.dataset.isTouch = true;
+    document.addEventListener('touchstart', function(){}, false);
+  }
+})();
+</script>
+  </body>
+</html>
+
