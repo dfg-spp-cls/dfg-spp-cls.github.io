@@ -4,6 +4,8 @@ excerpt: "m Rahmen des Young Researcher Vising Programme ermöglicht ..."
 lang: de
 ---
 
+**Update:** Verlängerung der Bewrbungsfrist. Bewerbungen können bis zum **9. Februar 2025** eingereicht werden. 
+
 Im Rahmen des Young Researcher Vising Programme ermöglicht das Schwerpunktproramm Nachwuchswissenschaftler\*innen im Zeitraum zwischen März 2025 und Februar 2026 Gastaufenthalte von bis zu 3 Monaten **bei einem laufenden, SPP-geförderten Forschungsprojekt**. Hierfür können pro Empfänger\*in Reise- und Übernachtungskosten von bis zu 9.000 € finanziert werden.
 
 **Voraussetzungen:**

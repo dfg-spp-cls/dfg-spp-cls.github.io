@@ -4,6 +4,8 @@ excerpt: "m Rahmen des Young Researcher Vising Programme ermöglicht ..."
 lang: en
 ---
 
+**Update:** Deadline extended. Applications will be accepted till **February 9th 2025**.
+
 The Priority Programme's Young Researcher Vising Programme offers funding for young researchers to visit one of our currently funded projects for up to 3 months between March 2025 and the end of February 2026. The can cover expenses for travel and accommodation up to 9,000 €.
 
 **Prerequisites:**
